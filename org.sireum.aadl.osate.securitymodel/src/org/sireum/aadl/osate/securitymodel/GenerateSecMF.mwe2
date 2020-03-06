@@ -1,0 +1,220 @@
+module org.sireum.aadl.osate.securitymodel.GenerateSecMF
+
+
+import org.eclipse.emf.mwe.utils.*
+import org.eclipse.xtext.generator.*
+import org.eclipse.xtext.ui.generator.*
+import org.osate.xtext.aadl2.errormodel.*
+
+var grammarURI = "classpath:/org/sireum/aadl/osate/securitymodel/SecMF.xtext"
+var file.extensions = "smf,smflib"
+var projectName = "org.sireum.aadl.osate.securitymodel"
+var runtimeProject = "../${projectName}"
+var fileHeader = "
+/** Copyright (c) 2020, Hariharan Thiagarajan, Kansas State University
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */"
+
+Workflow {
+	bean = StandaloneSetup {
+        scanClassPath = true
+        platformUri = "${runtimeProject}/.."
+        uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+			to = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel"
+			to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+			to = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.uml2.types/model/Types.genmodel"
+			to = "platform:/resource/org.eclipse.uml2.types/model/Types.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.uml2.uml/model/UML.genmodel"
+			to = "platform:/resource/org.eclipse.uml2.uml/model/UML.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.ecore"
+			to = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore"
+			to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.ecore"
+			to = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.uml2.types/model/Types.ecore"
+			to = "platform:/resource/org.eclipse.uml2.types/model/Types.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore"
+			to = "platform:/resource/org.eclipse.uml2.uml/model/UML.ecore"
+		}
+		//
+        registerGeneratedEPackage = "org.eclipse.emf.ecore.EcorePackage"
+        registerGeneratedEPackage = "org.eclipse.uml2.types.TypesPackage"
+        registerGeneratedEPackage = "org.eclipse.uml2.uml.UMLPackage"
+        registerGeneratedEPackage = "org.eclipse.emf.codegen.ecore.genmodel.GenModelPackage"
+        registerGeneratedEPackage = "org.eclipse.uml2.codegen.ecore.genmodel.GenModelPackage"
+        registerGenModelFile = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+        registerGenModelFile = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+        registerGenModelFile = "platform:/resource/org.eclipse.uml2.types/model/Types.genmodel"
+        registerGenModelFile = "platform:/resource/org.eclipse.uml2.uml/model/UML.genmodel"
+        registerGenModelFile = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+
+		registerGeneratedEPackage = "org.osate.aadl2.Aadl2Package"
+		registerGenModelFile = "platform:/resource/org.osate.aadl2/model/aadl2.genmodel"
+//		registerGenModelFile = "platform:/resource/org.osate.xtext.aadl2.errormodel/src/org/osate/xtext/aadl2/errormodel/ErrorModel.genmodel"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${runtimeProject}/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${runtimeProject}.ui/src-gen"
+	}
+	
+	component = Generator auto-inject {
+		pathRtProject = runtimeProject
+		pathUiProject = "${runtimeProject}.ui"
+//		pathTestProject = "${runtimeProject}.test"
+		projectNameRt = projectName
+		projectNameUi = "${projectName}.ui"
+		language = {
+			uri = grammarURI
+			fileExtensions = file.extensions
+			
+			//loadedResource = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+			
+
+			// Java API to access grammar elements (required by several other fragments)
+			fragment = grammarAccess.GrammarAccessFragment {}
+
+			// generates Java API for the generated EPackages 
+			fragment = EMFGeneratorFragmentCustom auto-inject {
+			}
+
+//			// the serialization component
+//			fragment = parseTreeConstructor.ParseTreeConstructorFragment {}
+            // Serializer 2.0
+            fragment = serializer.SerializerFragment {}
+
+			// a custom ResourceFactory for use with EMF 
+			fragment = resourceFactory.ResourceFactoryFragment {
+				fileExtensions = file.extensions
+			}
+
+			// The antlr parser generator fragment.
+//			fragment = parser.antlr.XtextAntlrGeneratorFragment {
+//			//  options = {
+//			//		backtrack = true
+//			//	}
+//			}
+			fragment = parser.antlr.ex.rt.AntlrGeneratorFragment {
+    		options = {
+        		ignoreCase = true
+//				backtrack = true
+//				classSplitting = true
+    			}
+			}
+			
+			// java-based API for validation 
+			fragment = validation.JavaValidatorFragment {
+//				composedCheck = "org.eclipse.xtext.validation.ImportUriValidator"
+//				composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
+				// registerForImportedPackages = true
+			}
+
+			// scoping and exporting API
+			// fragment = scoping.ImportURIScopingFragment {}
+//			 fragment = exporting.SimpleNamesFragment {}
+
+			// scoping and exporting API 
+			fragment = scoping.ImportNamespacesScopingFragment {
+				generateXtendStub = true
+			}
+			fragment = exporting.QualifiedNamesFragment {}
+			fragment = builder.BuilderIntegrationFragment {}
+
+//			// generator API
+//			fragment = generator.GeneratorFragment {
+//				generateMwe = true
+//				generateJavaMain = true
+//			}
+			
+			// formatter API 
+			fragment = formatting2.Formatter2Fragment {}
+
+			// labeling API 
+			fragment = labeling.LabelProviderFragment {}
+
+			// outline API 
+			fragment = outline.OutlineTreeProviderFragment {}
+			fragment = outline.QuickOutlineFragment {}
+
+			// quickfix API 
+			fragment = quickfix.QuickfixProviderFragment {}
+
+			// content assist API  
+			fragment = contentAssist.ContentAssistFragment {}
+			
+			// rename refactoring  
+			fragment = refactoring.RefactorElementNameFragment {}
+
+			// generates a more lightweight Antlr parser and lexer tailored for content assist  
+//			fragment = parser.antlr.XtextAntlrUiGeneratorFragment {}
+			fragment = parser.antlr.ex.ca.ContentAssistParserGeneratorFragment {
+				options = {
+        			ignoreCase = true
+        			//backtrack=true
+					//classSplitting = true
+				}
+				partialParsing = true
+			}
+
+			// generates junit test support classes into Generator#pathTestProject
+//			fragment = junit.Junit4Fragment {}
+
+			// project wizard (optional) 
+			// fragment = projectWizard.SimpleProjectWizardFragment {
+			// 		generatorProjectName = "${projectName}.generator" 
+			//		modelFileExtension = file.extensions
+			// }
+			
+			//fragment = types.TypesGeneratorFragment {}
+			// generates the required bindings only if the grammar inherits from Xbase
+			//fragment = xbase.XbaseGeneratorFragment {}
+		}
+	}
+}
+

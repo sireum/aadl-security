@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="secMF" nsURI="http://www.sireum.org/aadl/osate/securitymodel"
+    nsPrefix="secMF">
+  <eClassifiers xsi:type="ecore:EClass" name="SecModelLibrary" eSuperTypes="platform:/resource/org.osate.aadl2/model/aadl2.ecore#//AnnexLibrary">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
+        eType="#//SmfTypeDef" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//SmfTypeDef"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecModelSubclause" eSuperTypes="platform:/resource/org.osate.aadl2/model/aadl2.ecore#//AnnexSubclause">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classification" upperBound="-1"
+        eType="#//SMFClassification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="declassification" upperBound="-1"
+        eType="#//SMFDeclassification" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SMFClassification" eSuperTypes="platform:/resource/org.osate.aadl2/model/aadl2.ecore#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="ecore:EClass platform:/resource/org.osate.aadl2/model/aadl2.ecore#//NamedElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeRef" eType="#//SMFTypeRef"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SMFTypeRef" eSuperTypes="platform:/resource/org.osate.aadl2/model/aadl2.ecore#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SMFDeclassification" eSuperTypes="platform:/resource/org.osate.aadl2/model/aadl2.ecore#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flow" eType="ecore:EClass platform:/resource/org.osate.aadl2/model/aadl2.ecore#//NamedElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="srcName" eType="#//SMFTypeRef"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="any" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="snkName" eType="#//SMFTypeRef"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SmfTypeDef" eSuperTypes="platform:/resource/org.osate.aadl2/model/aadl2.ecore#//NamedElement #//SMFTypeRef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//SMFTypeRef"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecMFRoot" eSuperTypes="platform:/resource/org.osate.aadl2/model/aadl2.ecore#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="library" eType="#//SecModelLibrary"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subclauses" upperBound="-1"
+        eType="#//SecModelSubclause" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

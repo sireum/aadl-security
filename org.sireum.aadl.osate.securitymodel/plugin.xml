@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package 
+			uri = "http://www.sireum.org/aadl/osate/securitymodel/SecMF"
+			class = "org.sireum.aadl.osate.securitymodel.secMF.SecMFPackage"
+			genModel = "model/generated/SecMF.genmodel" />
+	</extension>
+ <extension
+       id="SMFParser"
+       name="SMFP"
+       point="org.osate.annexsupport.parser">
+    <parser
+          annexName="SMF"
+          class="org.sireum.aadl.osate.securitymodel.parsing.SMFAnnexParser"
+          id="org.sireum.aadl.osate.securitymodel.parser"
+          name="SMF Annex Parser">
+    </parser>
+ </extension>
+ <extension
+       id="SMFLinkingService"
+       point="org.osate.annexsupport.linkingservice">
+    <linkingservice
+          annexName="SMF"
+          class="org.sireum.aadl.osate.securitymodel.parsing.SMFAnnexLinkingService"
+          id="org.sireum.aadl.osate.securitymodel.linkingservice"
+          name="SMF Annex Linking Service">
+    </linkingservice>
+ </extension>
+ <extension
+       point="org.osate.annexsupport.unparser">
+    <unparser
+          annexName="SMF"
+          class="org.sireum.aadl.osate.securitymodel.parsing.SMFAnnexUnparser"
+          id="org.sireum.aadl.osate.securitymodel.unparser"
+          name="SMF Annex Unparser">
+    </unparser>
+ </extension>
+</plugin>

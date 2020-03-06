@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="&#xA;/** Copyright (c) 2020, Hariharan Thiagarajan, Kansas State University&#xA;All rights reserved.&#xA;&#xA;Redistribution and use in source and binary forms, with or without&#xA;modification, are permitted provided that the following conditions are met:&#xA;&#xA;1. Redistributions of source code must retain the above copyright notice, this&#xA;   list of conditions and the following disclaimer.&#xA;2. Redistributions in binary form must reproduce the above copyright notice,&#xA;   this list of conditions and the following disclaimer in the documentation&#xA;   and/or other materials provided with the distribution.&#xA;&#xA;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND&#xA;ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED&#xA;WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE&#xA;DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR&#xA;ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES&#xA;(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;&#xA;LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND&#xA;ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT&#xA;(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS&#xA;SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+    modelDirectory="/org.sireum.aadl.osate.securitymodel/src-gen" modelPluginID="org.sireum.aadl.osate.securitymodel"
+    forceOverwrite="true" modelName="SecMF" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="8.0" copyrightFields="false" runtimeVersion="2.20" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/resource/org.osate.aadl2/model/aadl2.genmodel#//aadl2">
+  <genPackages prefix="SecMF" basePackage="org.sireum.aadl.osate.securitymodel" disposableProviderFactory="true"
+      fileExtensions="secmf" ecorePackage="SecMF.ecore#/">
+    <genClasses ecoreClass="SecMF.ecore#//SecModelLibrary">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SecMF.ecore#//SecModelLibrary/types"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SecMF.ecore#//SecModelLibrary/type"/>
+    </genClasses>
+    <genClasses ecoreClass="SecMF.ecore#//SecModelSubclause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SecMF.ecore#//SecModelSubclause/classification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SecMF.ecore#//SecModelSubclause/declassification"/>
+    </genClasses>
+    <genClasses ecoreClass="SecMF.ecore#//SMFClassification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SecMF.ecore#//SMFClassification/feature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SecMF.ecore#//SMFClassification/typeRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute SecMF.ecore#//SMFClassification/typeName"/>
+    </genClasses>
+    <genClasses ecoreClass="SecMF.ecore#//SMFTypeRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SecMF.ecore#//SMFTypeRef/typeName"/>
+    </genClasses>
+    <genClasses ecoreClass="SecMF.ecore#//SMFDeclassification">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SecMF.ecore#//SMFDeclassification/flow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SecMF.ecore#//SMFDeclassification/srcName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SecMF.ecore#//SMFDeclassification/any"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SecMF.ecore#//SMFDeclassification/snkName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SecMF.ecore#//SMFDeclassification/srcTypeName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SecMF.ecore#//SMFDeclassification/snkTypeName"/>
+    </genClasses>
+    <genClasses ecoreClass="SecMF.ecore#//SmfTypeDef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SecMF.ecore#//SmfTypeDef/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SecMF.ecore#//SmfTypeDef/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="SecMF.ecore#//SecMFRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SecMF.ecore#//SecMFRoot/library"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SecMF.ecore#//SecMFRoot/subclauses"/>
+    </genClasses>
+    <genClasses ecoreClass="SecMF.ecore#//SmfType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SecMF.ecore#//SmfType/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SecMF.ecore#//SmfType/superType"/>
+    </genClasses>
+    <genClasses ecoreClass="SecMF.ecore#//FeatureRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SecMF.ecore#//FeatureRef/featureRef"/>
+    </genClasses>
+    <genClasses ecoreClass="SecMF.ecore#//SrcType"/>
+    <genClasses ecoreClass="SecMF.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SecMF.ecore#//Model/greetings"/>
+    </genClasses>
+    <genClasses ecoreClass="SecMF.ecore#//Greeting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SecMF.ecore#//Greeting/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
