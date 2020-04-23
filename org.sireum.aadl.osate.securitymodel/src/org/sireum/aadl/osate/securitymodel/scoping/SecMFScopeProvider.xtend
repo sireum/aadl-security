@@ -117,9 +117,13 @@ class SecMFScopeProvider extends org.osate.xtext.aadl2.properties.scoping.Proper
 		(context.getImportedUnits.map[mu | 
 			if(mu instanceof AadlPackageImpl) {
 				val al = (mu as AadlPackageImpl).getPublicSection
-				val sl = al.getOwnedAnnexLibraries.map[(it as DefaultAnnexLibrary).getParsedAnnexLibrary].filter[it instanceof SecModelLibrary]
-				val sll = sl.map[it as SecModelLibrary]
-				sll.map[it.getTypes].flatten
+				if(al != null) {
+					val sl = al.getOwnedAnnexLibraries.map[(it as DefaultAnnexLibrary).getParsedAnnexLibrary].filter[it instanceof SecModelLibrary]
+					val sll = sl.map[it as SecModelLibrary]
+					sll.map[it.getTypes].flatten
+				} else {
+					emptyList
+				}
 			} else {
 				emptyList
 			}
