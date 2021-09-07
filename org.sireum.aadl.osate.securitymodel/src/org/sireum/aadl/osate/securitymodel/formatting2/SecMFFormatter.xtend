@@ -29,7 +29,7 @@ import org.eclipse.xtext.formatting2.IFormattableDocument;
 import org.osate.xtext.aadl2.properties.formatting2.PropertiesFormatter;
 import org.sireum.aadl.osate.securitymodel.secMF.SMFClassification;
 import org.sireum.aadl.osate.securitymodel.secMF.SMFDeclassification;
-import org.sireum.aadl.osate.securitymodel.secMF.SecMFRoot;
+//import org.sireum.aadl.osate.securitymodel.secMF.SecMFRoot;
 import org.sireum.aadl.osate.securitymodel.secMF.SecModelSubclause;
 import org.sireum.aadl.osate.securitymodel.services.SecMFGrammarAccess;
 
@@ -37,12 +37,12 @@ class SecMFFormatter extends PropertiesFormatter {
 	
 	@Inject extension SecMFGrammarAccess
 
-	def dispatch void format(SecMFRoot secmfroot, extension IFormattableDocument document) {
-		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
-		for (SecModelSubclause subclauses : secmfroot.getSubclauses()) {
-			format(subclauses, document);
-		}
-	}
+//	def dispatch void format(SecMFRoot secmfroot, extension IFormattableDocument document) {
+//		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
+//		for (SecModelSubclause subclauses : secmfroot.getSubclauses()) {
+//			format(subclauses, document);
+//		}
+//	}
 
 	def dispatch void format(SecModelSubclause secmodelsubclause, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 

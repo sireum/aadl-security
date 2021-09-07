@@ -15,10 +15,11 @@ Require-Bundle: org.sireum.aadl.osate.securitymodel,
  org.eclipse.ui,
  org.eclipse.compare,
  org.eclipse.xtext.builder,
- org.eclipse.xtext.xbase.lib,
- org.antlr.runtime,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
  org.osate.xtext.aadl2.properties.ui,
- org.osate.aadl2
+ org.osate.aadl2,
+ org.eclipse.xtend.lib;resolution:=optional
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.sireum.aadl.osate.securitymodel.ui;
@@ -37,5 +38,8 @@ Export-Package: org.sireum.aadl.osate.securitymodel.ui;
  org.sireum.aadl.osate.securitymodel.ui.internal;uses:="org.osgi.framework,com.google.inject,org.eclipse.ui.plugin",
  org.sireum.aadl.osate.securitymodel.ui.labeling;uses:="org.eclipse.xtext.ui.label,org.eclipse.emf.edit.ui.provider",
  org.sireum.aadl.osate.securitymodel.ui.outline;uses:="org.eclipse.xtext.ui.editor.outline.impl",
- org.sireum.aadl.osate.securitymodel.ui.quickfix;uses:="org.eclipse.xtext.ui.editor.quickfix"
-Bundle-Activator: org.sireum.aadl.osate.securitymodel.ui.internal.SecMFActivator
+ org.sireum.aadl.osate.securitymodel.ui.quickfix;uses:="org.eclipse.xtext.ui.editor.quickfix",
+ org.sireum.aadl.osate.securitymodel.ide.contentassist.antlr.lexer,
+ org.sireum.aadl.osate.securitymodel.ide.contentassist.antlr,
+ org.sireum.aadl.osate.securitymodel.ide.contentassist.antlr.internal
+Bundle-Activator: org.sireum.aadl.osate.securitymodel.ui.internal.SecuritymodelActivator

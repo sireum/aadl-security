@@ -1,38 +1,25 @@
 module org.sireum.aadl.osate.securitymodel.GenerateSecMF
 
-
 import org.eclipse.emf.mwe.utils.*
-import org.eclipse.xtext.generator.*
-import org.eclipse.xtext.ui.generator.*
-import org.osate.xtext.aadl2.errormodel.*
+import org.eclipse.xtext.xtext.generator.*
+import org.eclipse.xtext.xtext.generator.model.project.*
 
 var grammarURI = "classpath:/org/sireum/aadl/osate/securitymodel/SecMF.xtext"
 var file.extensions = "smf,smflib"
 var projectName = "org.sireum.aadl.osate.securitymodel"
 var runtimeProject = "../${projectName}"
 var fileHeader = "
-/** Copyright (c) 2020, Hariharan Thiagarajan, Kansas State University
+/** Copyright (c) 2021, Kansas State University
+ *
  * All rights reserved.
  *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- *    list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- *    this list of conditions and the following disclaimer in the documentation
- *    and/or other materials provided with the distribution.
+ * 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */"
 
 Workflow {
@@ -90,7 +77,6 @@ Workflow {
         registerGenModelFile = "platform:/resource/org.eclipse.uml2.types/model/Types.genmodel"
         registerGenModelFile = "platform:/resource/org.eclipse.uml2.uml/model/UML.genmodel"
         registerGenModelFile = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
-
 		registerGeneratedEPackage = "org.osate.aadl2.Aadl2Package"
 		registerGenModelFile = "platform:/resource/org.osate.aadl2/model/aadl2.genmodel"
 //		registerGenModelFile = "platform:/resource/org.osate.xtext.aadl2.errormodel/src/org/osate/xtext/aadl2/errormodel/ErrorModel.genmodel"
@@ -104,117 +90,87 @@ Workflow {
 		directory = "${runtimeProject}.ui/src-gen"
 	}
 	
-	component = Generator auto-inject {
-		pathRtProject = runtimeProject
-		pathUiProject = "${runtimeProject}.ui"
-//		pathTestProject = "${runtimeProject}.test"
-		projectNameRt = projectName
-		projectNameUi = "${projectName}.ui"
+	component = XtextGenerator {
+		configuration = {
+			project = StandardProjectConfig {
+				baseName = projectName
+				rootPath = ".."
+				runtimeTest = {
+					enabled = false
+				}
+				genericIde = {
+					name = "${projectName}.ui"
+				}
+				eclipsePlugin = {
+					enabled = true
+				}
+				eclipsePluginTest = {
+					enabled = false
+				}
+				createEclipseMetaData = true
+			}
+			code = {
+				preferXtendStubs = false
+				encoding = "UTF-8"
+				lineDelimiter = "\n"
+				fileHeader = fileHeader
+			}
+		}
+//		pathRtProject = runtimeProject
+//		pathUiProject = "${runtimeProject}.ui"
+//		projectNameRt = projectName
+//		projectNameUi = "${projectName}.ui"
 		language = {
-			uri = grammarURI
+			grammarUri = grammarURI
+			//name  = "org.sireum.aadl.osate.securitymodel"
 			fileExtensions = file.extensions
-			
-			//loadedResource = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
-			
-
-			// Java API to access grammar elements (required by several other fragments)
-			fragment = grammarAccess.GrammarAccessFragment {}
-
-			// generates Java API for the generated EPackages 
-			fragment = EMFGeneratorFragmentCustom auto-inject {
+			fragment = grammarAccess.GrammarAccessFragment2 {}
+			fragment = ecore.EMFGeneratorFragment2 {
+				generateEdit = true
+//				editPluginID = "${projectName}.ide"
+//				editDirectory = "/${projectName}.ide/src"
 			}
-
-//			// the serialization component
-//			fragment = parseTreeConstructor.ParseTreeConstructorFragment {}
-            // Serializer 2.0
-            fragment = serializer.SerializerFragment {}
-
-			// a custom ResourceFactory for use with EMF 
-			fragment = resourceFactory.ResourceFactoryFragment {
-				fileExtensions = file.extensions
+			fragment = serializer.SerializerFragment2 {}
+			fragment = resourceFactory.ResourceFactoryFragment2 {}
+			fragment = parser.antlr.XtextAntlrGeneratorFragment2 {
+				options = {
+					classSplitting = true
+					ignoreCase = true
+				}
 			}
-
-			// The antlr parser generator fragment.
-//			fragment = parser.antlr.XtextAntlrGeneratorFragment {
-//			//  options = {
-//			//		backtrack = true
-//			//	}
-//			}
-			fragment = parser.antlr.ex.rt.AntlrGeneratorFragment {
-    		options = {
-        		ignoreCase = true
-//				backtrack = true
-//				classSplitting = true
-    			}
+			//fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 {}
+			fragment = validation.ValidatorFragment2 {
+			//composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
 			}
-			
-			// java-based API for validation 
-			fragment = validation.JavaValidatorFragment {
-//				composedCheck = "org.eclipse.xtext.validation.ImportUriValidator"
-//				composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
-				// registerForImportedPackages = true
+			fragment = scoping.ImportNamespacesScopingFragment2 {
+				generateXtendStub = true
+				ignoreCase = true
 			}
-
-			// scoping and exporting API
-			// fragment = scoping.ImportURIScopingFragment {}
-//			 fragment = exporting.SimpleNamesFragment {}
-
-			// scoping and exporting API 
-			fragment = scoping.ImportNamespacesScopingFragment {
+			fragment = exporting.QualifiedNamesFragment2 {}
+			fragment = builder.BuilderIntegrationFragment2 {}
+			//fragment = generator.GeneratorFragment2 {}
+			fragment = formatting.Formatter2Fragment2 {
 				generateXtendStub = true
 			}
-			fragment = exporting.QualifiedNamesFragment {}
-			fragment = builder.BuilderIntegrationFragment {}
-
-//			// generator API
-//			fragment = generator.GeneratorFragment {
-//				generateMwe = true
-//				generateJavaMain = true
-//			}
-			
-			// formatter API 
-			fragment = formatting2.Formatter2Fragment {}
-
-			// labeling API 
-			fragment = labeling.LabelProviderFragment {}
-
-			// outline API 
-			fragment = outline.OutlineTreeProviderFragment {}
-			fragment = outline.QuickOutlineFragment {}
-
-			// quickfix API 
-			fragment = quickfix.QuickfixProviderFragment {}
-
-			// content assist API  
-			fragment = contentAssist.ContentAssistFragment {}
-			
-			// rename refactoring  
-			fragment = refactoring.RefactorElementNameFragment {}
-
-			// generates a more lightweight Antlr parser and lexer tailored for content assist  
-//			fragment = parser.antlr.XtextAntlrUiGeneratorFragment {}
-			fragment = parser.antlr.ex.ca.ContentAssistParserGeneratorFragment {
-				options = {
-        			ignoreCase = true
-        			//backtrack=true
-					//classSplitting = true
-				}
-				partialParsing = true
+			fragment = ui.labeling.LabelProviderFragment2 {}
+			fragment = ui.outline.QuickOutlineFragment2 {}
+			fragment = ui.outline.OutlineTreeProviderFragment2 {}
+			fragment = ui.quickfix.QuickfixProviderFragment2 {}
+			fragment = ui.contentAssist.ContentAssistFragment2 {
+				generateXtendStub = true
 			}
-
-			// generates junit test support classes into Generator#pathTestProject
-//			fragment = junit.Junit4Fragment {}
-
-			// project wizard (optional) 
-			// fragment = projectWizard.SimpleProjectWizardFragment {
-			// 		generatorProjectName = "${projectName}.generator" 
-			//		modelFileExtension = file.extensions
-			// }
-			
-			//fragment = types.TypesGeneratorFragment {}
-			// generates the required bindings only if the grammar inherits from Xbase
-			//fragment = xbase.XbaseGeneratorFragment {}
+			//fragment = junit.JunitFragment {}
+			fragment = ui.refactoring.RefactorElementNameFragment2 {}
+			//fragment = types.TypesGeneratorFragment2 {}
+			//fragment = xbase.XtypeGeneratorFragment2 {}
+			//fragment = xbase.XbaseGeneratorFragment2 {}
+			//fragment = ui.templates.CodetemplatesGeneratorFragment2 {}
+			//fragment = ui.compare.CompareFragment2 {}
+			//fragment = web.WebIntegrationFragment {
+			//	framework = "Ace"
+			//}
+			//fragment = ui.projectWizard.TemplateProjectWizardFragment {}
+			//fragment = ui.fileWizard.TemplateFileWizardFragment {}
 		}
 	}
 }
-

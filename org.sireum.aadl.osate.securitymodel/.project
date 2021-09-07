@@ -3,6 +3,7 @@
 	<name>org.sireum.aadl.osate.securitymodel</name>
 	<comment></comment>
 	<projects>
+		<project>org.sireum.aadl.osate.securitymodel.ide</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

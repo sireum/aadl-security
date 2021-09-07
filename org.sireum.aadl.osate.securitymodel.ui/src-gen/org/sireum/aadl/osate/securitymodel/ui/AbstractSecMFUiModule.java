@@ -1,182 +1,226 @@
 
-
-/** Copyright (c) 2020, Hariharan Thiagarajan, Kansas State University
+/** Copyright (c) 2021, Kansas State University
+ *
  * All rights reserved.
  *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- *    list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- *    this list of conditions and the following disclaimer in the documentation
- *    and/or other materials provided with the distribution.
+ * 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 package org.sireum.aadl.osate.securitymodel.ui;
 
+import com.google.inject.Binder;
+import com.google.inject.Provider;
+import com.google.inject.name.Names;
+import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.xtext.builder.EclipseOutputConfigurationProvider;
+import org.eclipse.xtext.builder.builderState.IBuilderState;
+import org.eclipse.xtext.builder.clustering.CurrentDescriptions;
+import org.eclipse.xtext.builder.impl.PersistentDataAwareDirtyResource;
+import org.eclipse.xtext.builder.nature.NatureAddingEditorCallback;
+import org.eclipse.xtext.generator.IContextualOutputConfigurationProvider;
+import org.eclipse.xtext.ide.LexerIdeBindings;
+import org.eclipse.xtext.ide.editor.contentassist.antlr.IContentAssistParser;
+import org.eclipse.xtext.ide.editor.contentassist.antlr.internal.Lexer;
+import org.eclipse.xtext.parser.antlr.AntlrTokenDefProvider;
+import org.eclipse.xtext.parser.antlr.ITokenDefProvider;
+import org.eclipse.xtext.parser.antlr.LexerProvider;
+import org.eclipse.xtext.resource.IResourceDescriptions;
+import org.eclipse.xtext.resource.containers.IAllContainersState;
+import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
+import org.eclipse.xtext.ui.DefaultUiModule;
+import org.eclipse.xtext.ui.editor.DocumentBasedDirtyResource;
+import org.eclipse.xtext.ui.editor.IXtextEditorCallback;
+import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
+import org.eclipse.xtext.ui.editor.contentassist.FQNPrefixMatcher;
+import org.eclipse.xtext.ui.editor.contentassist.IContentProposalProvider;
+import org.eclipse.xtext.ui.editor.contentassist.IProposalConflictHelper;
+import org.eclipse.xtext.ui.editor.contentassist.PrefixMatcher;
+import org.eclipse.xtext.ui.editor.contentassist.antlr.AntlrProposalConflictHelper;
+import org.eclipse.xtext.ui.editor.contentassist.antlr.DelegatingContentAssistContextFactory;
+import org.eclipse.xtext.ui.editor.formatting.IContentFormatterFactory;
+import org.eclipse.xtext.ui.editor.formatting2.ContentFormatterFactory;
+import org.eclipse.xtext.ui.editor.outline.IOutlineTreeProvider;
+import org.eclipse.xtext.ui.editor.outline.impl.IOutlineTreeStructureProvider;
+import org.eclipse.xtext.ui.editor.preferences.IPreferenceStoreInitializer;
+import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionProvider;
+import org.eclipse.xtext.ui.refactoring.IDependentElementsCalculator;
+import org.eclipse.xtext.ui.refactoring.IReferenceUpdater;
+import org.eclipse.xtext.ui.refactoring.IRenameRefactoringProvider;
+import org.eclipse.xtext.ui.refactoring.IRenameStrategy;
+import org.eclipse.xtext.ui.refactoring.impl.DefaultDependentElementsCalculator;
+import org.eclipse.xtext.ui.refactoring.impl.DefaultReferenceUpdater;
+import org.eclipse.xtext.ui.refactoring.impl.DefaultRenameRefactoringProvider;
+import org.eclipse.xtext.ui.refactoring.impl.DefaultRenameStrategy;
+import org.eclipse.xtext.ui.refactoring.ui.DefaultRenameSupport;
+import org.eclipse.xtext.ui.refactoring.ui.IRenameSupport;
+import org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferences;
+import org.eclipse.xtext.ui.resource.ResourceServiceDescriptionLabelProvider;
+import org.eclipse.xtext.ui.shared.Access;
+import org.sireum.aadl.osate.securitymodel.ide.contentassist.antlr.SecMFParser;
+import org.sireum.aadl.osate.securitymodel.ide.contentassist.antlr.lexer.InternalSecMFLexer;
+import org.sireum.aadl.osate.securitymodel.ui.contentassist.SecMFProposalProvider;
+import org.sireum.aadl.osate.securitymodel.ui.labeling.SecMFDescriptionLabelProvider;
+import org.sireum.aadl.osate.securitymodel.ui.labeling.SecMFLabelProvider;
+import org.sireum.aadl.osate.securitymodel.ui.outline.SecMFOutlineTreeProvider;
+import org.sireum.aadl.osate.securitymodel.ui.quickfix.SecMFQuickfixProvider;
 
 /**
- * Manual modifications go to {org.sireum.aadl.osate.securitymodel.ui.SecMFUiModule}
+ * Manual modifications go to {@link SecMFUiModule}.
  */
 @SuppressWarnings("all")
-public abstract class AbstractSecMFUiModule extends org.eclipse.xtext.ui.DefaultUiModule {
-	
+public abstract class AbstractSecMFUiModule extends DefaultUiModule {
+
 	public AbstractSecMFUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
 	}
 	
+	// contributed by org.eclipse.xtext.xtext.generator.ImplicitFragment
+	public Provider<? extends IAllContainersState> provideIAllContainersState() {
+		return Access.getJavaProjectsState();
+	}
 	
-	// contributed by org.eclipse.xtext.ui.generator.ImplicitUiFragment
-	public com.google.inject.Provider<org.eclipse.xtext.resource.containers.IAllContainersState> provideIAllContainersState() {
-		return org.eclipse.xtext.ui.shared.Access.getJavaProjectsState();
+	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
+	public Class<? extends IProposalConflictHelper> bindIProposalConflictHelper() {
+		return AntlrProposalConflictHelper.class;
 	}
-
-	// contributed by org.eclipse.xtext.generator.parser.antlr.ex.rt.AntlrGeneratorFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.IProposalConflictHelper> bindIProposalConflictHelper() {
-		return org.eclipse.xtext.ui.editor.contentassist.antlr.AntlrProposalConflictHelper.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
+	public void configureContentAssistLexer(Binder binder) {
+		binder.bind(Lexer.class)
+			.annotatedWith(Names.named(LexerIdeBindings.CONTENT_ASSIST))
+			.to(InternalSecMFLexer.class);
 	}
-
-	// contributed by org.eclipse.xtext.generator.parser.antlr.ex.rt.AntlrGeneratorFragment
-	public void configureHighlightingLexer(com.google.inject.Binder binder) {
-		binder.bind(org.eclipse.xtext.parser.antlr.Lexer.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.ui.LexerUIBindings.HIGHLIGHTING)).to(org.sireum.aadl.osate.securitymodel.parser.antlr.lexer.InternalSecMFLexer.class);
+	
+	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
+	public void configureHighlightingLexer(Binder binder) {
+		binder.bind(org.eclipse.xtext.parser.antlr.Lexer.class)
+			.annotatedWith(Names.named(LexerIdeBindings.HIGHLIGHTING))
+			.to(org.sireum.aadl.osate.securitymodel.parser.antlr.lexer.InternalSecMFLexer.class);
 	}
-
-	// contributed by org.eclipse.xtext.generator.parser.antlr.ex.rt.AntlrGeneratorFragment
-	public void configureHighlightingTokenDefProvider(com.google.inject.Binder binder) {
-		binder.bind(org.eclipse.xtext.parser.antlr.ITokenDefProvider.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.ui.LexerUIBindings.HIGHLIGHTING)).to(org.eclipse.xtext.parser.antlr.AntlrTokenDefProvider.class);
+	
+	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
+	public void configureHighlightingTokenDefProvider(Binder binder) {
+		binder.bind(ITokenDefProvider.class)
+			.annotatedWith(Names.named(LexerIdeBindings.HIGHLIGHTING))
+			.to(AntlrTokenDefProvider.class);
 	}
-
-	// contributed by org.eclipse.xtext.generator.exporting.QualifiedNamesFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.PrefixMatcher> bindPrefixMatcher() {
-		return org.eclipse.xtext.ui.editor.contentassist.FQNPrefixMatcher.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
+	public Class<? extends ContentAssistContext.Factory> bindContentAssistContext$Factory() {
+		return DelegatingContentAssistContextFactory.class;
 	}
-
-	// contributed by org.eclipse.xtext.generator.exporting.QualifiedNamesFragment
-	public Class<? extends org.eclipse.xtext.ui.refactoring.IDependentElementsCalculator> bindIDependentElementsCalculator() {
-		return org.eclipse.xtext.ui.refactoring.impl.DefaultDependentElementsCalculator.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
+	public Class<? extends IContentAssistParser> bindIContentAssistParser() {
+		return SecMFParser.class;
 	}
-
-	// contributed by org.eclipse.xtext.generator.builder.BuilderIntegrationFragment
-	public void configureIResourceDescriptionsBuilderScope(com.google.inject.Binder binder) {
-		binder.bind(org.eclipse.xtext.resource.IResourceDescriptions.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider.NAMED_BUILDER_SCOPE)).to(org.eclipse.xtext.builder.clustering.CurrentDescriptions.ResourceSetAware.class);
+	
+	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
+	public void configureContentAssistLexerProvider(Binder binder) {
+		binder.bind(InternalSecMFLexer.class).toProvider(LexerProvider.create(InternalSecMFLexer.class));
 	}
-
-	// contributed by org.eclipse.xtext.generator.builder.BuilderIntegrationFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.IXtextEditorCallback> bindIXtextEditorCallback() {
-		return org.eclipse.xtext.builder.nature.NatureAddingEditorCallback.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.exporting.QualifiedNamesFragment2
+	public Class<? extends PrefixMatcher> bindPrefixMatcher() {
+		return FQNPrefixMatcher.class;
 	}
-
-	// contributed by org.eclipse.xtext.generator.builder.BuilderIntegrationFragment
-	public Class<? extends org.eclipse.xtext.generator.IContextualOutputConfigurationProvider> bindIContextualOutputConfigurationProvider() {
-		return org.eclipse.xtext.builder.EclipseOutputConfigurationProvider.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.exporting.QualifiedNamesFragment2
+	public Class<? extends IDependentElementsCalculator> bindIDependentElementsCalculator() {
+		return DefaultDependentElementsCalculator.class;
 	}
-
-	// contributed by org.eclipse.xtext.generator.builder.BuilderIntegrationFragment
-	public void configureIResourceDescriptionsPersisted(com.google.inject.Binder binder) {
-		binder.bind(org.eclipse.xtext.resource.IResourceDescriptions.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider.PERSISTED_DESCRIPTIONS)).to(org.eclipse.xtext.builder.builderState.IBuilderState.class);
+	
+	// contributed by org.eclipse.xtext.xtext.generator.builder.BuilderIntegrationFragment2
+	public void configureIResourceDescriptionsBuilderScope(Binder binder) {
+		binder.bind(IResourceDescriptions.class).annotatedWith(Names.named(ResourceDescriptionsProvider.NAMED_BUILDER_SCOPE)).to(CurrentDescriptions.ResourceSetAware.class);
 	}
-
-	// contributed by org.eclipse.xtext.generator.builder.BuilderIntegrationFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.DocumentBasedDirtyResource> bindDocumentBasedDirtyResource() {
-		return org.eclipse.xtext.builder.impl.PersistentDataAwareDirtyResource.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.builder.BuilderIntegrationFragment2
+	public Class<? extends IXtextEditorCallback> bindIXtextEditorCallback() {
+		return NatureAddingEditorCallback.class;
 	}
-
-	// contributed by org.eclipse.xtext.generator.formatting2.Formatter2Fragment
-	public Class<? extends org.eclipse.xtext.ui.editor.formatting.IContentFormatterFactory> bindIContentFormatterFactory() {
-		return org.eclipse.xtext.ui.editor.formatting2.ContentFormatterFactory.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.builder.BuilderIntegrationFragment2
+	public Class<? extends IContextualOutputConfigurationProvider> bindIContextualOutputConfigurationProvider() {
+		return EclipseOutputConfigurationProvider.class;
 	}
-
-	// contributed by org.eclipse.xtext.ui.generator.labeling.LabelProviderFragment
-	public Class<? extends org.eclipse.jface.viewers.ILabelProvider> bindILabelProvider() {
-		return org.sireum.aadl.osate.securitymodel.ui.labeling.SecMFLabelProvider.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.builder.BuilderIntegrationFragment2
+	public void configureIResourceDescriptionsPersisted(Binder binder) {
+		binder.bind(IResourceDescriptions.class).annotatedWith(Names.named(ResourceDescriptionsProvider.PERSISTED_DESCRIPTIONS)).to(IBuilderState.class);
 	}
-
-	// contributed by org.eclipse.xtext.ui.generator.labeling.LabelProviderFragment
-	public void configureResourceUIServiceLabelProvider(com.google.inject.Binder binder) {
-		binder.bind(org.eclipse.jface.viewers.ILabelProvider.class).annotatedWith(org.eclipse.xtext.ui.resource.ResourceServiceDescriptionLabelProvider.class).to(org.sireum.aadl.osate.securitymodel.ui.labeling.SecMFDescriptionLabelProvider.class);
+	
+	// contributed by org.eclipse.xtext.xtext.generator.builder.BuilderIntegrationFragment2
+	public Class<? extends DocumentBasedDirtyResource> bindDocumentBasedDirtyResource() {
+		return PersistentDataAwareDirtyResource.class;
 	}
-
-	// contributed by org.eclipse.xtext.ui.generator.outline.OutlineTreeProviderFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.outline.IOutlineTreeProvider> bindIOutlineTreeProvider() {
-		return org.sireum.aadl.osate.securitymodel.ui.outline.SecMFOutlineTreeProvider.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.formatting.Formatter2Fragment2
+	public Class<? extends IContentFormatterFactory> bindIContentFormatterFactory() {
+		return ContentFormatterFactory.class;
 	}
-
-	// contributed by org.eclipse.xtext.ui.generator.outline.OutlineTreeProviderFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.outline.impl.IOutlineTreeStructureProvider> bindIOutlineTreeStructureProvider() {
-		return org.sireum.aadl.osate.securitymodel.ui.outline.SecMFOutlineTreeProvider.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.labeling.LabelProviderFragment2
+	public Class<? extends ILabelProvider> bindILabelProvider() {
+		return SecMFLabelProvider.class;
 	}
-
-	// contributed by org.eclipse.xtext.ui.generator.quickfix.QuickfixProviderFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.quickfix.IssueResolutionProvider> bindIssueResolutionProvider() {
-		return org.sireum.aadl.osate.securitymodel.ui.quickfix.SecMFQuickfixProvider.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.labeling.LabelProviderFragment2
+	public void configureResourceUIServiceLabelProvider(Binder binder) {
+		binder.bind(ILabelProvider.class).annotatedWith(ResourceServiceDescriptionLabelProvider.class).to(SecMFDescriptionLabelProvider.class);
 	}
-
-	// contributed by org.eclipse.xtext.ui.generator.contentAssist.ContentAssistFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.IContentProposalProvider> bindIContentProposalProvider() {
-		return org.sireum.aadl.osate.securitymodel.ui.contentassist.SecMFProposalProvider.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.outline.OutlineTreeProviderFragment2
+	public Class<? extends IOutlineTreeProvider> bindIOutlineTreeProvider() {
+		return SecMFOutlineTreeProvider.class;
 	}
-
-	// contributed by org.eclipse.xtext.ui.generator.refactoring.RefactorElementNameFragment
-	public Class<? extends org.eclipse.xtext.ui.refactoring.IRenameStrategy> bindIRenameStrategy() {
-		return org.eclipse.xtext.ui.refactoring.impl.DefaultRenameStrategy.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.outline.OutlineTreeProviderFragment2
+	public Class<? extends IOutlineTreeStructureProvider> bindIOutlineTreeStructureProvider() {
+		return SecMFOutlineTreeProvider.class;
 	}
-
-	// contributed by org.eclipse.xtext.ui.generator.refactoring.RefactorElementNameFragment
-	public Class<? extends org.eclipse.xtext.ui.refactoring.IReferenceUpdater> bindIReferenceUpdater() {
-		return org.eclipse.xtext.ui.refactoring.impl.DefaultReferenceUpdater.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.quickfix.QuickfixProviderFragment2
+	public Class<? extends IssueResolutionProvider> bindIssueResolutionProvider() {
+		return SecMFQuickfixProvider.class;
 	}
-
-	// contributed by org.eclipse.xtext.ui.generator.refactoring.RefactorElementNameFragment
-	public void configureIPreferenceStoreInitializer(com.google.inject.Binder binder) {
-		binder.bind(org.eclipse.xtext.ui.editor.preferences.IPreferenceStoreInitializer.class).annotatedWith(com.google.inject.name.Names.named("RefactoringPreferences")).to(org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferences.Initializer.class);
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.contentAssist.ContentAssistFragment2
+	public Class<? extends IContentProposalProvider> bindIContentProposalProvider() {
+		return SecMFProposalProvider.class;
 	}
-
-	// contributed by org.eclipse.xtext.ui.generator.refactoring.RefactorElementNameFragment
-	public Class<? extends org.eclipse.xtext.ui.refactoring.IRenameRefactoringProvider> bindIRenameRefactoringProvider() {
-		return org.eclipse.xtext.ui.refactoring.impl.DefaultRenameRefactoringProvider.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.refactoring.RefactorElementNameFragment2
+	public void configureIPreferenceStoreInitializer(Binder binder) {
+		binder.bind(IPreferenceStoreInitializer.class)
+			.annotatedWith(Names.named("RefactoringPreferences"))
+			.to(RefactoringPreferences.Initializer.class);
 	}
-
-	// contributed by org.eclipse.xtext.ui.generator.refactoring.RefactorElementNameFragment
-	public Class<? extends org.eclipse.xtext.ui.refactoring.ui.IRenameSupport.Factory> bindIRenameSupport$Factory() {
-		return org.eclipse.xtext.ui.refactoring.ui.DefaultRenameSupport.Factory.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.refactoring.RefactorElementNameFragment2
+	public Class<? extends IRenameStrategy> bindIRenameStrategy() {
+		return DefaultRenameStrategy.class;
 	}
-
-	// contributed by org.eclipse.xtext.generator.parser.antlr.ex.ca.ContentAssistParserGeneratorFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext.Factory> bindContentAssistContext$Factory() {
-		return org.eclipse.xtext.ui.editor.contentassist.antlr.ParserBasedContentAssistContextFactory.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.refactoring.RefactorElementNameFragment2
+	public Class<? extends IReferenceUpdater> bindIReferenceUpdater() {
+		return DefaultReferenceUpdater.class;
 	}
-
-	// contributed by org.eclipse.xtext.generator.parser.antlr.ex.ca.ContentAssistParserGeneratorFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.antlr.IContentAssistParser> bindIContentAssistParser() {
-		return org.sireum.aadl.osate.securitymodel.ui.contentassist.antlr.SecMFParser.class;
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.refactoring.RefactorElementNameFragment2
+	public Class<? extends IRenameRefactoringProvider> bindIRenameRefactoringProvider() {
+		return DefaultRenameRefactoringProvider.class;
 	}
-
-	// contributed by org.eclipse.xtext.generator.parser.antlr.ex.ca.ContentAssistParserGeneratorFragment
-	public void configureContentAssistLexerProvider(com.google.inject.Binder binder) {
-		binder.bind(org.sireum.aadl.osate.securitymodel.ui.contentassist.antlr.lexer.InternalSecMFLexer.class).toProvider(org.eclipse.xtext.parser.antlr.LexerProvider.create(org.sireum.aadl.osate.securitymodel.ui.contentassist.antlr.lexer.InternalSecMFLexer.class));
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.refactoring.RefactorElementNameFragment2
+	public Class<? extends IRenameSupport.Factory> bindIRenameSupport$Factory() {
+		return DefaultRenameSupport.Factory.class;
 	}
-
-	// contributed by org.eclipse.xtext.generator.parser.antlr.ex.ca.ContentAssistParserGeneratorFragment
-	public void configureContentAssistLexer(com.google.inject.Binder binder) {
-		binder.bind(org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.ui.LexerUIBindings.CONTENT_ASSIST)).to(org.sireum.aadl.osate.securitymodel.ui.contentassist.antlr.lexer.InternalSecMFLexer.class);
-	}
-
-	// contributed by org.eclipse.xtext.generator.parser.antlr.ex.ca.ContentAssistParserGeneratorFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.antlr.ParserBasedContentAssistContextFactory.StatefulFactory> bindParserBasedContentAssistContextFactory$StatefulFactory() {
-		return org.eclipse.xtext.ui.editor.contentassist.antlr.ParserBasedContentAssistContextFactory.PartialStatefulFactory.class;
-	}
-
-
+	
 }

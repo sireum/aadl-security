@@ -38,7 +38,7 @@ public class SMFQualifiedNameProvider extends DefaultDeclarativeQualifiedNamePro
 			if (nameElement instanceof SecModelLibrary || nameElement instanceof SecModelSubclause) {
 				return nameElement.getName();
 			}
-			SecModelLibrary sml = ((SecMFRoot) root).getLibrary();
+			SecModelLibrary sml = null;// ((SecMFRoot) root).getLibrary();
 			if(sml != null) {
 				return root.getName()+"::"+nameElement.getName();
 			}

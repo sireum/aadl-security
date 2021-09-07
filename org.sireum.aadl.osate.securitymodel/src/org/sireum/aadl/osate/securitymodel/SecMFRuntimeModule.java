@@ -3,59 +3,41 @@
  */
 package org.sireum.aadl.osate.securitymodel;
 
-import org.eclipse.xtext.formatting2.regionaccess.TextRegionAccessBuilder;
-import org.eclipse.xtext.naming.IQualifiedNameConverter;
-import org.eclipse.xtext.scoping.IGlobalScopeProvider;
-import org.eclipse.xtext.scoping.IScopeProvider;
-import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
-import org.eclipse.xtext.serializer.ISerializer;
-import org.eclipse.xtext.serializer.tokens.ICrossReferenceSerializer;
-import org.osate.aadl2.modelsupport.scoping.EClassGlobalScopeProvider;
-import org.osate.xtext.aadl2.formatting2.regionaccess.Aadl2TextRegionAccessBuilder;
-import org.sireum.aadl.osate.securitymodel.naming.SMFQualifiedNameConverter;
-import org.sireum.aadl.osate.securitymodel.naming.SMFQualifiedNameProvider;
-import org.sireum.aadl.osate.securitymodel.scoping.SMFImportedNamespaceAwareLocalScopeProvider;
-import org.sireum.aadl.osate.securitymodel.serializer.SecMFCrossReferenceSerializer;
-import org.sireum.aadl.osate.securitymodel.serializer.SecMFSerializer;
-
-import com.google.inject.Binder;
-import com.google.inject.name.Names;
-
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class SecMFRuntimeModule extends AbstractSecMFRuntimeModule {
 
-	@Override
-	public Class<? extends org.eclipse.xtext.naming.IQualifiedNameProvider> bindIQualifiedNameProvider() {
-		return SMFQualifiedNameProvider.class;
-	}
-
-	public Class<? extends IQualifiedNameConverter> bindIQualifiedNameConverter() {
-		return SMFQualifiedNameConverter.class;
-	}
-
-	public Class<? extends ICrossReferenceSerializer> bindICrossReferenceSerializer() {
-		return SecMFCrossReferenceSerializer.class;
-	}
-
-	@Override
-	public Class<? extends ISerializer> bindISerializer() {
-		return SecMFSerializer.class;
-	}
-
-	@Override
-	public void configureIScopeProviderDelegate(Binder binder) {
-		binder.bind(IScopeProvider.class).annotatedWith(Names.named(AbstractDeclarativeScopeProvider.NAMED_DELEGATE))
-		.to(SMFImportedNamespaceAwareLocalScopeProvider.class);
-	}
-
-	public Class<? extends TextRegionAccessBuilder> bindTextRegionAccessBuilder() {
-		return Aadl2TextRegionAccessBuilder.class;
-	}
-
-	@Override
-	public Class<? extends IGlobalScopeProvider> bindIGlobalScopeProvider() {
-		return EClassGlobalScopeProvider.class;
-	}
+//	@Override
+//	public Class<? extends org.eclipse.xtext.naming.IQualifiedNameProvider> bindIQualifiedNameProvider() {
+//		return SMFQualifiedNameProvider.class;
+//	}
+//
+//	public Class<? extends IQualifiedNameConverter> bindIQualifiedNameConverter() {
+//		return SMFQualifiedNameConverter.class;
+//	}
+//
+//	public Class<? extends ICrossReferenceSerializer> bindICrossReferenceSerializer() {
+//		return SecMFCrossReferenceSerializer.class;
+//	}
+//
+//	@Override
+//	public Class<? extends ISerializer> bindISerializer() {
+//		return SecMFSerializer.class;
+//	}
+//
+//	@Override
+//	public void configureIScopeProviderDelegate(Binder binder) {
+//		binder.bind(IScopeProvider.class).annotatedWith(Names.named(AbstractDeclarativeScopeProvider.NAMED_DELEGATE))
+//		.to(SMFImportedNamespaceAwareLocalScopeProvider.class);
+//	}
+//
+//	public Class<? extends TextRegionAccessBuilder> bindTextRegionAccessBuilder() {
+//		return Aadl2TextRegionAccessBuilder.class;
+//	}
+//
+//	@Override
+//	public Class<? extends IGlobalScopeProvider> bindIGlobalScopeProvider() {
+//		return EClassGlobalScopeProvider.class;
+//	}
 }

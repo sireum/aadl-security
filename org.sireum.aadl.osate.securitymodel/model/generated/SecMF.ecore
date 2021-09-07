@@ -26,7 +26,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="snkName" eType="#//SMFTypeRef"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SmfTypeDef" eSuperTypes="platform:/resource/org.osate.aadl2/model/aadl2.ecore#//NamedElement #//SMFTypeRef">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//SMFTypeRef"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" unique="false" upperBound="-1"
+        eType="#//SMFTypeRef"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SecMFRoot" eSuperTypes="platform:/resource/org.osate.aadl2/model/aadl2.ecore#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="library" eType="#//SecModelLibrary"

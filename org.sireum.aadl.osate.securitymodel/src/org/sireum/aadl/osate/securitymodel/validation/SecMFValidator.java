@@ -23,20 +23,24 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 package org.sireum.aadl.osate.securitymodel.validation;
- 
-import java.util.ArrayList;
-import java.util.List;
 
-import org.eclipse.emf.ecore.EPackage;
 
-public class AbstractSecMFJavaValidator extends org.osate.xtext.aadl2.properties.validation.PropertiesJavaValidator {
-
-	@Override
-	protected List<EPackage> getEPackages() {
-	    List<EPackage> result = new ArrayList<EPackage>();
-	    result.add(org.sireum.aadl.osate.securitymodel.secMF.SecMFPackage.eINSTANCE);
-	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://aadl.info/AADL/2.0"));
-		return result;
-	}
-
+/**
+ * This class contains custom validation rules. 
+ *
+ * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
+ */
+public class SecMFValidator extends AbstractSecMFValidator {
+	
+//	public static final INVALID_NAME = 'invalidName'
+//
+//	@Check
+//	public void checkGreetingStartsWithCapital(Greeting greeting) {
+//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
+//			warning("Name should start with a capital",
+//					SecMFPackage.Literals.GREETING__NAME,
+//					INVALID_NAME);
+//		}
+//	}
+	
 }

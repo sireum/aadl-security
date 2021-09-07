@@ -1,26 +1,15 @@
 
-/** Copyright (c) 2020, Hariharan Thiagarajan, Kansas State University
+/** Copyright (c) 2021, Kansas State University
+ *
  * All rights reserved.
  *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice, this
- *    list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- *    this list of conditions and the following disclaimer in the documentation
- *    and/or other materials provided with the distribution.
+ * 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 package org.sireum.aadl.osate.securitymodel.serializer;
 
@@ -31,6 +20,7 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
@@ -44,6 +34,7 @@ public abstract class AbstractSecMFSyntacticSequencer extends AbstractSyntacticS
 	protected SecMFGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_SMFLibrary___DomainTypesKeywordsParserRuleCall_0_1_2_0_EndTypesKeywordsParserRuleCall_0_1_2_2_SemicolonKeyword_0_1_2_3__q;
 	protected AbstractElementAlias match_SMFLibrary___DomainTypesKeywordsParserRuleCall_1_6_0_EndTypesKeywordsParserRuleCall_1_6_2_SemicolonKeyword_1_6_3__q;
+	protected AbstractElementAlias match_SMFTypeDef___ColonKeyword_1_0_0_TypeKeyword_1_0_1___or___ColonKeyword_1_1_0_TypeKeyword_1_1_1_ExtendsKeyword_1_1_2__;
 	protected AbstractElementAlias match_SecModelLibrary___DomainTypesKeywordsParserRuleCall_1_0_EndTypesKeywordsParserRuleCall_1_2_SemicolonKeyword_1_3__q;
 	
 	@Inject
@@ -51,6 +42,7 @@ public abstract class AbstractSecMFSyntacticSequencer extends AbstractSyntacticS
 		grammarAccess = (SecMFGrammarAccess) access;
 		match_SMFLibrary___DomainTypesKeywordsParserRuleCall_0_1_2_0_EndTypesKeywordsParserRuleCall_0_1_2_2_SemicolonKeyword_0_1_2_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSMFLibraryAccess().getDomainTypesKeywordsParserRuleCall_0_1_2_0()), new TokenAlias(false, false, grammarAccess.getSMFLibraryAccess().getEndTypesKeywordsParserRuleCall_0_1_2_2()), new TokenAlias(false, false, grammarAccess.getSMFLibraryAccess().getSemicolonKeyword_0_1_2_3()));
 		match_SMFLibrary___DomainTypesKeywordsParserRuleCall_1_6_0_EndTypesKeywordsParserRuleCall_1_6_2_SemicolonKeyword_1_6_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSMFLibraryAccess().getDomainTypesKeywordsParserRuleCall_1_6_0()), new TokenAlias(false, false, grammarAccess.getSMFLibraryAccess().getEndTypesKeywordsParserRuleCall_1_6_2()), new TokenAlias(false, false, grammarAccess.getSMFLibraryAccess().getSemicolonKeyword_1_6_3()));
+		match_SMFTypeDef___ColonKeyword_1_0_0_TypeKeyword_1_0_1___or___ColonKeyword_1_1_0_TypeKeyword_1_1_1_ExtendsKeyword_1_1_2__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getSMFTypeDefAccess().getColonKeyword_1_0_0()), new TokenAlias(false, false, grammarAccess.getSMFTypeDefAccess().getTypeKeyword_1_0_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getSMFTypeDefAccess().getColonKeyword_1_1_0()), new TokenAlias(false, false, grammarAccess.getSMFTypeDefAccess().getTypeKeyword_1_1_1()), new TokenAlias(false, false, grammarAccess.getSMFTypeDefAccess().getExtendsKeyword_1_1_2())));
 		match_SecModelLibrary___DomainTypesKeywordsParserRuleCall_1_0_EndTypesKeywordsParserRuleCall_1_2_SemicolonKeyword_1_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSecModelLibraryAccess().getDomainTypesKeywordsParserRuleCall_1_0()), new TokenAlias(false, false, grammarAccess.getSecModelLibraryAccess().getEndTypesKeywordsParserRuleCall_1_2()), new TokenAlias(false, false, grammarAccess.getSecModelLibraryAccess().getSemicolonKeyword_1_3()));
 	}
 	
@@ -187,6 +179,8 @@ public abstract class AbstractSecMFSyntacticSequencer extends AbstractSyntacticS
 				emit_SMFLibrary___DomainTypesKeywordsParserRuleCall_0_1_2_0_EndTypesKeywordsParserRuleCall_0_1_2_2_SemicolonKeyword_0_1_2_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_SMFLibrary___DomainTypesKeywordsParserRuleCall_1_6_0_EndTypesKeywordsParserRuleCall_1_6_2_SemicolonKeyword_1_6_3__q.equals(syntax))
 				emit_SMFLibrary___DomainTypesKeywordsParserRuleCall_1_6_0_EndTypesKeywordsParserRuleCall_1_6_2_SemicolonKeyword_1_6_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_SMFTypeDef___ColonKeyword_1_0_0_TypeKeyword_1_0_1___or___ColonKeyword_1_1_0_TypeKeyword_1_1_1_ExtendsKeyword_1_1_2__.equals(syntax))
+				emit_SMFTypeDef___ColonKeyword_1_0_0_TypeKeyword_1_0_1___or___ColonKeyword_1_1_0_TypeKeyword_1_1_1_ExtendsKeyword_1_1_2__(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_SecModelLibrary___DomainTypesKeywordsParserRuleCall_1_0_EndTypesKeywordsParserRuleCall_1_2_SemicolonKeyword_1_3__q.equals(syntax))
 				emit_SecModelLibrary___DomainTypesKeywordsParserRuleCall_1_0_EndTypesKeywordsParserRuleCall_1_2_SemicolonKeyword_1_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
@@ -212,6 +206,17 @@ public abstract class AbstractSecMFSyntacticSequencer extends AbstractSyntacticS
 	 *     name=QEMREF 'public' 'annex' ID '{**' (ambiguity) '**}' ';' 'end' QEMREF ';' (rule end)
 	 */
 	protected void emit_SMFLibrary___DomainTypesKeywordsParserRuleCall_1_6_0_EndTypesKeywordsParserRuleCall_1_6_2_SemicolonKeyword_1_6_3__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     (':' 'type') | (':' 'type' 'extends')
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     name=ID (ambiguity) ';' (rule end)
+	 */
+	protected void emit_SMFTypeDef___ColonKeyword_1_0_0_TypeKeyword_1_0_1___or___ColonKeyword_1_1_0_TypeKeyword_1_1_1_ExtendsKeyword_1_1_2__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

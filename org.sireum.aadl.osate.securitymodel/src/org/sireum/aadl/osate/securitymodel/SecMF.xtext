@@ -95,7 +95,7 @@ SMFDeclassification returns SMFDeclassification:
 SMFTypeDef returns SmfTypeDef:
 	name=ID (
 		(':' 'type')
-		|(':' 'type' 'extends' type=[SMFTypeRef|ID])
+		|(':' 'type' 'extends' type+=([SMFTypeRef|ID])*)
 	)
 	';';
 
