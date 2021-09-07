@@ -1982,7 +1982,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSMFTypeDef"
-    // InternalSecMFParser.g:768:1: ruleSMFTypeDef returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) )* ) ) otherlv_7= Semicolon ) ;
+    // InternalSecMFParser.g:768:1: ruleSMFTypeDef returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) ) (otherlv_7= Comma ( (otherlv_8= RULE_ID ) ) )* ) ) otherlv_9= Semicolon ) ;
     public final EObject ruleSMFTypeDef() throws RecognitionException {
         EObject current = null;
 
@@ -1994,16 +1994,18 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         Token otherlv_5=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
+        Token otherlv_8=null;
+        Token otherlv_9=null;
 
 
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:774:2: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) )* ) ) otherlv_7= Semicolon ) )
-            // InternalSecMFParser.g:775:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) )* ) ) otherlv_7= Semicolon )
+            // InternalSecMFParser.g:774:2: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) ) (otherlv_7= Comma ( (otherlv_8= RULE_ID ) ) )* ) ) otherlv_9= Semicolon ) )
+            // InternalSecMFParser.g:775:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) ) (otherlv_7= Comma ( (otherlv_8= RULE_ID ) ) )* ) ) otherlv_9= Semicolon )
             {
-            // InternalSecMFParser.g:775:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) )* ) ) otherlv_7= Semicolon )
-            // InternalSecMFParser.g:776:3: ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) )* ) ) otherlv_7= Semicolon
+            // InternalSecMFParser.g:775:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) ) (otherlv_7= Comma ( (otherlv_8= RULE_ID ) ) )* ) ) otherlv_9= Semicolon )
+            // InternalSecMFParser.g:776:3: ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) ) (otherlv_7= Comma ( (otherlv_8= RULE_ID ) ) )* ) ) otherlv_9= Semicolon
             {
             // InternalSecMFParser.g:776:3: ( (lv_name_0_0= RULE_ID ) )
             // InternalSecMFParser.g:777:4: (lv_name_0_0= RULE_ID )
@@ -2031,7 +2033,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:794:3: ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) )* ) )
+            // InternalSecMFParser.g:794:3: ( (otherlv_1= Colon otherlv_2= Type ) | (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) ) (otherlv_7= Comma ( (otherlv_8= RULE_ID ) ) )* ) )
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -2089,10 +2091,10 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSecMFParser.g:806:4: (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) )* )
+                    // InternalSecMFParser.g:806:4: (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) ) (otherlv_7= Comma ( (otherlv_8= RULE_ID ) ) )* )
                     {
-                    // InternalSecMFParser.g:806:4: (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) )* )
-                    // InternalSecMFParser.g:807:5: otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) )*
+                    // InternalSecMFParser.g:806:4: (otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) ) (otherlv_7= Comma ( (otherlv_8= RULE_ID ) ) )* )
+                    // InternalSecMFParser.g:807:5: otherlv_3= Colon otherlv_4= Type otherlv_5= Extends ( (otherlv_6= RULE_ID ) ) (otherlv_7= Comma ( (otherlv_8= RULE_ID ) ) )*
                     {
                     otherlv_3=(Token)match(input,Colon,FollowSets000.FOLLOW_20); 
 
@@ -2102,37 +2104,68 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                     					newLeafNode(otherlv_4, grammarAccess.getSMFTypeDefAccess().getTypeKeyword_1_1_1());
                     				
-                    otherlv_5=(Token)match(input,Extends,FollowSets000.FOLLOW_22); 
+                    otherlv_5=(Token)match(input,Extends,FollowSets000.FOLLOW_6); 
 
                     					newLeafNode(otherlv_5, grammarAccess.getSMFTypeDefAccess().getExtendsKeyword_1_1_2());
                     				
-                    // InternalSecMFParser.g:819:5: ( (otherlv_6= RULE_ID ) )*
+                    // InternalSecMFParser.g:819:5: ( (otherlv_6= RULE_ID ) )
+                    // InternalSecMFParser.g:820:6: (otherlv_6= RULE_ID )
+                    {
+                    // InternalSecMFParser.g:820:6: (otherlv_6= RULE_ID )
+                    // InternalSecMFParser.g:821:7: otherlv_6= RULE_ID
+                    {
+
+                    							if (current==null) {
+                    								current = createModelElement(grammarAccess.getSMFTypeDefRule());
+                    							}
+                    						
+                    otherlv_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_22); 
+
+                    							newLeafNode(otherlv_6, grammarAccess.getSMFTypeDefAccess().getTypeSMFTypeRefCrossReference_1_1_3_0());
+                    						
+
+                    }
+
+
+                    }
+
+                    // InternalSecMFParser.g:832:5: (otherlv_7= Comma ( (otherlv_8= RULE_ID ) ) )*
                     loop19:
                     do {
                         int alt19=2;
                         int LA19_0 = input.LA(1);
 
-                        if ( (LA19_0==RULE_ID) ) {
+                        if ( (LA19_0==Comma) ) {
                             alt19=1;
                         }
 
 
                         switch (alt19) {
                     	case 1 :
-                    	    // InternalSecMFParser.g:820:6: (otherlv_6= RULE_ID )
+                    	    // InternalSecMFParser.g:833:6: otherlv_7= Comma ( (otherlv_8= RULE_ID ) )
                     	    {
-                    	    // InternalSecMFParser.g:820:6: (otherlv_6= RULE_ID )
-                    	    // InternalSecMFParser.g:821:7: otherlv_6= RULE_ID
+                    	    otherlv_7=(Token)match(input,Comma,FollowSets000.FOLLOW_6); 
+
+                    	    						newLeafNode(otherlv_7, grammarAccess.getSMFTypeDefAccess().getCommaKeyword_1_1_4_0());
+                    	    					
+                    	    // InternalSecMFParser.g:837:6: ( (otherlv_8= RULE_ID ) )
+                    	    // InternalSecMFParser.g:838:7: (otherlv_8= RULE_ID )
+                    	    {
+                    	    // InternalSecMFParser.g:838:7: (otherlv_8= RULE_ID )
+                    	    // InternalSecMFParser.g:839:8: otherlv_8= RULE_ID
                     	    {
 
-                    	    							if (current==null) {
-                    	    								current = createModelElement(grammarAccess.getSMFTypeDefRule());
-                    	    							}
-                    	    						
-                    	    otherlv_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_22); 
+                    	    								if (current==null) {
+                    	    									current = createModelElement(grammarAccess.getSMFTypeDefRule());
+                    	    								}
+                    	    							
+                    	    otherlv_8=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_22); 
 
-                    	    							newLeafNode(otherlv_6, grammarAccess.getSMFTypeDefAccess().getTypeSMFTypeRefCrossReference_1_1_3_0());
-                    	    						
+                    	    								newLeafNode(otherlv_8, grammarAccess.getSMFTypeDefAccess().getTypeSMFTypeRefCrossReference_1_1_4_1_0());
+                    	    							
+
+                    	    }
+
 
                     	    }
 
@@ -2154,9 +2187,9 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,Semicolon,FollowSets000.FOLLOW_2); 
+            otherlv_9=(Token)match(input,Semicolon,FollowSets000.FOLLOW_2); 
 
-            			newLeafNode(otherlv_7, grammarAccess.getSMFTypeDefAccess().getSemicolonKeyword_2());
+            			newLeafNode(otherlv_9, grammarAccess.getSMFTypeDefAccess().getSemicolonKeyword_2());
             		
 
             }
@@ -2181,7 +2214,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleClassificationKeywords"
-    // InternalSecMFParser.g:842:1: entryRuleClassificationKeywords returns [String current=null] : iv_ruleClassificationKeywords= ruleClassificationKeywords EOF ;
+    // InternalSecMFParser.g:861:1: entryRuleClassificationKeywords returns [String current=null] : iv_ruleClassificationKeywords= ruleClassificationKeywords EOF ;
     public final String entryRuleClassificationKeywords() throws RecognitionException {
         String current = null;
 
@@ -2189,8 +2222,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:842:62: (iv_ruleClassificationKeywords= ruleClassificationKeywords EOF )
-            // InternalSecMFParser.g:843:2: iv_ruleClassificationKeywords= ruleClassificationKeywords EOF
+            // InternalSecMFParser.g:861:62: (iv_ruleClassificationKeywords= ruleClassificationKeywords EOF )
+            // InternalSecMFParser.g:862:2: iv_ruleClassificationKeywords= ruleClassificationKeywords EOF
             {
              newCompositeNode(grammarAccess.getClassificationKeywordsRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -2217,7 +2250,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleClassificationKeywords"
-    // InternalSecMFParser.g:849:1: ruleClassificationKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= Classification ;
+    // InternalSecMFParser.g:868:1: ruleClassificationKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= Classification ;
     public final AntlrDatatypeRuleToken ruleClassificationKeywords() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2227,8 +2260,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:855:2: (kw= Classification )
-            // InternalSecMFParser.g:856:2: kw= Classification
+            // InternalSecMFParser.g:874:2: (kw= Classification )
+            // InternalSecMFParser.g:875:2: kw= Classification
             {
             kw=(Token)match(input,Classification,FollowSets000.FOLLOW_2); 
 
@@ -2255,7 +2288,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDeclassificationKeywords"
-    // InternalSecMFParser.g:864:1: entryRuleDeclassificationKeywords returns [String current=null] : iv_ruleDeclassificationKeywords= ruleDeclassificationKeywords EOF ;
+    // InternalSecMFParser.g:883:1: entryRuleDeclassificationKeywords returns [String current=null] : iv_ruleDeclassificationKeywords= ruleDeclassificationKeywords EOF ;
     public final String entryRuleDeclassificationKeywords() throws RecognitionException {
         String current = null;
 
@@ -2263,8 +2296,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:864:64: (iv_ruleDeclassificationKeywords= ruleDeclassificationKeywords EOF )
-            // InternalSecMFParser.g:865:2: iv_ruleDeclassificationKeywords= ruleDeclassificationKeywords EOF
+            // InternalSecMFParser.g:883:64: (iv_ruleDeclassificationKeywords= ruleDeclassificationKeywords EOF )
+            // InternalSecMFParser.g:884:2: iv_ruleDeclassificationKeywords= ruleDeclassificationKeywords EOF
             {
              newCompositeNode(grammarAccess.getDeclassificationKeywordsRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -2291,7 +2324,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDeclassificationKeywords"
-    // InternalSecMFParser.g:871:1: ruleDeclassificationKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= DeClassification ;
+    // InternalSecMFParser.g:890:1: ruleDeclassificationKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= DeClassification ;
     public final AntlrDatatypeRuleToken ruleDeclassificationKeywords() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2301,8 +2334,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:877:2: (kw= DeClassification )
-            // InternalSecMFParser.g:878:2: kw= DeClassification
+            // InternalSecMFParser.g:896:2: (kw= DeClassification )
+            // InternalSecMFParser.g:897:2: kw= DeClassification
             {
             kw=(Token)match(input,DeClassification,FollowSets000.FOLLOW_2); 
 
@@ -2329,7 +2362,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDomainTypesKeywords"
-    // InternalSecMFParser.g:886:1: entryRuleDomainTypesKeywords returns [String current=null] : iv_ruleDomainTypesKeywords= ruleDomainTypesKeywords EOF ;
+    // InternalSecMFParser.g:905:1: entryRuleDomainTypesKeywords returns [String current=null] : iv_ruleDomainTypesKeywords= ruleDomainTypesKeywords EOF ;
     public final String entryRuleDomainTypesKeywords() throws RecognitionException {
         String current = null;
 
@@ -2337,8 +2370,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:886:59: (iv_ruleDomainTypesKeywords= ruleDomainTypesKeywords EOF )
-            // InternalSecMFParser.g:887:2: iv_ruleDomainTypesKeywords= ruleDomainTypesKeywords EOF
+            // InternalSecMFParser.g:905:59: (iv_ruleDomainTypesKeywords= ruleDomainTypesKeywords EOF )
+            // InternalSecMFParser.g:906:2: iv_ruleDomainTypesKeywords= ruleDomainTypesKeywords EOF
             {
              newCompositeNode(grammarAccess.getDomainTypesKeywordsRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -2365,7 +2398,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDomainTypesKeywords"
-    // InternalSecMFParser.g:893:1: ruleDomainTypesKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= Domain kw= Types ) ;
+    // InternalSecMFParser.g:912:1: ruleDomainTypesKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= Domain kw= Types ) ;
     public final AntlrDatatypeRuleToken ruleDomainTypesKeywords() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2375,11 +2408,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:899:2: ( (kw= Domain kw= Types ) )
-            // InternalSecMFParser.g:900:2: (kw= Domain kw= Types )
+            // InternalSecMFParser.g:918:2: ( (kw= Domain kw= Types ) )
+            // InternalSecMFParser.g:919:2: (kw= Domain kw= Types )
             {
-            // InternalSecMFParser.g:900:2: (kw= Domain kw= Types )
-            // InternalSecMFParser.g:901:3: kw= Domain kw= Types
+            // InternalSecMFParser.g:919:2: (kw= Domain kw= Types )
+            // InternalSecMFParser.g:920:3: kw= Domain kw= Types
             {
             kw=(Token)match(input,Domain,FollowSets000.FOLLOW_23); 
 
@@ -2414,7 +2447,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEndTypesKeywords"
-    // InternalSecMFParser.g:915:1: entryRuleEndTypesKeywords returns [String current=null] : iv_ruleEndTypesKeywords= ruleEndTypesKeywords EOF ;
+    // InternalSecMFParser.g:934:1: entryRuleEndTypesKeywords returns [String current=null] : iv_ruleEndTypesKeywords= ruleEndTypesKeywords EOF ;
     public final String entryRuleEndTypesKeywords() throws RecognitionException {
         String current = null;
 
@@ -2422,8 +2455,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:915:56: (iv_ruleEndTypesKeywords= ruleEndTypesKeywords EOF )
-            // InternalSecMFParser.g:916:2: iv_ruleEndTypesKeywords= ruleEndTypesKeywords EOF
+            // InternalSecMFParser.g:934:56: (iv_ruleEndTypesKeywords= ruleEndTypesKeywords EOF )
+            // InternalSecMFParser.g:935:2: iv_ruleEndTypesKeywords= ruleEndTypesKeywords EOF
             {
              newCompositeNode(grammarAccess.getEndTypesKeywordsRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -2450,7 +2483,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEndTypesKeywords"
-    // InternalSecMFParser.g:922:1: ruleEndTypesKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= End kw= Types ) ;
+    // InternalSecMFParser.g:941:1: ruleEndTypesKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= End kw= Types ) ;
     public final AntlrDatatypeRuleToken ruleEndTypesKeywords() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2460,11 +2493,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:928:2: ( (kw= End kw= Types ) )
-            // InternalSecMFParser.g:929:2: (kw= End kw= Types )
+            // InternalSecMFParser.g:947:2: ( (kw= End kw= Types ) )
+            // InternalSecMFParser.g:948:2: (kw= End kw= Types )
             {
-            // InternalSecMFParser.g:929:2: (kw= End kw= Types )
-            // InternalSecMFParser.g:930:3: kw= End kw= Types
+            // InternalSecMFParser.g:948:2: (kw= End kw= Types )
+            // InternalSecMFParser.g:949:3: kw= End kw= Types
             {
             kw=(Token)match(input,End,FollowSets000.FOLLOW_23); 
 
@@ -2499,7 +2532,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQEMREF"
-    // InternalSecMFParser.g:944:1: entryRuleQEMREF returns [String current=null] : iv_ruleQEMREF= ruleQEMREF EOF ;
+    // InternalSecMFParser.g:963:1: entryRuleQEMREF returns [String current=null] : iv_ruleQEMREF= ruleQEMREF EOF ;
     public final String entryRuleQEMREF() throws RecognitionException {
         String current = null;
 
@@ -2507,8 +2540,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:944:46: (iv_ruleQEMREF= ruleQEMREF EOF )
-            // InternalSecMFParser.g:945:2: iv_ruleQEMREF= ruleQEMREF EOF
+            // InternalSecMFParser.g:963:46: (iv_ruleQEMREF= ruleQEMREF EOF )
+            // InternalSecMFParser.g:964:2: iv_ruleQEMREF= ruleQEMREF EOF
             {
              newCompositeNode(grammarAccess.getQEMREFRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -2535,7 +2568,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQEMREF"
-    // InternalSecMFParser.g:951:1: ruleQEMREF returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )* ) ;
+    // InternalSecMFParser.g:970:1: ruleQEMREF returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQEMREF() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2547,11 +2580,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:957:2: ( (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )* ) )
-            // InternalSecMFParser.g:958:2: (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )* )
+            // InternalSecMFParser.g:976:2: ( (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )* ) )
+            // InternalSecMFParser.g:977:2: (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )* )
             {
-            // InternalSecMFParser.g:958:2: (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )* )
-            // InternalSecMFParser.g:959:3: this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )*
+            // InternalSecMFParser.g:977:2: (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )* )
+            // InternalSecMFParser.g:978:3: this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )*
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_24); 
 
@@ -2560,7 +2593,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_ID_0, grammarAccess.getQEMREFAccess().getIDTerminalRuleCall_0());
             		
-            // InternalSecMFParser.g:966:3: (kw= ColonColon this_ID_2= RULE_ID )*
+            // InternalSecMFParser.g:985:3: (kw= ColonColon this_ID_2= RULE_ID )*
             loop21:
             do {
                 int alt21=2;
@@ -2573,7 +2606,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                 switch (alt21) {
             	case 1 :
-            	    // InternalSecMFParser.g:967:4: kw= ColonColon this_ID_2= RULE_ID
+            	    // InternalSecMFParser.g:986:4: kw= ColonColon this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,ColonColon,FollowSets000.FOLLOW_6); 
 
@@ -2619,7 +2652,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContainedPropertyAssociation"
-    // InternalSecMFParser.g:984:1: entryRuleContainedPropertyAssociation returns [EObject current=null] : iv_ruleContainedPropertyAssociation= ruleContainedPropertyAssociation EOF ;
+    // InternalSecMFParser.g:1003:1: entryRuleContainedPropertyAssociation returns [EObject current=null] : iv_ruleContainedPropertyAssociation= ruleContainedPropertyAssociation EOF ;
     public final EObject entryRuleContainedPropertyAssociation() throws RecognitionException {
         EObject current = null;
 
@@ -2627,8 +2660,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:984:69: (iv_ruleContainedPropertyAssociation= ruleContainedPropertyAssociation EOF )
-            // InternalSecMFParser.g:985:2: iv_ruleContainedPropertyAssociation= ruleContainedPropertyAssociation EOF
+            // InternalSecMFParser.g:1003:69: (iv_ruleContainedPropertyAssociation= ruleContainedPropertyAssociation EOF )
+            // InternalSecMFParser.g:1004:2: iv_ruleContainedPropertyAssociation= ruleContainedPropertyAssociation EOF
             {
              newCompositeNode(grammarAccess.getContainedPropertyAssociationRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -2655,7 +2688,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContainedPropertyAssociation"
-    // InternalSecMFParser.g:991:1: ruleContainedPropertyAssociation returns [EObject current=null] : ( ( ( ruleQPREF ) ) (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) ) ( (lv_constant_3_0= Constant ) )? ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* ) ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )? ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )? otherlv_15= Semicolon ) ;
+    // InternalSecMFParser.g:1010:1: ruleContainedPropertyAssociation returns [EObject current=null] : ( ( ( ruleQPREF ) ) (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) ) ( (lv_constant_3_0= Constant ) )? ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* ) ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )? ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )? otherlv_15= Semicolon ) ;
     public final EObject ruleContainedPropertyAssociation() throws RecognitionException {
         EObject current = null;
 
@@ -2680,17 +2713,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:997:2: ( ( ( ( ruleQPREF ) ) (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) ) ( (lv_constant_3_0= Constant ) )? ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* ) ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )? ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )? otherlv_15= Semicolon ) )
-            // InternalSecMFParser.g:998:2: ( ( ( ruleQPREF ) ) (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) ) ( (lv_constant_3_0= Constant ) )? ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* ) ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )? ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )? otherlv_15= Semicolon )
+            // InternalSecMFParser.g:1016:2: ( ( ( ( ruleQPREF ) ) (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) ) ( (lv_constant_3_0= Constant ) )? ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* ) ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )? ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )? otherlv_15= Semicolon ) )
+            // InternalSecMFParser.g:1017:2: ( ( ( ruleQPREF ) ) (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) ) ( (lv_constant_3_0= Constant ) )? ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* ) ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )? ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )? otherlv_15= Semicolon )
             {
-            // InternalSecMFParser.g:998:2: ( ( ( ruleQPREF ) ) (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) ) ( (lv_constant_3_0= Constant ) )? ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* ) ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )? ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )? otherlv_15= Semicolon )
-            // InternalSecMFParser.g:999:3: ( ( ruleQPREF ) ) (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) ) ( (lv_constant_3_0= Constant ) )? ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* ) ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )? ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )? otherlv_15= Semicolon
+            // InternalSecMFParser.g:1017:2: ( ( ( ruleQPREF ) ) (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) ) ( (lv_constant_3_0= Constant ) )? ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* ) ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )? ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )? otherlv_15= Semicolon )
+            // InternalSecMFParser.g:1018:3: ( ( ruleQPREF ) ) (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) ) ( (lv_constant_3_0= Constant ) )? ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* ) ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )? ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )? otherlv_15= Semicolon
             {
-            // InternalSecMFParser.g:999:3: ( ( ruleQPREF ) )
-            // InternalSecMFParser.g:1000:4: ( ruleQPREF )
+            // InternalSecMFParser.g:1018:3: ( ( ruleQPREF ) )
+            // InternalSecMFParser.g:1019:4: ( ruleQPREF )
             {
-            // InternalSecMFParser.g:1000:4: ( ruleQPREF )
-            // InternalSecMFParser.g:1001:5: ruleQPREF
+            // InternalSecMFParser.g:1019:4: ( ruleQPREF )
+            // InternalSecMFParser.g:1020:5: ruleQPREF
             {
 
             					if (current==null) {
@@ -2714,7 +2747,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:1015:3: (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) )
+            // InternalSecMFParser.g:1034:3: (otherlv_1= EqualsSignGreaterThanSign | ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) ) )
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -2732,7 +2765,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt22) {
                 case 1 :
-                    // InternalSecMFParser.g:1016:4: otherlv_1= EqualsSignGreaterThanSign
+                    // InternalSecMFParser.g:1035:4: otherlv_1= EqualsSignGreaterThanSign
                     {
                     otherlv_1=(Token)match(input,EqualsSignGreaterThanSign,FollowSets000.FOLLOW_26); 
 
@@ -2742,13 +2775,13 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSecMFParser.g:1021:4: ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) )
+                    // InternalSecMFParser.g:1040:4: ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) )
                     {
-                    // InternalSecMFParser.g:1021:4: ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) )
-                    // InternalSecMFParser.g:1022:5: (lv_append_2_0= PlusSignEqualsSignGreaterThanSign )
+                    // InternalSecMFParser.g:1040:4: ( (lv_append_2_0= PlusSignEqualsSignGreaterThanSign ) )
+                    // InternalSecMFParser.g:1041:5: (lv_append_2_0= PlusSignEqualsSignGreaterThanSign )
                     {
-                    // InternalSecMFParser.g:1022:5: (lv_append_2_0= PlusSignEqualsSignGreaterThanSign )
-                    // InternalSecMFParser.g:1023:6: lv_append_2_0= PlusSignEqualsSignGreaterThanSign
+                    // InternalSecMFParser.g:1041:5: (lv_append_2_0= PlusSignEqualsSignGreaterThanSign )
+                    // InternalSecMFParser.g:1042:6: lv_append_2_0= PlusSignEqualsSignGreaterThanSign
                     {
                     lv_append_2_0=(Token)match(input,PlusSignEqualsSignGreaterThanSign,FollowSets000.FOLLOW_26); 
 
@@ -2772,7 +2805,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:1036:3: ( (lv_constant_3_0= Constant ) )?
+            // InternalSecMFParser.g:1055:3: ( (lv_constant_3_0= Constant ) )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2781,10 +2814,10 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt23) {
                 case 1 :
-                    // InternalSecMFParser.g:1037:4: (lv_constant_3_0= Constant )
+                    // InternalSecMFParser.g:1056:4: (lv_constant_3_0= Constant )
                     {
-                    // InternalSecMFParser.g:1037:4: (lv_constant_3_0= Constant )
-                    // InternalSecMFParser.g:1038:5: lv_constant_3_0= Constant
+                    // InternalSecMFParser.g:1056:4: (lv_constant_3_0= Constant )
+                    // InternalSecMFParser.g:1057:5: lv_constant_3_0= Constant
                     {
                     lv_constant_3_0=(Token)match(input,Constant,FollowSets000.FOLLOW_26); 
 
@@ -2805,14 +2838,14 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:1050:3: ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* )
-            // InternalSecMFParser.g:1051:4: ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )*
+            // InternalSecMFParser.g:1069:3: ( ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )* )
+            // InternalSecMFParser.g:1070:4: ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) ) (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )*
             {
-            // InternalSecMFParser.g:1051:4: ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) )
-            // InternalSecMFParser.g:1052:5: (lv_ownedValue_4_0= ruleOptionalModalPropertyValue )
+            // InternalSecMFParser.g:1070:4: ( (lv_ownedValue_4_0= ruleOptionalModalPropertyValue ) )
+            // InternalSecMFParser.g:1071:5: (lv_ownedValue_4_0= ruleOptionalModalPropertyValue )
             {
-            // InternalSecMFParser.g:1052:5: (lv_ownedValue_4_0= ruleOptionalModalPropertyValue )
-            // InternalSecMFParser.g:1053:6: lv_ownedValue_4_0= ruleOptionalModalPropertyValue
+            // InternalSecMFParser.g:1071:5: (lv_ownedValue_4_0= ruleOptionalModalPropertyValue )
+            // InternalSecMFParser.g:1072:6: lv_ownedValue_4_0= ruleOptionalModalPropertyValue
             {
 
             						newCompositeNode(grammarAccess.getContainedPropertyAssociationAccess().getOwnedValueOptionalModalPropertyValueParserRuleCall_3_0_0());
@@ -2839,7 +2872,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:1070:4: (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )*
+            // InternalSecMFParser.g:1089:4: (otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) ) )*
             loop24:
             do {
                 int alt24=2;
@@ -2852,17 +2885,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                 switch (alt24) {
             	case 1 :
-            	    // InternalSecMFParser.g:1071:5: otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) )
+            	    // InternalSecMFParser.g:1090:5: otherlv_5= Comma ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) )
             	    {
             	    otherlv_5=(Token)match(input,Comma,FollowSets000.FOLLOW_26); 
 
             	    					newLeafNode(otherlv_5, grammarAccess.getContainedPropertyAssociationAccess().getCommaKeyword_3_1_0());
             	    				
-            	    // InternalSecMFParser.g:1075:5: ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) )
-            	    // InternalSecMFParser.g:1076:6: (lv_ownedValue_6_0= ruleOptionalModalPropertyValue )
+            	    // InternalSecMFParser.g:1094:5: ( (lv_ownedValue_6_0= ruleOptionalModalPropertyValue ) )
+            	    // InternalSecMFParser.g:1095:6: (lv_ownedValue_6_0= ruleOptionalModalPropertyValue )
             	    {
-            	    // InternalSecMFParser.g:1076:6: (lv_ownedValue_6_0= ruleOptionalModalPropertyValue )
-            	    // InternalSecMFParser.g:1077:7: lv_ownedValue_6_0= ruleOptionalModalPropertyValue
+            	    // InternalSecMFParser.g:1095:6: (lv_ownedValue_6_0= ruleOptionalModalPropertyValue )
+            	    // InternalSecMFParser.g:1096:7: lv_ownedValue_6_0= ruleOptionalModalPropertyValue
             	    {
 
             	    							newCompositeNode(grammarAccess.getContainedPropertyAssociationAccess().getOwnedValueOptionalModalPropertyValueParserRuleCall_3_1_1_0());
@@ -2901,7 +2934,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:1096:3: ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )?
+            // InternalSecMFParser.g:1115:3: ( ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )* )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -2910,7 +2943,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt26) {
                 case 1 :
-                    // InternalSecMFParser.g:1097:4: ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )*
+                    // InternalSecMFParser.g:1116:4: ruleAppliesToKeywords ( (lv_appliesTo_8_0= ruleContainmentPath ) ) (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )*
                     {
 
                     				newCompositeNode(grammarAccess.getContainedPropertyAssociationAccess().getAppliesToKeywordsParserRuleCall_4_0());
@@ -2923,11 +2956,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                     				afterParserOrEnumRuleCall();
                     			
-                    // InternalSecMFParser.g:1104:4: ( (lv_appliesTo_8_0= ruleContainmentPath ) )
-                    // InternalSecMFParser.g:1105:5: (lv_appliesTo_8_0= ruleContainmentPath )
+                    // InternalSecMFParser.g:1123:4: ( (lv_appliesTo_8_0= ruleContainmentPath ) )
+                    // InternalSecMFParser.g:1124:5: (lv_appliesTo_8_0= ruleContainmentPath )
                     {
-                    // InternalSecMFParser.g:1105:5: (lv_appliesTo_8_0= ruleContainmentPath )
-                    // InternalSecMFParser.g:1106:6: lv_appliesTo_8_0= ruleContainmentPath
+                    // InternalSecMFParser.g:1124:5: (lv_appliesTo_8_0= ruleContainmentPath )
+                    // InternalSecMFParser.g:1125:6: lv_appliesTo_8_0= ruleContainmentPath
                     {
 
                     						newCompositeNode(grammarAccess.getContainedPropertyAssociationAccess().getAppliesToContainmentPathParserRuleCall_4_1_0());
@@ -2954,7 +2987,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalSecMFParser.g:1123:4: (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )*
+                    // InternalSecMFParser.g:1142:4: (otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) ) )*
                     loop25:
                     do {
                         int alt25=2;
@@ -2967,17 +3000,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                         switch (alt25) {
                     	case 1 :
-                    	    // InternalSecMFParser.g:1124:5: otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) )
+                    	    // InternalSecMFParser.g:1143:5: otherlv_9= Comma ( (lv_appliesTo_10_0= ruleContainmentPath ) )
                     	    {
                     	    otherlv_9=(Token)match(input,Comma,FollowSets000.FOLLOW_6); 
 
                     	    					newLeafNode(otherlv_9, grammarAccess.getContainedPropertyAssociationAccess().getCommaKeyword_4_2_0());
                     	    				
-                    	    // InternalSecMFParser.g:1128:5: ( (lv_appliesTo_10_0= ruleContainmentPath ) )
-                    	    // InternalSecMFParser.g:1129:6: (lv_appliesTo_10_0= ruleContainmentPath )
+                    	    // InternalSecMFParser.g:1147:5: ( (lv_appliesTo_10_0= ruleContainmentPath ) )
+                    	    // InternalSecMFParser.g:1148:6: (lv_appliesTo_10_0= ruleContainmentPath )
                     	    {
-                    	    // InternalSecMFParser.g:1129:6: (lv_appliesTo_10_0= ruleContainmentPath )
-                    	    // InternalSecMFParser.g:1130:7: lv_appliesTo_10_0= ruleContainmentPath
+                    	    // InternalSecMFParser.g:1148:6: (lv_appliesTo_10_0= ruleContainmentPath )
+                    	    // InternalSecMFParser.g:1149:7: lv_appliesTo_10_0= ruleContainmentPath
                     	    {
 
                     	    							newCompositeNode(grammarAccess.getContainedPropertyAssociationAccess().getAppliesToContainmentPathParserRuleCall_4_2_1_0());
@@ -3019,7 +3052,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:1149:3: ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )?
+            // InternalSecMFParser.g:1168:3: ( ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -3028,7 +3061,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt27) {
                 case 1 :
-                    // InternalSecMFParser.g:1150:4: ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis
+                    // InternalSecMFParser.g:1169:4: ruleInBindingKeywords otherlv_12= LeftParenthesis ( ( ruleQCREF ) ) otherlv_14= RightParenthesis
                     {
 
                     				newCompositeNode(grammarAccess.getContainedPropertyAssociationAccess().getInBindingKeywordsParserRuleCall_5_0());
@@ -3045,11 +3078,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_12, grammarAccess.getContainedPropertyAssociationAccess().getLeftParenthesisKeyword_5_1());
                     			
-                    // InternalSecMFParser.g:1161:4: ( ( ruleQCREF ) )
-                    // InternalSecMFParser.g:1162:5: ( ruleQCREF )
+                    // InternalSecMFParser.g:1180:4: ( ( ruleQCREF ) )
+                    // InternalSecMFParser.g:1181:5: ( ruleQCREF )
                     {
-                    // InternalSecMFParser.g:1162:5: ( ruleQCREF )
-                    // InternalSecMFParser.g:1163:6: ruleQCREF
+                    // InternalSecMFParser.g:1181:5: ( ruleQCREF )
+                    // InternalSecMFParser.g:1182:6: ruleQCREF
                     {
 
                     						if (current==null) {
@@ -3110,7 +3143,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContainmentPath"
-    // InternalSecMFParser.g:1190:1: entryRuleContainmentPath returns [EObject current=null] : iv_ruleContainmentPath= ruleContainmentPath EOF ;
+    // InternalSecMFParser.g:1209:1: entryRuleContainmentPath returns [EObject current=null] : iv_ruleContainmentPath= ruleContainmentPath EOF ;
     public final EObject entryRuleContainmentPath() throws RecognitionException {
         EObject current = null;
 
@@ -3118,8 +3151,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1190:56: (iv_ruleContainmentPath= ruleContainmentPath EOF )
-            // InternalSecMFParser.g:1191:2: iv_ruleContainmentPath= ruleContainmentPath EOF
+            // InternalSecMFParser.g:1209:56: (iv_ruleContainmentPath= ruleContainmentPath EOF )
+            // InternalSecMFParser.g:1210:2: iv_ruleContainmentPath= ruleContainmentPath EOF
             {
              newCompositeNode(grammarAccess.getContainmentPathRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -3146,7 +3179,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContainmentPath"
-    // InternalSecMFParser.g:1197:1: ruleContainmentPath returns [EObject current=null] : ( (lv_path_0_0= ruleContainmentPathElement ) ) ;
+    // InternalSecMFParser.g:1216:1: ruleContainmentPath returns [EObject current=null] : ( (lv_path_0_0= ruleContainmentPathElement ) ) ;
     public final EObject ruleContainmentPath() throws RecognitionException {
         EObject current = null;
 
@@ -3157,14 +3190,14 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1203:2: ( ( (lv_path_0_0= ruleContainmentPathElement ) ) )
-            // InternalSecMFParser.g:1204:2: ( (lv_path_0_0= ruleContainmentPathElement ) )
+            // InternalSecMFParser.g:1222:2: ( ( (lv_path_0_0= ruleContainmentPathElement ) ) )
+            // InternalSecMFParser.g:1223:2: ( (lv_path_0_0= ruleContainmentPathElement ) )
             {
-            // InternalSecMFParser.g:1204:2: ( (lv_path_0_0= ruleContainmentPathElement ) )
-            // InternalSecMFParser.g:1205:3: (lv_path_0_0= ruleContainmentPathElement )
+            // InternalSecMFParser.g:1223:2: ( (lv_path_0_0= ruleContainmentPathElement ) )
+            // InternalSecMFParser.g:1224:3: (lv_path_0_0= ruleContainmentPathElement )
             {
-            // InternalSecMFParser.g:1205:3: (lv_path_0_0= ruleContainmentPathElement )
-            // InternalSecMFParser.g:1206:4: lv_path_0_0= ruleContainmentPathElement
+            // InternalSecMFParser.g:1224:3: (lv_path_0_0= ruleContainmentPathElement )
+            // InternalSecMFParser.g:1225:4: lv_path_0_0= ruleContainmentPathElement
             {
 
             				newCompositeNode(grammarAccess.getContainmentPathAccess().getPathContainmentPathElementParserRuleCall_0());
@@ -3211,7 +3244,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOptionalModalPropertyValue"
-    // InternalSecMFParser.g:1226:1: entryRuleOptionalModalPropertyValue returns [EObject current=null] : iv_ruleOptionalModalPropertyValue= ruleOptionalModalPropertyValue EOF ;
+    // InternalSecMFParser.g:1245:1: entryRuleOptionalModalPropertyValue returns [EObject current=null] : iv_ruleOptionalModalPropertyValue= ruleOptionalModalPropertyValue EOF ;
     public final EObject entryRuleOptionalModalPropertyValue() throws RecognitionException {
         EObject current = null;
 
@@ -3219,8 +3252,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1226:67: (iv_ruleOptionalModalPropertyValue= ruleOptionalModalPropertyValue EOF )
-            // InternalSecMFParser.g:1227:2: iv_ruleOptionalModalPropertyValue= ruleOptionalModalPropertyValue EOF
+            // InternalSecMFParser.g:1245:67: (iv_ruleOptionalModalPropertyValue= ruleOptionalModalPropertyValue EOF )
+            // InternalSecMFParser.g:1246:2: iv_ruleOptionalModalPropertyValue= ruleOptionalModalPropertyValue EOF
             {
              newCompositeNode(grammarAccess.getOptionalModalPropertyValueRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -3247,7 +3280,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOptionalModalPropertyValue"
-    // InternalSecMFParser.g:1233:1: ruleOptionalModalPropertyValue returns [EObject current=null] : ( ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )? ) ;
+    // InternalSecMFParser.g:1252:1: ruleOptionalModalPropertyValue returns [EObject current=null] : ( ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )? ) ;
     public final EObject ruleOptionalModalPropertyValue() throws RecognitionException {
         EObject current = null;
 
@@ -3263,17 +3296,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1239:2: ( ( ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )? ) )
-            // InternalSecMFParser.g:1240:2: ( ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )? )
+            // InternalSecMFParser.g:1258:2: ( ( ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )? ) )
+            // InternalSecMFParser.g:1259:2: ( ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )? )
             {
-            // InternalSecMFParser.g:1240:2: ( ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )? )
-            // InternalSecMFParser.g:1241:3: ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )?
+            // InternalSecMFParser.g:1259:2: ( ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )? )
+            // InternalSecMFParser.g:1260:3: ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )?
             {
-            // InternalSecMFParser.g:1241:3: ( (lv_ownedValue_0_0= rulePropertyExpression ) )
-            // InternalSecMFParser.g:1242:4: (lv_ownedValue_0_0= rulePropertyExpression )
+            // InternalSecMFParser.g:1260:3: ( (lv_ownedValue_0_0= rulePropertyExpression ) )
+            // InternalSecMFParser.g:1261:4: (lv_ownedValue_0_0= rulePropertyExpression )
             {
-            // InternalSecMFParser.g:1242:4: (lv_ownedValue_0_0= rulePropertyExpression )
-            // InternalSecMFParser.g:1243:5: lv_ownedValue_0_0= rulePropertyExpression
+            // InternalSecMFParser.g:1261:4: (lv_ownedValue_0_0= rulePropertyExpression )
+            // InternalSecMFParser.g:1262:5: lv_ownedValue_0_0= rulePropertyExpression
             {
 
             					newCompositeNode(grammarAccess.getOptionalModalPropertyValueAccess().getOwnedValuePropertyExpressionParserRuleCall_0_0());
@@ -3300,7 +3333,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:1260:3: ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )?
+            // InternalSecMFParser.g:1279:3: ( ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -3313,7 +3346,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt29) {
                 case 1 :
-                    // InternalSecMFParser.g:1261:4: ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis
+                    // InternalSecMFParser.g:1280:4: ruleInModesKeywords otherlv_2= LeftParenthesis ( (otherlv_3= RULE_ID ) ) (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )* otherlv_6= RightParenthesis
                     {
 
                     				newCompositeNode(grammarAccess.getOptionalModalPropertyValueAccess().getInModesKeywordsParserRuleCall_1_0());
@@ -3330,11 +3363,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_2, grammarAccess.getOptionalModalPropertyValueAccess().getLeftParenthesisKeyword_1_1());
                     			
-                    // InternalSecMFParser.g:1272:4: ( (otherlv_3= RULE_ID ) )
-                    // InternalSecMFParser.g:1273:5: (otherlv_3= RULE_ID )
+                    // InternalSecMFParser.g:1291:4: ( (otherlv_3= RULE_ID ) )
+                    // InternalSecMFParser.g:1292:5: (otherlv_3= RULE_ID )
                     {
-                    // InternalSecMFParser.g:1273:5: (otherlv_3= RULE_ID )
-                    // InternalSecMFParser.g:1274:6: otherlv_3= RULE_ID
+                    // InternalSecMFParser.g:1292:5: (otherlv_3= RULE_ID )
+                    // InternalSecMFParser.g:1293:6: otherlv_3= RULE_ID
                     {
 
                     						if (current==null) {
@@ -3351,7 +3384,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalSecMFParser.g:1285:4: (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )*
+                    // InternalSecMFParser.g:1304:4: (otherlv_4= Comma ( (otherlv_5= RULE_ID ) ) )*
                     loop28:
                     do {
                         int alt28=2;
@@ -3364,17 +3397,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                         switch (alt28) {
                     	case 1 :
-                    	    // InternalSecMFParser.g:1286:5: otherlv_4= Comma ( (otherlv_5= RULE_ID ) )
+                    	    // InternalSecMFParser.g:1305:5: otherlv_4= Comma ( (otherlv_5= RULE_ID ) )
                     	    {
                     	    otherlv_4=(Token)match(input,Comma,FollowSets000.FOLLOW_6); 
 
                     	    					newLeafNode(otherlv_4, grammarAccess.getOptionalModalPropertyValueAccess().getCommaKeyword_1_3_0());
                     	    				
-                    	    // InternalSecMFParser.g:1290:5: ( (otherlv_5= RULE_ID ) )
-                    	    // InternalSecMFParser.g:1291:6: (otherlv_5= RULE_ID )
+                    	    // InternalSecMFParser.g:1309:5: ( (otherlv_5= RULE_ID ) )
+                    	    // InternalSecMFParser.g:1310:6: (otherlv_5= RULE_ID )
                     	    {
-                    	    // InternalSecMFParser.g:1291:6: (otherlv_5= RULE_ID )
-                    	    // InternalSecMFParser.g:1292:7: otherlv_5= RULE_ID
+                    	    // InternalSecMFParser.g:1310:6: (otherlv_5= RULE_ID )
+                    	    // InternalSecMFParser.g:1311:7: otherlv_5= RULE_ID
                     	    {
 
                     	    							if (current==null) {
@@ -3433,7 +3466,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePropertyValue"
-    // InternalSecMFParser.g:1313:1: entryRulePropertyValue returns [EObject current=null] : iv_rulePropertyValue= rulePropertyValue EOF ;
+    // InternalSecMFParser.g:1332:1: entryRulePropertyValue returns [EObject current=null] : iv_rulePropertyValue= rulePropertyValue EOF ;
     public final EObject entryRulePropertyValue() throws RecognitionException {
         EObject current = null;
 
@@ -3441,8 +3474,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1313:54: (iv_rulePropertyValue= rulePropertyValue EOF )
-            // InternalSecMFParser.g:1314:2: iv_rulePropertyValue= rulePropertyValue EOF
+            // InternalSecMFParser.g:1332:54: (iv_rulePropertyValue= rulePropertyValue EOF )
+            // InternalSecMFParser.g:1333:2: iv_rulePropertyValue= rulePropertyValue EOF
             {
              newCompositeNode(grammarAccess.getPropertyValueRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -3469,7 +3502,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePropertyValue"
-    // InternalSecMFParser.g:1320:1: rulePropertyValue returns [EObject current=null] : ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ;
+    // InternalSecMFParser.g:1339:1: rulePropertyValue returns [EObject current=null] : ( (lv_ownedValue_0_0= rulePropertyExpression ) ) ;
     public final EObject rulePropertyValue() throws RecognitionException {
         EObject current = null;
 
@@ -3480,14 +3513,14 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1326:2: ( ( (lv_ownedValue_0_0= rulePropertyExpression ) ) )
-            // InternalSecMFParser.g:1327:2: ( (lv_ownedValue_0_0= rulePropertyExpression ) )
+            // InternalSecMFParser.g:1345:2: ( ( (lv_ownedValue_0_0= rulePropertyExpression ) ) )
+            // InternalSecMFParser.g:1346:2: ( (lv_ownedValue_0_0= rulePropertyExpression ) )
             {
-            // InternalSecMFParser.g:1327:2: ( (lv_ownedValue_0_0= rulePropertyExpression ) )
-            // InternalSecMFParser.g:1328:3: (lv_ownedValue_0_0= rulePropertyExpression )
+            // InternalSecMFParser.g:1346:2: ( (lv_ownedValue_0_0= rulePropertyExpression ) )
+            // InternalSecMFParser.g:1347:3: (lv_ownedValue_0_0= rulePropertyExpression )
             {
-            // InternalSecMFParser.g:1328:3: (lv_ownedValue_0_0= rulePropertyExpression )
-            // InternalSecMFParser.g:1329:4: lv_ownedValue_0_0= rulePropertyExpression
+            // InternalSecMFParser.g:1347:3: (lv_ownedValue_0_0= rulePropertyExpression )
+            // InternalSecMFParser.g:1348:4: lv_ownedValue_0_0= rulePropertyExpression
             {
 
             				newCompositeNode(grammarAccess.getPropertyValueAccess().getOwnedValuePropertyExpressionParserRuleCall_0());
@@ -3534,7 +3567,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePropertyExpression"
-    // InternalSecMFParser.g:1349:1: entryRulePropertyExpression returns [EObject current=null] : iv_rulePropertyExpression= rulePropertyExpression EOF ;
+    // InternalSecMFParser.g:1368:1: entryRulePropertyExpression returns [EObject current=null] : iv_rulePropertyExpression= rulePropertyExpression EOF ;
     public final EObject entryRulePropertyExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3542,8 +3575,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1349:59: (iv_rulePropertyExpression= rulePropertyExpression EOF )
-            // InternalSecMFParser.g:1350:2: iv_rulePropertyExpression= rulePropertyExpression EOF
+            // InternalSecMFParser.g:1368:59: (iv_rulePropertyExpression= rulePropertyExpression EOF )
+            // InternalSecMFParser.g:1369:2: iv_rulePropertyExpression= rulePropertyExpression EOF
             {
              newCompositeNode(grammarAccess.getPropertyExpressionRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -3570,7 +3603,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePropertyExpression"
-    // InternalSecMFParser.g:1356:1: rulePropertyExpression returns [EObject current=null] : (this_RecordTerm_0= ruleRecordTerm | this_ReferenceTerm_1= ruleReferenceTerm | this_ComponentClassifierTerm_2= ruleComponentClassifierTerm | this_ComputedTerm_3= ruleComputedTerm | this_StringTerm_4= ruleStringTerm | this_NumericRangeTerm_5= ruleNumericRangeTerm | this_RealTerm_6= ruleRealTerm | this_IntegerTerm_7= ruleIntegerTerm | this_ListTerm_8= ruleListTerm | this_BooleanLiteral_9= ruleBooleanLiteral | this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm ) ;
+    // InternalSecMFParser.g:1375:1: rulePropertyExpression returns [EObject current=null] : (this_RecordTerm_0= ruleRecordTerm | this_ReferenceTerm_1= ruleReferenceTerm | this_ComponentClassifierTerm_2= ruleComponentClassifierTerm | this_ComputedTerm_3= ruleComputedTerm | this_StringTerm_4= ruleStringTerm | this_NumericRangeTerm_5= ruleNumericRangeTerm | this_RealTerm_6= ruleRealTerm | this_IntegerTerm_7= ruleIntegerTerm | this_ListTerm_8= ruleListTerm | this_BooleanLiteral_9= ruleBooleanLiteral | this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm ) ;
     public final EObject rulePropertyExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3601,15 +3634,15 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1362:2: ( (this_RecordTerm_0= ruleRecordTerm | this_ReferenceTerm_1= ruleReferenceTerm | this_ComponentClassifierTerm_2= ruleComponentClassifierTerm | this_ComputedTerm_3= ruleComputedTerm | this_StringTerm_4= ruleStringTerm | this_NumericRangeTerm_5= ruleNumericRangeTerm | this_RealTerm_6= ruleRealTerm | this_IntegerTerm_7= ruleIntegerTerm | this_ListTerm_8= ruleListTerm | this_BooleanLiteral_9= ruleBooleanLiteral | this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm ) )
-            // InternalSecMFParser.g:1363:2: (this_RecordTerm_0= ruleRecordTerm | this_ReferenceTerm_1= ruleReferenceTerm | this_ComponentClassifierTerm_2= ruleComponentClassifierTerm | this_ComputedTerm_3= ruleComputedTerm | this_StringTerm_4= ruleStringTerm | this_NumericRangeTerm_5= ruleNumericRangeTerm | this_RealTerm_6= ruleRealTerm | this_IntegerTerm_7= ruleIntegerTerm | this_ListTerm_8= ruleListTerm | this_BooleanLiteral_9= ruleBooleanLiteral | this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm )
+            // InternalSecMFParser.g:1381:2: ( (this_RecordTerm_0= ruleRecordTerm | this_ReferenceTerm_1= ruleReferenceTerm | this_ComponentClassifierTerm_2= ruleComponentClassifierTerm | this_ComputedTerm_3= ruleComputedTerm | this_StringTerm_4= ruleStringTerm | this_NumericRangeTerm_5= ruleNumericRangeTerm | this_RealTerm_6= ruleRealTerm | this_IntegerTerm_7= ruleIntegerTerm | this_ListTerm_8= ruleListTerm | this_BooleanLiteral_9= ruleBooleanLiteral | this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm ) )
+            // InternalSecMFParser.g:1382:2: (this_RecordTerm_0= ruleRecordTerm | this_ReferenceTerm_1= ruleReferenceTerm | this_ComponentClassifierTerm_2= ruleComponentClassifierTerm | this_ComputedTerm_3= ruleComputedTerm | this_StringTerm_4= ruleStringTerm | this_NumericRangeTerm_5= ruleNumericRangeTerm | this_RealTerm_6= ruleRealTerm | this_IntegerTerm_7= ruleIntegerTerm | this_ListTerm_8= ruleListTerm | this_BooleanLiteral_9= ruleBooleanLiteral | this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm )
             {
-            // InternalSecMFParser.g:1363:2: (this_RecordTerm_0= ruleRecordTerm | this_ReferenceTerm_1= ruleReferenceTerm | this_ComponentClassifierTerm_2= ruleComponentClassifierTerm | this_ComputedTerm_3= ruleComputedTerm | this_StringTerm_4= ruleStringTerm | this_NumericRangeTerm_5= ruleNumericRangeTerm | this_RealTerm_6= ruleRealTerm | this_IntegerTerm_7= ruleIntegerTerm | this_ListTerm_8= ruleListTerm | this_BooleanLiteral_9= ruleBooleanLiteral | this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm )
+            // InternalSecMFParser.g:1382:2: (this_RecordTerm_0= ruleRecordTerm | this_ReferenceTerm_1= ruleReferenceTerm | this_ComponentClassifierTerm_2= ruleComponentClassifierTerm | this_ComputedTerm_3= ruleComputedTerm | this_StringTerm_4= ruleStringTerm | this_NumericRangeTerm_5= ruleNumericRangeTerm | this_RealTerm_6= ruleRealTerm | this_IntegerTerm_7= ruleIntegerTerm | this_ListTerm_8= ruleListTerm | this_BooleanLiteral_9= ruleBooleanLiteral | this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm )
             int alt30=11;
             alt30 = dfa30.predict(input);
             switch (alt30) {
                 case 1 :
-                    // InternalSecMFParser.g:1364:3: this_RecordTerm_0= ruleRecordTerm
+                    // InternalSecMFParser.g:1383:3: this_RecordTerm_0= ruleRecordTerm
                     {
 
                     			newCompositeNode(grammarAccess.getPropertyExpressionAccess().getRecordTermParserRuleCall_0());
@@ -3627,7 +3660,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSecMFParser.g:1373:3: this_ReferenceTerm_1= ruleReferenceTerm
+                    // InternalSecMFParser.g:1392:3: this_ReferenceTerm_1= ruleReferenceTerm
                     {
 
                     			newCompositeNode(grammarAccess.getPropertyExpressionAccess().getReferenceTermParserRuleCall_1());
@@ -3645,7 +3678,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalSecMFParser.g:1382:3: this_ComponentClassifierTerm_2= ruleComponentClassifierTerm
+                    // InternalSecMFParser.g:1401:3: this_ComponentClassifierTerm_2= ruleComponentClassifierTerm
                     {
 
                     			newCompositeNode(grammarAccess.getPropertyExpressionAccess().getComponentClassifierTermParserRuleCall_2());
@@ -3663,7 +3696,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalSecMFParser.g:1391:3: this_ComputedTerm_3= ruleComputedTerm
+                    // InternalSecMFParser.g:1410:3: this_ComputedTerm_3= ruleComputedTerm
                     {
 
                     			newCompositeNode(grammarAccess.getPropertyExpressionAccess().getComputedTermParserRuleCall_3());
@@ -3681,7 +3714,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalSecMFParser.g:1400:3: this_StringTerm_4= ruleStringTerm
+                    // InternalSecMFParser.g:1419:3: this_StringTerm_4= ruleStringTerm
                     {
 
                     			newCompositeNode(grammarAccess.getPropertyExpressionAccess().getStringTermParserRuleCall_4());
@@ -3699,7 +3732,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalSecMFParser.g:1409:3: this_NumericRangeTerm_5= ruleNumericRangeTerm
+                    // InternalSecMFParser.g:1428:3: this_NumericRangeTerm_5= ruleNumericRangeTerm
                     {
 
                     			newCompositeNode(grammarAccess.getPropertyExpressionAccess().getNumericRangeTermParserRuleCall_5());
@@ -3717,7 +3750,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalSecMFParser.g:1418:3: this_RealTerm_6= ruleRealTerm
+                    // InternalSecMFParser.g:1437:3: this_RealTerm_6= ruleRealTerm
                     {
 
                     			newCompositeNode(grammarAccess.getPropertyExpressionAccess().getRealTermParserRuleCall_6());
@@ -3735,7 +3768,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalSecMFParser.g:1427:3: this_IntegerTerm_7= ruleIntegerTerm
+                    // InternalSecMFParser.g:1446:3: this_IntegerTerm_7= ruleIntegerTerm
                     {
 
                     			newCompositeNode(grammarAccess.getPropertyExpressionAccess().getIntegerTermParserRuleCall_7());
@@ -3753,7 +3786,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalSecMFParser.g:1436:3: this_ListTerm_8= ruleListTerm
+                    // InternalSecMFParser.g:1455:3: this_ListTerm_8= ruleListTerm
                     {
 
                     			newCompositeNode(grammarAccess.getPropertyExpressionAccess().getListTermParserRuleCall_8());
@@ -3771,7 +3804,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalSecMFParser.g:1445:3: this_BooleanLiteral_9= ruleBooleanLiteral
+                    // InternalSecMFParser.g:1464:3: this_BooleanLiteral_9= ruleBooleanLiteral
                     {
 
                     			newCompositeNode(grammarAccess.getPropertyExpressionAccess().getBooleanLiteralParserRuleCall_9());
@@ -3789,7 +3822,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalSecMFParser.g:1454:3: this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm
+                    // InternalSecMFParser.g:1473:3: this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm
                     {
 
                     			newCompositeNode(grammarAccess.getPropertyExpressionAccess().getLiteralorReferenceTermParserRuleCall_10());
@@ -3829,7 +3862,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLiteralorReferenceTerm"
-    // InternalSecMFParser.g:1466:1: entryRuleLiteralorReferenceTerm returns [EObject current=null] : iv_ruleLiteralorReferenceTerm= ruleLiteralorReferenceTerm EOF ;
+    // InternalSecMFParser.g:1485:1: entryRuleLiteralorReferenceTerm returns [EObject current=null] : iv_ruleLiteralorReferenceTerm= ruleLiteralorReferenceTerm EOF ;
     public final EObject entryRuleLiteralorReferenceTerm() throws RecognitionException {
         EObject current = null;
 
@@ -3837,8 +3870,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1466:63: (iv_ruleLiteralorReferenceTerm= ruleLiteralorReferenceTerm EOF )
-            // InternalSecMFParser.g:1467:2: iv_ruleLiteralorReferenceTerm= ruleLiteralorReferenceTerm EOF
+            // InternalSecMFParser.g:1485:63: (iv_ruleLiteralorReferenceTerm= ruleLiteralorReferenceTerm EOF )
+            // InternalSecMFParser.g:1486:2: iv_ruleLiteralorReferenceTerm= ruleLiteralorReferenceTerm EOF
             {
              newCompositeNode(grammarAccess.getLiteralorReferenceTermRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -3865,7 +3898,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLiteralorReferenceTerm"
-    // InternalSecMFParser.g:1473:1: ruleLiteralorReferenceTerm returns [EObject current=null] : ( ( ruleQPREF ) ) ;
+    // InternalSecMFParser.g:1492:1: ruleLiteralorReferenceTerm returns [EObject current=null] : ( ( ruleQPREF ) ) ;
     public final EObject ruleLiteralorReferenceTerm() throws RecognitionException {
         EObject current = null;
 
@@ -3873,14 +3906,14 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1479:2: ( ( ( ruleQPREF ) ) )
-            // InternalSecMFParser.g:1480:2: ( ( ruleQPREF ) )
+            // InternalSecMFParser.g:1498:2: ( ( ( ruleQPREF ) ) )
+            // InternalSecMFParser.g:1499:2: ( ( ruleQPREF ) )
             {
-            // InternalSecMFParser.g:1480:2: ( ( ruleQPREF ) )
-            // InternalSecMFParser.g:1481:3: ( ruleQPREF )
+            // InternalSecMFParser.g:1499:2: ( ( ruleQPREF ) )
+            // InternalSecMFParser.g:1500:3: ( ruleQPREF )
             {
-            // InternalSecMFParser.g:1481:3: ( ruleQPREF )
-            // InternalSecMFParser.g:1482:4: ruleQPREF
+            // InternalSecMFParser.g:1500:3: ( ruleQPREF )
+            // InternalSecMFParser.g:1501:4: ruleQPREF
             {
 
             				if (current==null) {
@@ -3924,7 +3957,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBooleanLiteral"
-    // InternalSecMFParser.g:1499:1: entryRuleBooleanLiteral returns [EObject current=null] : iv_ruleBooleanLiteral= ruleBooleanLiteral EOF ;
+    // InternalSecMFParser.g:1518:1: entryRuleBooleanLiteral returns [EObject current=null] : iv_ruleBooleanLiteral= ruleBooleanLiteral EOF ;
     public final EObject entryRuleBooleanLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3932,8 +3965,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1499:55: (iv_ruleBooleanLiteral= ruleBooleanLiteral EOF )
-            // InternalSecMFParser.g:1500:2: iv_ruleBooleanLiteral= ruleBooleanLiteral EOF
+            // InternalSecMFParser.g:1518:55: (iv_ruleBooleanLiteral= ruleBooleanLiteral EOF )
+            // InternalSecMFParser.g:1519:2: iv_ruleBooleanLiteral= ruleBooleanLiteral EOF
             {
              newCompositeNode(grammarAccess.getBooleanLiteralRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -3960,7 +3993,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanLiteral"
-    // InternalSecMFParser.g:1506:1: ruleBooleanLiteral returns [EObject current=null] : ( () ( ( (lv_value_1_0= True ) ) | otherlv_2= False ) ) ;
+    // InternalSecMFParser.g:1525:1: ruleBooleanLiteral returns [EObject current=null] : ( () ( ( (lv_value_1_0= True ) ) | otherlv_2= False ) ) ;
     public final EObject ruleBooleanLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3971,14 +4004,14 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1512:2: ( ( () ( ( (lv_value_1_0= True ) ) | otherlv_2= False ) ) )
-            // InternalSecMFParser.g:1513:2: ( () ( ( (lv_value_1_0= True ) ) | otherlv_2= False ) )
+            // InternalSecMFParser.g:1531:2: ( ( () ( ( (lv_value_1_0= True ) ) | otherlv_2= False ) ) )
+            // InternalSecMFParser.g:1532:2: ( () ( ( (lv_value_1_0= True ) ) | otherlv_2= False ) )
             {
-            // InternalSecMFParser.g:1513:2: ( () ( ( (lv_value_1_0= True ) ) | otherlv_2= False ) )
-            // InternalSecMFParser.g:1514:3: () ( ( (lv_value_1_0= True ) ) | otherlv_2= False )
+            // InternalSecMFParser.g:1532:2: ( () ( ( (lv_value_1_0= True ) ) | otherlv_2= False ) )
+            // InternalSecMFParser.g:1533:3: () ( ( (lv_value_1_0= True ) ) | otherlv_2= False )
             {
-            // InternalSecMFParser.g:1514:3: ()
-            // InternalSecMFParser.g:1515:4: 
+            // InternalSecMFParser.g:1533:3: ()
+            // InternalSecMFParser.g:1534:4: 
             {
 
             				current = forceCreateModelElement(
@@ -3988,7 +4021,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:1521:3: ( ( (lv_value_1_0= True ) ) | otherlv_2= False )
+            // InternalSecMFParser.g:1540:3: ( ( (lv_value_1_0= True ) ) | otherlv_2= False )
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -4006,13 +4039,13 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt31) {
                 case 1 :
-                    // InternalSecMFParser.g:1522:4: ( (lv_value_1_0= True ) )
+                    // InternalSecMFParser.g:1541:4: ( (lv_value_1_0= True ) )
                     {
-                    // InternalSecMFParser.g:1522:4: ( (lv_value_1_0= True ) )
-                    // InternalSecMFParser.g:1523:5: (lv_value_1_0= True )
+                    // InternalSecMFParser.g:1541:4: ( (lv_value_1_0= True ) )
+                    // InternalSecMFParser.g:1542:5: (lv_value_1_0= True )
                     {
-                    // InternalSecMFParser.g:1523:5: (lv_value_1_0= True )
-                    // InternalSecMFParser.g:1524:6: lv_value_1_0= True
+                    // InternalSecMFParser.g:1542:5: (lv_value_1_0= True )
+                    // InternalSecMFParser.g:1543:6: lv_value_1_0= True
                     {
                     lv_value_1_0=(Token)match(input,True,FollowSets000.FOLLOW_2); 
 
@@ -4034,7 +4067,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSecMFParser.g:1537:4: otherlv_2= False
+                    // InternalSecMFParser.g:1556:4: otherlv_2= False
                     {
                     otherlv_2=(Token)match(input,False,FollowSets000.FOLLOW_2); 
 
@@ -4069,7 +4102,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConstantValue"
-    // InternalSecMFParser.g:1546:1: entryRuleConstantValue returns [EObject current=null] : iv_ruleConstantValue= ruleConstantValue EOF ;
+    // InternalSecMFParser.g:1565:1: entryRuleConstantValue returns [EObject current=null] : iv_ruleConstantValue= ruleConstantValue EOF ;
     public final EObject entryRuleConstantValue() throws RecognitionException {
         EObject current = null;
 
@@ -4077,8 +4110,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1546:54: (iv_ruleConstantValue= ruleConstantValue EOF )
-            // InternalSecMFParser.g:1547:2: iv_ruleConstantValue= ruleConstantValue EOF
+            // InternalSecMFParser.g:1565:54: (iv_ruleConstantValue= ruleConstantValue EOF )
+            // InternalSecMFParser.g:1566:2: iv_ruleConstantValue= ruleConstantValue EOF
             {
              newCompositeNode(grammarAccess.getConstantValueRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -4105,7 +4138,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConstantValue"
-    // InternalSecMFParser.g:1553:1: ruleConstantValue returns [EObject current=null] : ( ( ruleQPREF ) ) ;
+    // InternalSecMFParser.g:1572:1: ruleConstantValue returns [EObject current=null] : ( ( ruleQPREF ) ) ;
     public final EObject ruleConstantValue() throws RecognitionException {
         EObject current = null;
 
@@ -4113,14 +4146,14 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1559:2: ( ( ( ruleQPREF ) ) )
-            // InternalSecMFParser.g:1560:2: ( ( ruleQPREF ) )
+            // InternalSecMFParser.g:1578:2: ( ( ( ruleQPREF ) ) )
+            // InternalSecMFParser.g:1579:2: ( ( ruleQPREF ) )
             {
-            // InternalSecMFParser.g:1560:2: ( ( ruleQPREF ) )
-            // InternalSecMFParser.g:1561:3: ( ruleQPREF )
+            // InternalSecMFParser.g:1579:2: ( ( ruleQPREF ) )
+            // InternalSecMFParser.g:1580:3: ( ruleQPREF )
             {
-            // InternalSecMFParser.g:1561:3: ( ruleQPREF )
-            // InternalSecMFParser.g:1562:4: ruleQPREF
+            // InternalSecMFParser.g:1580:3: ( ruleQPREF )
+            // InternalSecMFParser.g:1581:4: ruleQPREF
             {
 
             				if (current==null) {
@@ -4164,7 +4197,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleReferenceTerm"
-    // InternalSecMFParser.g:1579:1: entryRuleReferenceTerm returns [EObject current=null] : iv_ruleReferenceTerm= ruleReferenceTerm EOF ;
+    // InternalSecMFParser.g:1598:1: entryRuleReferenceTerm returns [EObject current=null] : iv_ruleReferenceTerm= ruleReferenceTerm EOF ;
     public final EObject entryRuleReferenceTerm() throws RecognitionException {
         EObject current = null;
 
@@ -4172,8 +4205,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1579:54: (iv_ruleReferenceTerm= ruleReferenceTerm EOF )
-            // InternalSecMFParser.g:1580:2: iv_ruleReferenceTerm= ruleReferenceTerm EOF
+            // InternalSecMFParser.g:1598:54: (iv_ruleReferenceTerm= ruleReferenceTerm EOF )
+            // InternalSecMFParser.g:1599:2: iv_ruleReferenceTerm= ruleReferenceTerm EOF
             {
              newCompositeNode(grammarAccess.getReferenceTermRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -4200,7 +4233,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReferenceTerm"
-    // InternalSecMFParser.g:1586:1: ruleReferenceTerm returns [EObject current=null] : (otherlv_0= Reference otherlv_1= LeftParenthesis ( (lv_path_2_0= ruleContainmentPathElement ) ) otherlv_3= RightParenthesis ) ;
+    // InternalSecMFParser.g:1605:1: ruleReferenceTerm returns [EObject current=null] : (otherlv_0= Reference otherlv_1= LeftParenthesis ( (lv_path_2_0= ruleContainmentPathElement ) ) otherlv_3= RightParenthesis ) ;
     public final EObject ruleReferenceTerm() throws RecognitionException {
         EObject current = null;
 
@@ -4214,11 +4247,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1592:2: ( (otherlv_0= Reference otherlv_1= LeftParenthesis ( (lv_path_2_0= ruleContainmentPathElement ) ) otherlv_3= RightParenthesis ) )
-            // InternalSecMFParser.g:1593:2: (otherlv_0= Reference otherlv_1= LeftParenthesis ( (lv_path_2_0= ruleContainmentPathElement ) ) otherlv_3= RightParenthesis )
+            // InternalSecMFParser.g:1611:2: ( (otherlv_0= Reference otherlv_1= LeftParenthesis ( (lv_path_2_0= ruleContainmentPathElement ) ) otherlv_3= RightParenthesis ) )
+            // InternalSecMFParser.g:1612:2: (otherlv_0= Reference otherlv_1= LeftParenthesis ( (lv_path_2_0= ruleContainmentPathElement ) ) otherlv_3= RightParenthesis )
             {
-            // InternalSecMFParser.g:1593:2: (otherlv_0= Reference otherlv_1= LeftParenthesis ( (lv_path_2_0= ruleContainmentPathElement ) ) otherlv_3= RightParenthesis )
-            // InternalSecMFParser.g:1594:3: otherlv_0= Reference otherlv_1= LeftParenthesis ( (lv_path_2_0= ruleContainmentPathElement ) ) otherlv_3= RightParenthesis
+            // InternalSecMFParser.g:1612:2: (otherlv_0= Reference otherlv_1= LeftParenthesis ( (lv_path_2_0= ruleContainmentPathElement ) ) otherlv_3= RightParenthesis )
+            // InternalSecMFParser.g:1613:3: otherlv_0= Reference otherlv_1= LeftParenthesis ( (lv_path_2_0= ruleContainmentPathElement ) ) otherlv_3= RightParenthesis
             {
             otherlv_0=(Token)match(input,Reference,FollowSets000.FOLLOW_29); 
 
@@ -4228,11 +4261,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getReferenceTermAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalSecMFParser.g:1602:3: ( (lv_path_2_0= ruleContainmentPathElement ) )
-            // InternalSecMFParser.g:1603:4: (lv_path_2_0= ruleContainmentPathElement )
+            // InternalSecMFParser.g:1621:3: ( (lv_path_2_0= ruleContainmentPathElement ) )
+            // InternalSecMFParser.g:1622:4: (lv_path_2_0= ruleContainmentPathElement )
             {
-            // InternalSecMFParser.g:1603:4: (lv_path_2_0= ruleContainmentPathElement )
-            // InternalSecMFParser.g:1604:5: lv_path_2_0= ruleContainmentPathElement
+            // InternalSecMFParser.g:1622:4: (lv_path_2_0= ruleContainmentPathElement )
+            // InternalSecMFParser.g:1623:5: lv_path_2_0= ruleContainmentPathElement
             {
 
             					newCompositeNode(grammarAccess.getReferenceTermAccess().getPathContainmentPathElementParserRuleCall_2_0());
@@ -4286,7 +4319,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRecordTerm"
-    // InternalSecMFParser.g:1629:1: entryRuleRecordTerm returns [EObject current=null] : iv_ruleRecordTerm= ruleRecordTerm EOF ;
+    // InternalSecMFParser.g:1648:1: entryRuleRecordTerm returns [EObject current=null] : iv_ruleRecordTerm= ruleRecordTerm EOF ;
     public final EObject entryRuleRecordTerm() throws RecognitionException {
         EObject current = null;
 
@@ -4294,8 +4327,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1629:51: (iv_ruleRecordTerm= ruleRecordTerm EOF )
-            // InternalSecMFParser.g:1630:2: iv_ruleRecordTerm= ruleRecordTerm EOF
+            // InternalSecMFParser.g:1648:51: (iv_ruleRecordTerm= ruleRecordTerm EOF )
+            // InternalSecMFParser.g:1649:2: iv_ruleRecordTerm= ruleRecordTerm EOF
             {
              newCompositeNode(grammarAccess.getRecordTermRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -4322,7 +4355,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRecordTerm"
-    // InternalSecMFParser.g:1636:1: ruleRecordTerm returns [EObject current=null] : (otherlv_0= LeftSquareBracket ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+ otherlv_2= RightSquareBracket ) ;
+    // InternalSecMFParser.g:1655:1: ruleRecordTerm returns [EObject current=null] : (otherlv_0= LeftSquareBracket ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+ otherlv_2= RightSquareBracket ) ;
     public final EObject ruleRecordTerm() throws RecognitionException {
         EObject current = null;
 
@@ -4335,17 +4368,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1642:2: ( (otherlv_0= LeftSquareBracket ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+ otherlv_2= RightSquareBracket ) )
-            // InternalSecMFParser.g:1643:2: (otherlv_0= LeftSquareBracket ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+ otherlv_2= RightSquareBracket )
+            // InternalSecMFParser.g:1661:2: ( (otherlv_0= LeftSquareBracket ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+ otherlv_2= RightSquareBracket ) )
+            // InternalSecMFParser.g:1662:2: (otherlv_0= LeftSquareBracket ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+ otherlv_2= RightSquareBracket )
             {
-            // InternalSecMFParser.g:1643:2: (otherlv_0= LeftSquareBracket ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+ otherlv_2= RightSquareBracket )
-            // InternalSecMFParser.g:1644:3: otherlv_0= LeftSquareBracket ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+ otherlv_2= RightSquareBracket
+            // InternalSecMFParser.g:1662:2: (otherlv_0= LeftSquareBracket ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+ otherlv_2= RightSquareBracket )
+            // InternalSecMFParser.g:1663:3: otherlv_0= LeftSquareBracket ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+ otherlv_2= RightSquareBracket
             {
             otherlv_0=(Token)match(input,LeftSquareBracket,FollowSets000.FOLLOW_6); 
 
             			newLeafNode(otherlv_0, grammarAccess.getRecordTermAccess().getLeftSquareBracketKeyword_0());
             		
-            // InternalSecMFParser.g:1648:3: ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+
+            // InternalSecMFParser.g:1667:3: ( (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation ) )+
             int cnt32=0;
             loop32:
             do {
@@ -4359,10 +4392,10 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                 switch (alt32) {
             	case 1 :
-            	    // InternalSecMFParser.g:1649:4: (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation )
+            	    // InternalSecMFParser.g:1668:4: (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation )
             	    {
-            	    // InternalSecMFParser.g:1649:4: (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation )
-            	    // InternalSecMFParser.g:1650:5: lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation
+            	    // InternalSecMFParser.g:1668:4: (lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation )
+            	    // InternalSecMFParser.g:1669:5: lv_ownedFieldValue_1_0= ruleFieldPropertyAssociation
             	    {
 
             	    					newCompositeNode(grammarAccess.getRecordTermAccess().getOwnedFieldValueFieldPropertyAssociationParserRuleCall_1_0());
@@ -4426,7 +4459,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComputedTerm"
-    // InternalSecMFParser.g:1675:1: entryRuleComputedTerm returns [EObject current=null] : iv_ruleComputedTerm= ruleComputedTerm EOF ;
+    // InternalSecMFParser.g:1694:1: entryRuleComputedTerm returns [EObject current=null] : iv_ruleComputedTerm= ruleComputedTerm EOF ;
     public final EObject entryRuleComputedTerm() throws RecognitionException {
         EObject current = null;
 
@@ -4434,8 +4467,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1675:53: (iv_ruleComputedTerm= ruleComputedTerm EOF )
-            // InternalSecMFParser.g:1676:2: iv_ruleComputedTerm= ruleComputedTerm EOF
+            // InternalSecMFParser.g:1694:53: (iv_ruleComputedTerm= ruleComputedTerm EOF )
+            // InternalSecMFParser.g:1695:2: iv_ruleComputedTerm= ruleComputedTerm EOF
             {
              newCompositeNode(grammarAccess.getComputedTermRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -4462,7 +4495,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComputedTerm"
-    // InternalSecMFParser.g:1682:1: ruleComputedTerm returns [EObject current=null] : (otherlv_0= Compute otherlv_1= LeftParenthesis ( (lv_function_2_0= RULE_ID ) ) otherlv_3= RightParenthesis ) ;
+    // InternalSecMFParser.g:1701:1: ruleComputedTerm returns [EObject current=null] : (otherlv_0= Compute otherlv_1= LeftParenthesis ( (lv_function_2_0= RULE_ID ) ) otherlv_3= RightParenthesis ) ;
     public final EObject ruleComputedTerm() throws RecognitionException {
         EObject current = null;
 
@@ -4475,11 +4508,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1688:2: ( (otherlv_0= Compute otherlv_1= LeftParenthesis ( (lv_function_2_0= RULE_ID ) ) otherlv_3= RightParenthesis ) )
-            // InternalSecMFParser.g:1689:2: (otherlv_0= Compute otherlv_1= LeftParenthesis ( (lv_function_2_0= RULE_ID ) ) otherlv_3= RightParenthesis )
+            // InternalSecMFParser.g:1707:2: ( (otherlv_0= Compute otherlv_1= LeftParenthesis ( (lv_function_2_0= RULE_ID ) ) otherlv_3= RightParenthesis ) )
+            // InternalSecMFParser.g:1708:2: (otherlv_0= Compute otherlv_1= LeftParenthesis ( (lv_function_2_0= RULE_ID ) ) otherlv_3= RightParenthesis )
             {
-            // InternalSecMFParser.g:1689:2: (otherlv_0= Compute otherlv_1= LeftParenthesis ( (lv_function_2_0= RULE_ID ) ) otherlv_3= RightParenthesis )
-            // InternalSecMFParser.g:1690:3: otherlv_0= Compute otherlv_1= LeftParenthesis ( (lv_function_2_0= RULE_ID ) ) otherlv_3= RightParenthesis
+            // InternalSecMFParser.g:1708:2: (otherlv_0= Compute otherlv_1= LeftParenthesis ( (lv_function_2_0= RULE_ID ) ) otherlv_3= RightParenthesis )
+            // InternalSecMFParser.g:1709:3: otherlv_0= Compute otherlv_1= LeftParenthesis ( (lv_function_2_0= RULE_ID ) ) otherlv_3= RightParenthesis
             {
             otherlv_0=(Token)match(input,Compute,FollowSets000.FOLLOW_29); 
 
@@ -4489,11 +4522,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getComputedTermAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalSecMFParser.g:1698:3: ( (lv_function_2_0= RULE_ID ) )
-            // InternalSecMFParser.g:1699:4: (lv_function_2_0= RULE_ID )
+            // InternalSecMFParser.g:1717:3: ( (lv_function_2_0= RULE_ID ) )
+            // InternalSecMFParser.g:1718:4: (lv_function_2_0= RULE_ID )
             {
-            // InternalSecMFParser.g:1699:4: (lv_function_2_0= RULE_ID )
-            // InternalSecMFParser.g:1700:5: lv_function_2_0= RULE_ID
+            // InternalSecMFParser.g:1718:4: (lv_function_2_0= RULE_ID )
+            // InternalSecMFParser.g:1719:5: lv_function_2_0= RULE_ID
             {
             lv_function_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_30); 
 
@@ -4542,7 +4575,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComponentClassifierTerm"
-    // InternalSecMFParser.g:1724:1: entryRuleComponentClassifierTerm returns [EObject current=null] : iv_ruleComponentClassifierTerm= ruleComponentClassifierTerm EOF ;
+    // InternalSecMFParser.g:1743:1: entryRuleComponentClassifierTerm returns [EObject current=null] : iv_ruleComponentClassifierTerm= ruleComponentClassifierTerm EOF ;
     public final EObject entryRuleComponentClassifierTerm() throws RecognitionException {
         EObject current = null;
 
@@ -4550,8 +4583,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1724:64: (iv_ruleComponentClassifierTerm= ruleComponentClassifierTerm EOF )
-            // InternalSecMFParser.g:1725:2: iv_ruleComponentClassifierTerm= ruleComponentClassifierTerm EOF
+            // InternalSecMFParser.g:1743:64: (iv_ruleComponentClassifierTerm= ruleComponentClassifierTerm EOF )
+            // InternalSecMFParser.g:1744:2: iv_ruleComponentClassifierTerm= ruleComponentClassifierTerm EOF
             {
              newCompositeNode(grammarAccess.getComponentClassifierTermRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -4578,7 +4611,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComponentClassifierTerm"
-    // InternalSecMFParser.g:1731:1: ruleComponentClassifierTerm returns [EObject current=null] : (otherlv_0= Classifier otherlv_1= LeftParenthesis ( ( ruleQCREF ) ) otherlv_3= RightParenthesis ) ;
+    // InternalSecMFParser.g:1750:1: ruleComponentClassifierTerm returns [EObject current=null] : (otherlv_0= Classifier otherlv_1= LeftParenthesis ( ( ruleQCREF ) ) otherlv_3= RightParenthesis ) ;
     public final EObject ruleComponentClassifierTerm() throws RecognitionException {
         EObject current = null;
 
@@ -4590,11 +4623,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1737:2: ( (otherlv_0= Classifier otherlv_1= LeftParenthesis ( ( ruleQCREF ) ) otherlv_3= RightParenthesis ) )
-            // InternalSecMFParser.g:1738:2: (otherlv_0= Classifier otherlv_1= LeftParenthesis ( ( ruleQCREF ) ) otherlv_3= RightParenthesis )
+            // InternalSecMFParser.g:1756:2: ( (otherlv_0= Classifier otherlv_1= LeftParenthesis ( ( ruleQCREF ) ) otherlv_3= RightParenthesis ) )
+            // InternalSecMFParser.g:1757:2: (otherlv_0= Classifier otherlv_1= LeftParenthesis ( ( ruleQCREF ) ) otherlv_3= RightParenthesis )
             {
-            // InternalSecMFParser.g:1738:2: (otherlv_0= Classifier otherlv_1= LeftParenthesis ( ( ruleQCREF ) ) otherlv_3= RightParenthesis )
-            // InternalSecMFParser.g:1739:3: otherlv_0= Classifier otherlv_1= LeftParenthesis ( ( ruleQCREF ) ) otherlv_3= RightParenthesis
+            // InternalSecMFParser.g:1757:2: (otherlv_0= Classifier otherlv_1= LeftParenthesis ( ( ruleQCREF ) ) otherlv_3= RightParenthesis )
+            // InternalSecMFParser.g:1758:3: otherlv_0= Classifier otherlv_1= LeftParenthesis ( ( ruleQCREF ) ) otherlv_3= RightParenthesis
             {
             otherlv_0=(Token)match(input,Classifier,FollowSets000.FOLLOW_29); 
 
@@ -4604,11 +4637,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getComponentClassifierTermAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalSecMFParser.g:1747:3: ( ( ruleQCREF ) )
-            // InternalSecMFParser.g:1748:4: ( ruleQCREF )
+            // InternalSecMFParser.g:1766:3: ( ( ruleQCREF ) )
+            // InternalSecMFParser.g:1767:4: ( ruleQCREF )
             {
-            // InternalSecMFParser.g:1748:4: ( ruleQCREF )
-            // InternalSecMFParser.g:1749:5: ruleQCREF
+            // InternalSecMFParser.g:1767:4: ( ruleQCREF )
+            // InternalSecMFParser.g:1768:5: ruleQCREF
             {
 
             					if (current==null) {
@@ -4659,7 +4692,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleListTerm"
-    // InternalSecMFParser.g:1771:1: entryRuleListTerm returns [EObject current=null] : iv_ruleListTerm= ruleListTerm EOF ;
+    // InternalSecMFParser.g:1790:1: entryRuleListTerm returns [EObject current=null] : iv_ruleListTerm= ruleListTerm EOF ;
     public final EObject entryRuleListTerm() throws RecognitionException {
         EObject current = null;
 
@@ -4667,8 +4700,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1771:49: (iv_ruleListTerm= ruleListTerm EOF )
-            // InternalSecMFParser.g:1772:2: iv_ruleListTerm= ruleListTerm EOF
+            // InternalSecMFParser.g:1790:49: (iv_ruleListTerm= ruleListTerm EOF )
+            // InternalSecMFParser.g:1791:2: iv_ruleListTerm= ruleListTerm EOF
             {
              newCompositeNode(grammarAccess.getListTermRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -4695,7 +4728,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleListTerm"
-    // InternalSecMFParser.g:1778:1: ruleListTerm returns [EObject current=null] : ( () otherlv_1= LeftParenthesis ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )? otherlv_5= RightParenthesis ) ;
+    // InternalSecMFParser.g:1797:1: ruleListTerm returns [EObject current=null] : ( () otherlv_1= LeftParenthesis ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )? otherlv_5= RightParenthesis ) ;
     public final EObject ruleListTerm() throws RecognitionException {
         EObject current = null;
 
@@ -4711,14 +4744,14 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1784:2: ( ( () otherlv_1= LeftParenthesis ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )? otherlv_5= RightParenthesis ) )
-            // InternalSecMFParser.g:1785:2: ( () otherlv_1= LeftParenthesis ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )? otherlv_5= RightParenthesis )
+            // InternalSecMFParser.g:1803:2: ( ( () otherlv_1= LeftParenthesis ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )? otherlv_5= RightParenthesis ) )
+            // InternalSecMFParser.g:1804:2: ( () otherlv_1= LeftParenthesis ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )? otherlv_5= RightParenthesis )
             {
-            // InternalSecMFParser.g:1785:2: ( () otherlv_1= LeftParenthesis ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )? otherlv_5= RightParenthesis )
-            // InternalSecMFParser.g:1786:3: () otherlv_1= LeftParenthesis ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )? otherlv_5= RightParenthesis
+            // InternalSecMFParser.g:1804:2: ( () otherlv_1= LeftParenthesis ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )? otherlv_5= RightParenthesis )
+            // InternalSecMFParser.g:1805:3: () otherlv_1= LeftParenthesis ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )? otherlv_5= RightParenthesis
             {
-            // InternalSecMFParser.g:1786:3: ()
-            // InternalSecMFParser.g:1787:4: 
+            // InternalSecMFParser.g:1805:3: ()
+            // InternalSecMFParser.g:1806:4: 
             {
 
             				current = forceCreateModelElement(
@@ -4732,7 +4765,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getListTermAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalSecMFParser.g:1797:3: ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )?
+            // InternalSecMFParser.g:1816:3: ( ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )* )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -4741,13 +4774,13 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt34) {
                 case 1 :
-                    // InternalSecMFParser.g:1798:4: ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )*
+                    // InternalSecMFParser.g:1817:4: ( (lv_ownedListElement_2_0= rulePropertyExpression ) ) (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )*
                     {
-                    // InternalSecMFParser.g:1798:4: ( (lv_ownedListElement_2_0= rulePropertyExpression ) )
-                    // InternalSecMFParser.g:1799:5: (lv_ownedListElement_2_0= rulePropertyExpression )
+                    // InternalSecMFParser.g:1817:4: ( (lv_ownedListElement_2_0= rulePropertyExpression ) )
+                    // InternalSecMFParser.g:1818:5: (lv_ownedListElement_2_0= rulePropertyExpression )
                     {
-                    // InternalSecMFParser.g:1799:5: (lv_ownedListElement_2_0= rulePropertyExpression )
-                    // InternalSecMFParser.g:1800:6: lv_ownedListElement_2_0= rulePropertyExpression
+                    // InternalSecMFParser.g:1818:5: (lv_ownedListElement_2_0= rulePropertyExpression )
+                    // InternalSecMFParser.g:1819:6: lv_ownedListElement_2_0= rulePropertyExpression
                     {
 
                     						newCompositeNode(grammarAccess.getListTermAccess().getOwnedListElementPropertyExpressionParserRuleCall_2_0_0());
@@ -4774,7 +4807,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalSecMFParser.g:1817:4: (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )*
+                    // InternalSecMFParser.g:1836:4: (otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) ) )*
                     loop33:
                     do {
                         int alt33=2;
@@ -4787,17 +4820,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                         switch (alt33) {
                     	case 1 :
-                    	    // InternalSecMFParser.g:1818:5: otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) )
+                    	    // InternalSecMFParser.g:1837:5: otherlv_3= Comma ( (lv_ownedListElement_4_0= rulePropertyExpression ) )
                     	    {
                     	    otherlv_3=(Token)match(input,Comma,FollowSets000.FOLLOW_26); 
 
                     	    					newLeafNode(otherlv_3, grammarAccess.getListTermAccess().getCommaKeyword_2_1_0());
                     	    				
-                    	    // InternalSecMFParser.g:1822:5: ( (lv_ownedListElement_4_0= rulePropertyExpression ) )
-                    	    // InternalSecMFParser.g:1823:6: (lv_ownedListElement_4_0= rulePropertyExpression )
+                    	    // InternalSecMFParser.g:1841:5: ( (lv_ownedListElement_4_0= rulePropertyExpression ) )
+                    	    // InternalSecMFParser.g:1842:6: (lv_ownedListElement_4_0= rulePropertyExpression )
                     	    {
-                    	    // InternalSecMFParser.g:1823:6: (lv_ownedListElement_4_0= rulePropertyExpression )
-                    	    // InternalSecMFParser.g:1824:7: lv_ownedListElement_4_0= rulePropertyExpression
+                    	    // InternalSecMFParser.g:1842:6: (lv_ownedListElement_4_0= rulePropertyExpression )
+                    	    // InternalSecMFParser.g:1843:7: lv_ownedListElement_4_0= rulePropertyExpression
                     	    {
 
                     	    							newCompositeNode(grammarAccess.getListTermAccess().getOwnedListElementPropertyExpressionParserRuleCall_2_1_1_0());
@@ -4866,7 +4899,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFieldPropertyAssociation"
-    // InternalSecMFParser.g:1851:1: entryRuleFieldPropertyAssociation returns [EObject current=null] : iv_ruleFieldPropertyAssociation= ruleFieldPropertyAssociation EOF ;
+    // InternalSecMFParser.g:1870:1: entryRuleFieldPropertyAssociation returns [EObject current=null] : iv_ruleFieldPropertyAssociation= ruleFieldPropertyAssociation EOF ;
     public final EObject entryRuleFieldPropertyAssociation() throws RecognitionException {
         EObject current = null;
 
@@ -4874,8 +4907,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1851:65: (iv_ruleFieldPropertyAssociation= ruleFieldPropertyAssociation EOF )
-            // InternalSecMFParser.g:1852:2: iv_ruleFieldPropertyAssociation= ruleFieldPropertyAssociation EOF
+            // InternalSecMFParser.g:1870:65: (iv_ruleFieldPropertyAssociation= ruleFieldPropertyAssociation EOF )
+            // InternalSecMFParser.g:1871:2: iv_ruleFieldPropertyAssociation= ruleFieldPropertyAssociation EOF
             {
              newCompositeNode(grammarAccess.getFieldPropertyAssociationRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -4902,7 +4935,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFieldPropertyAssociation"
-    // InternalSecMFParser.g:1858:1: ruleFieldPropertyAssociation returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= EqualsSignGreaterThanSign ( (lv_ownedValue_2_0= rulePropertyExpression ) ) otherlv_3= Semicolon ) ;
+    // InternalSecMFParser.g:1877:1: ruleFieldPropertyAssociation returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= EqualsSignGreaterThanSign ( (lv_ownedValue_2_0= rulePropertyExpression ) ) otherlv_3= Semicolon ) ;
     public final EObject ruleFieldPropertyAssociation() throws RecognitionException {
         EObject current = null;
 
@@ -4916,17 +4949,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1864:2: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= EqualsSignGreaterThanSign ( (lv_ownedValue_2_0= rulePropertyExpression ) ) otherlv_3= Semicolon ) )
-            // InternalSecMFParser.g:1865:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= EqualsSignGreaterThanSign ( (lv_ownedValue_2_0= rulePropertyExpression ) ) otherlv_3= Semicolon )
+            // InternalSecMFParser.g:1883:2: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= EqualsSignGreaterThanSign ( (lv_ownedValue_2_0= rulePropertyExpression ) ) otherlv_3= Semicolon ) )
+            // InternalSecMFParser.g:1884:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= EqualsSignGreaterThanSign ( (lv_ownedValue_2_0= rulePropertyExpression ) ) otherlv_3= Semicolon )
             {
-            // InternalSecMFParser.g:1865:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= EqualsSignGreaterThanSign ( (lv_ownedValue_2_0= rulePropertyExpression ) ) otherlv_3= Semicolon )
-            // InternalSecMFParser.g:1866:3: ( (otherlv_0= RULE_ID ) ) otherlv_1= EqualsSignGreaterThanSign ( (lv_ownedValue_2_0= rulePropertyExpression ) ) otherlv_3= Semicolon
+            // InternalSecMFParser.g:1884:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= EqualsSignGreaterThanSign ( (lv_ownedValue_2_0= rulePropertyExpression ) ) otherlv_3= Semicolon )
+            // InternalSecMFParser.g:1885:3: ( (otherlv_0= RULE_ID ) ) otherlv_1= EqualsSignGreaterThanSign ( (lv_ownedValue_2_0= rulePropertyExpression ) ) otherlv_3= Semicolon
             {
-            // InternalSecMFParser.g:1866:3: ( (otherlv_0= RULE_ID ) )
-            // InternalSecMFParser.g:1867:4: (otherlv_0= RULE_ID )
+            // InternalSecMFParser.g:1885:3: ( (otherlv_0= RULE_ID ) )
+            // InternalSecMFParser.g:1886:4: (otherlv_0= RULE_ID )
             {
-            // InternalSecMFParser.g:1867:4: (otherlv_0= RULE_ID )
-            // InternalSecMFParser.g:1868:5: otherlv_0= RULE_ID
+            // InternalSecMFParser.g:1886:4: (otherlv_0= RULE_ID )
+            // InternalSecMFParser.g:1887:5: otherlv_0= RULE_ID
             {
 
             					if (current==null) {
@@ -4947,11 +4980,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getFieldPropertyAssociationAccess().getEqualsSignGreaterThanSignKeyword_1());
             		
-            // InternalSecMFParser.g:1883:3: ( (lv_ownedValue_2_0= rulePropertyExpression ) )
-            // InternalSecMFParser.g:1884:4: (lv_ownedValue_2_0= rulePropertyExpression )
+            // InternalSecMFParser.g:1902:3: ( (lv_ownedValue_2_0= rulePropertyExpression ) )
+            // InternalSecMFParser.g:1903:4: (lv_ownedValue_2_0= rulePropertyExpression )
             {
-            // InternalSecMFParser.g:1884:4: (lv_ownedValue_2_0= rulePropertyExpression )
-            // InternalSecMFParser.g:1885:5: lv_ownedValue_2_0= rulePropertyExpression
+            // InternalSecMFParser.g:1903:4: (lv_ownedValue_2_0= rulePropertyExpression )
+            // InternalSecMFParser.g:1904:5: lv_ownedValue_2_0= rulePropertyExpression
             {
 
             					newCompositeNode(grammarAccess.getFieldPropertyAssociationAccess().getOwnedValuePropertyExpressionParserRuleCall_2_0());
@@ -5005,7 +5038,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContainmentPathElement"
-    // InternalSecMFParser.g:1910:1: entryRuleContainmentPathElement returns [EObject current=null] : iv_ruleContainmentPathElement= ruleContainmentPathElement EOF ;
+    // InternalSecMFParser.g:1929:1: entryRuleContainmentPathElement returns [EObject current=null] : iv_ruleContainmentPathElement= ruleContainmentPathElement EOF ;
     public final EObject entryRuleContainmentPathElement() throws RecognitionException {
         EObject current = null;
 
@@ -5013,8 +5046,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1910:63: (iv_ruleContainmentPathElement= ruleContainmentPathElement EOF )
-            // InternalSecMFParser.g:1911:2: iv_ruleContainmentPathElement= ruleContainmentPathElement EOF
+            // InternalSecMFParser.g:1929:63: (iv_ruleContainmentPathElement= ruleContainmentPathElement EOF )
+            // InternalSecMFParser.g:1930:2: iv_ruleContainmentPathElement= ruleContainmentPathElement EOF
             {
              newCompositeNode(grammarAccess.getContainmentPathElementRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -5041,7 +5074,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContainmentPathElement"
-    // InternalSecMFParser.g:1917:1: ruleContainmentPathElement returns [EObject current=null] : ( ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* ) (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )? ) ;
+    // InternalSecMFParser.g:1936:1: ruleContainmentPathElement returns [EObject current=null] : ( ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* ) (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )? ) ;
     public final EObject ruleContainmentPathElement() throws RecognitionException {
         EObject current = null;
 
@@ -5056,20 +5089,20 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:1923:2: ( ( ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* ) (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )? ) )
-            // InternalSecMFParser.g:1924:2: ( ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* ) (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )? )
+            // InternalSecMFParser.g:1942:2: ( ( ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* ) (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )? ) )
+            // InternalSecMFParser.g:1943:2: ( ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* ) (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )? )
             {
-            // InternalSecMFParser.g:1924:2: ( ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* ) (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )? )
-            // InternalSecMFParser.g:1925:3: ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* ) (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )?
+            // InternalSecMFParser.g:1943:2: ( ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* ) (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )? )
+            // InternalSecMFParser.g:1944:3: ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* ) (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )?
             {
-            // InternalSecMFParser.g:1925:3: ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* )
-            // InternalSecMFParser.g:1926:4: ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )*
+            // InternalSecMFParser.g:1944:3: ( ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )* )
+            // InternalSecMFParser.g:1945:4: ( (otherlv_0= RULE_ID ) ) ( (lv_arrayRange_1_0= ruleArrayRange ) )*
             {
-            // InternalSecMFParser.g:1926:4: ( (otherlv_0= RULE_ID ) )
-            // InternalSecMFParser.g:1927:5: (otherlv_0= RULE_ID )
+            // InternalSecMFParser.g:1945:4: ( (otherlv_0= RULE_ID ) )
+            // InternalSecMFParser.g:1946:5: (otherlv_0= RULE_ID )
             {
-            // InternalSecMFParser.g:1927:5: (otherlv_0= RULE_ID )
-            // InternalSecMFParser.g:1928:6: otherlv_0= RULE_ID
+            // InternalSecMFParser.g:1946:5: (otherlv_0= RULE_ID )
+            // InternalSecMFParser.g:1947:6: otherlv_0= RULE_ID
             {
 
             						if (current==null) {
@@ -5086,7 +5119,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:1939:4: ( (lv_arrayRange_1_0= ruleArrayRange ) )*
+            // InternalSecMFParser.g:1958:4: ( (lv_arrayRange_1_0= ruleArrayRange ) )*
             loop35:
             do {
                 int alt35=2;
@@ -5099,10 +5132,10 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                 switch (alt35) {
             	case 1 :
-            	    // InternalSecMFParser.g:1940:5: (lv_arrayRange_1_0= ruleArrayRange )
+            	    // InternalSecMFParser.g:1959:5: (lv_arrayRange_1_0= ruleArrayRange )
             	    {
-            	    // InternalSecMFParser.g:1940:5: (lv_arrayRange_1_0= ruleArrayRange )
-            	    // InternalSecMFParser.g:1941:6: lv_arrayRange_1_0= ruleArrayRange
+            	    // InternalSecMFParser.g:1959:5: (lv_arrayRange_1_0= ruleArrayRange )
+            	    // InternalSecMFParser.g:1960:6: lv_arrayRange_1_0= ruleArrayRange
             	    {
 
             	    						newCompositeNode(grammarAccess.getContainmentPathElementAccess().getArrayRangeArrayRangeParserRuleCall_0_1_0());
@@ -5138,7 +5171,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:1959:3: (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )?
+            // InternalSecMFParser.g:1978:3: (otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) ) )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -5147,17 +5180,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt36) {
                 case 1 :
-                    // InternalSecMFParser.g:1960:4: otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) )
+                    // InternalSecMFParser.g:1979:4: otherlv_2= FullStop ( (lv_path_3_0= ruleContainmentPathElement ) )
                     {
                     otherlv_2=(Token)match(input,FullStop,FollowSets000.FOLLOW_6); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getContainmentPathElementAccess().getFullStopKeyword_1_0());
                     			
-                    // InternalSecMFParser.g:1964:4: ( (lv_path_3_0= ruleContainmentPathElement ) )
-                    // InternalSecMFParser.g:1965:5: (lv_path_3_0= ruleContainmentPathElement )
+                    // InternalSecMFParser.g:1983:4: ( (lv_path_3_0= ruleContainmentPathElement ) )
+                    // InternalSecMFParser.g:1984:5: (lv_path_3_0= ruleContainmentPathElement )
                     {
-                    // InternalSecMFParser.g:1965:5: (lv_path_3_0= ruleContainmentPathElement )
-                    // InternalSecMFParser.g:1966:6: lv_path_3_0= ruleContainmentPathElement
+                    // InternalSecMFParser.g:1984:5: (lv_path_3_0= ruleContainmentPathElement )
+                    // InternalSecMFParser.g:1985:6: lv_path_3_0= ruleContainmentPathElement
                     {
 
                     						newCompositeNode(grammarAccess.getContainmentPathElementAccess().getPathContainmentPathElementParserRuleCall_1_1_0());
@@ -5213,7 +5246,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePlusMinus"
-    // InternalSecMFParser.g:1988:1: entryRulePlusMinus returns [String current=null] : iv_rulePlusMinus= rulePlusMinus EOF ;
+    // InternalSecMFParser.g:2007:1: entryRulePlusMinus returns [String current=null] : iv_rulePlusMinus= rulePlusMinus EOF ;
     public final String entryRulePlusMinus() throws RecognitionException {
         String current = null;
 
@@ -5221,8 +5254,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:1988:49: (iv_rulePlusMinus= rulePlusMinus EOF )
-            // InternalSecMFParser.g:1989:2: iv_rulePlusMinus= rulePlusMinus EOF
+            // InternalSecMFParser.g:2007:49: (iv_rulePlusMinus= rulePlusMinus EOF )
+            // InternalSecMFParser.g:2008:2: iv_rulePlusMinus= rulePlusMinus EOF
             {
              newCompositeNode(grammarAccess.getPlusMinusRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -5249,7 +5282,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePlusMinus"
-    // InternalSecMFParser.g:1995:1: rulePlusMinus returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= PlusSign | kw= HyphenMinus ) ;
+    // InternalSecMFParser.g:2014:1: rulePlusMinus returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= PlusSign | kw= HyphenMinus ) ;
     public final AntlrDatatypeRuleToken rulePlusMinus() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5259,10 +5292,10 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2001:2: ( (kw= PlusSign | kw= HyphenMinus ) )
-            // InternalSecMFParser.g:2002:2: (kw= PlusSign | kw= HyphenMinus )
+            // InternalSecMFParser.g:2020:2: ( (kw= PlusSign | kw= HyphenMinus ) )
+            // InternalSecMFParser.g:2021:2: (kw= PlusSign | kw= HyphenMinus )
             {
-            // InternalSecMFParser.g:2002:2: (kw= PlusSign | kw= HyphenMinus )
+            // InternalSecMFParser.g:2021:2: (kw= PlusSign | kw= HyphenMinus )
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -5280,7 +5313,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt37) {
                 case 1 :
-                    // InternalSecMFParser.g:2003:3: kw= PlusSign
+                    // InternalSecMFParser.g:2022:3: kw= PlusSign
                     {
                     kw=(Token)match(input,PlusSign,FollowSets000.FOLLOW_2); 
 
@@ -5291,7 +5324,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSecMFParser.g:2009:3: kw= HyphenMinus
+                    // InternalSecMFParser.g:2028:3: kw= HyphenMinus
                     {
                     kw=(Token)match(input,HyphenMinus,FollowSets000.FOLLOW_2); 
 
@@ -5324,7 +5357,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringTerm"
-    // InternalSecMFParser.g:2018:1: entryRuleStringTerm returns [EObject current=null] : iv_ruleStringTerm= ruleStringTerm EOF ;
+    // InternalSecMFParser.g:2037:1: entryRuleStringTerm returns [EObject current=null] : iv_ruleStringTerm= ruleStringTerm EOF ;
     public final EObject entryRuleStringTerm() throws RecognitionException {
         EObject current = null;
 
@@ -5332,8 +5365,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2018:51: (iv_ruleStringTerm= ruleStringTerm EOF )
-            // InternalSecMFParser.g:2019:2: iv_ruleStringTerm= ruleStringTerm EOF
+            // InternalSecMFParser.g:2037:51: (iv_ruleStringTerm= ruleStringTerm EOF )
+            // InternalSecMFParser.g:2038:2: iv_ruleStringTerm= ruleStringTerm EOF
             {
              newCompositeNode(grammarAccess.getStringTermRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -5360,7 +5393,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringTerm"
-    // InternalSecMFParser.g:2025:1: ruleStringTerm returns [EObject current=null] : ( (lv_value_0_0= ruleNoQuoteString ) ) ;
+    // InternalSecMFParser.g:2044:1: ruleStringTerm returns [EObject current=null] : ( (lv_value_0_0= ruleNoQuoteString ) ) ;
     public final EObject ruleStringTerm() throws RecognitionException {
         EObject current = null;
 
@@ -5371,14 +5404,14 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2031:2: ( ( (lv_value_0_0= ruleNoQuoteString ) ) )
-            // InternalSecMFParser.g:2032:2: ( (lv_value_0_0= ruleNoQuoteString ) )
+            // InternalSecMFParser.g:2050:2: ( ( (lv_value_0_0= ruleNoQuoteString ) ) )
+            // InternalSecMFParser.g:2051:2: ( (lv_value_0_0= ruleNoQuoteString ) )
             {
-            // InternalSecMFParser.g:2032:2: ( (lv_value_0_0= ruleNoQuoteString ) )
-            // InternalSecMFParser.g:2033:3: (lv_value_0_0= ruleNoQuoteString )
+            // InternalSecMFParser.g:2051:2: ( (lv_value_0_0= ruleNoQuoteString ) )
+            // InternalSecMFParser.g:2052:3: (lv_value_0_0= ruleNoQuoteString )
             {
-            // InternalSecMFParser.g:2033:3: (lv_value_0_0= ruleNoQuoteString )
-            // InternalSecMFParser.g:2034:4: lv_value_0_0= ruleNoQuoteString
+            // InternalSecMFParser.g:2052:3: (lv_value_0_0= ruleNoQuoteString )
+            // InternalSecMFParser.g:2053:4: lv_value_0_0= ruleNoQuoteString
             {
 
             				newCompositeNode(grammarAccess.getStringTermAccess().getValueNoQuoteStringParserRuleCall_0());
@@ -5425,7 +5458,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNoQuoteString"
-    // InternalSecMFParser.g:2054:1: entryRuleNoQuoteString returns [String current=null] : iv_ruleNoQuoteString= ruleNoQuoteString EOF ;
+    // InternalSecMFParser.g:2073:1: entryRuleNoQuoteString returns [String current=null] : iv_ruleNoQuoteString= ruleNoQuoteString EOF ;
     public final String entryRuleNoQuoteString() throws RecognitionException {
         String current = null;
 
@@ -5433,8 +5466,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2054:53: (iv_ruleNoQuoteString= ruleNoQuoteString EOF )
-            // InternalSecMFParser.g:2055:2: iv_ruleNoQuoteString= ruleNoQuoteString EOF
+            // InternalSecMFParser.g:2073:53: (iv_ruleNoQuoteString= ruleNoQuoteString EOF )
+            // InternalSecMFParser.g:2074:2: iv_ruleNoQuoteString= ruleNoQuoteString EOF
             {
              newCompositeNode(grammarAccess.getNoQuoteStringRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -5461,7 +5494,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNoQuoteString"
-    // InternalSecMFParser.g:2061:1: ruleNoQuoteString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_STRING_0= RULE_STRING ;
+    // InternalSecMFParser.g:2080:1: ruleNoQuoteString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_STRING_0= RULE_STRING ;
     public final AntlrDatatypeRuleToken ruleNoQuoteString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5471,8 +5504,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2067:2: (this_STRING_0= RULE_STRING )
-            // InternalSecMFParser.g:2068:2: this_STRING_0= RULE_STRING
+            // InternalSecMFParser.g:2086:2: (this_STRING_0= RULE_STRING )
+            // InternalSecMFParser.g:2087:2: this_STRING_0= RULE_STRING
             {
             this_STRING_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_2); 
 
@@ -5501,7 +5534,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArrayRange"
-    // InternalSecMFParser.g:2078:1: entryRuleArrayRange returns [EObject current=null] : iv_ruleArrayRange= ruleArrayRange EOF ;
+    // InternalSecMFParser.g:2097:1: entryRuleArrayRange returns [EObject current=null] : iv_ruleArrayRange= ruleArrayRange EOF ;
     public final EObject entryRuleArrayRange() throws RecognitionException {
         EObject current = null;
 
@@ -5509,8 +5542,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2078:51: (iv_ruleArrayRange= ruleArrayRange EOF )
-            // InternalSecMFParser.g:2079:2: iv_ruleArrayRange= ruleArrayRange EOF
+            // InternalSecMFParser.g:2097:51: (iv_ruleArrayRange= ruleArrayRange EOF )
+            // InternalSecMFParser.g:2098:2: iv_ruleArrayRange= ruleArrayRange EOF
             {
              newCompositeNode(grammarAccess.getArrayRangeRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -5537,7 +5570,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArrayRange"
-    // InternalSecMFParser.g:2085:1: ruleArrayRange returns [EObject current=null] : ( () otherlv_1= LeftSquareBracket ( (lv_lowerBound_2_0= ruleINTVALUE ) ) (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )? otherlv_5= RightSquareBracket ) ;
+    // InternalSecMFParser.g:2104:1: ruleArrayRange returns [EObject current=null] : ( () otherlv_1= LeftSquareBracket ( (lv_lowerBound_2_0= ruleINTVALUE ) ) (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )? otherlv_5= RightSquareBracket ) ;
     public final EObject ruleArrayRange() throws RecognitionException {
         EObject current = null;
 
@@ -5553,14 +5586,14 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2091:2: ( ( () otherlv_1= LeftSquareBracket ( (lv_lowerBound_2_0= ruleINTVALUE ) ) (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )? otherlv_5= RightSquareBracket ) )
-            // InternalSecMFParser.g:2092:2: ( () otherlv_1= LeftSquareBracket ( (lv_lowerBound_2_0= ruleINTVALUE ) ) (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )? otherlv_5= RightSquareBracket )
+            // InternalSecMFParser.g:2110:2: ( ( () otherlv_1= LeftSquareBracket ( (lv_lowerBound_2_0= ruleINTVALUE ) ) (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )? otherlv_5= RightSquareBracket ) )
+            // InternalSecMFParser.g:2111:2: ( () otherlv_1= LeftSquareBracket ( (lv_lowerBound_2_0= ruleINTVALUE ) ) (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )? otherlv_5= RightSquareBracket )
             {
-            // InternalSecMFParser.g:2092:2: ( () otherlv_1= LeftSquareBracket ( (lv_lowerBound_2_0= ruleINTVALUE ) ) (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )? otherlv_5= RightSquareBracket )
-            // InternalSecMFParser.g:2093:3: () otherlv_1= LeftSquareBracket ( (lv_lowerBound_2_0= ruleINTVALUE ) ) (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )? otherlv_5= RightSquareBracket
+            // InternalSecMFParser.g:2111:2: ( () otherlv_1= LeftSquareBracket ( (lv_lowerBound_2_0= ruleINTVALUE ) ) (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )? otherlv_5= RightSquareBracket )
+            // InternalSecMFParser.g:2112:3: () otherlv_1= LeftSquareBracket ( (lv_lowerBound_2_0= ruleINTVALUE ) ) (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )? otherlv_5= RightSquareBracket
             {
-            // InternalSecMFParser.g:2093:3: ()
-            // InternalSecMFParser.g:2094:4: 
+            // InternalSecMFParser.g:2112:3: ()
+            // InternalSecMFParser.g:2113:4: 
             {
 
             				current = forceCreateModelElement(
@@ -5574,11 +5607,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getArrayRangeAccess().getLeftSquareBracketKeyword_1());
             		
-            // InternalSecMFParser.g:2104:3: ( (lv_lowerBound_2_0= ruleINTVALUE ) )
-            // InternalSecMFParser.g:2105:4: (lv_lowerBound_2_0= ruleINTVALUE )
+            // InternalSecMFParser.g:2123:3: ( (lv_lowerBound_2_0= ruleINTVALUE ) )
+            // InternalSecMFParser.g:2124:4: (lv_lowerBound_2_0= ruleINTVALUE )
             {
-            // InternalSecMFParser.g:2105:4: (lv_lowerBound_2_0= ruleINTVALUE )
-            // InternalSecMFParser.g:2106:5: lv_lowerBound_2_0= ruleINTVALUE
+            // InternalSecMFParser.g:2124:4: (lv_lowerBound_2_0= ruleINTVALUE )
+            // InternalSecMFParser.g:2125:5: lv_lowerBound_2_0= ruleINTVALUE
             {
 
             					newCompositeNode(grammarAccess.getArrayRangeAccess().getLowerBoundINTVALUEParserRuleCall_2_0());
@@ -5605,7 +5638,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:2123:3: (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )?
+            // InternalSecMFParser.g:2142:3: (otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) ) )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -5614,17 +5647,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt38) {
                 case 1 :
-                    // InternalSecMFParser.g:2124:4: otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) )
+                    // InternalSecMFParser.g:2143:4: otherlv_3= FullStopFullStop ( (lv_upperBound_4_0= ruleINTVALUE ) )
                     {
                     otherlv_3=(Token)match(input,FullStopFullStop,FollowSets000.FOLLOW_37); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getArrayRangeAccess().getFullStopFullStopKeyword_3_0());
                     			
-                    // InternalSecMFParser.g:2128:4: ( (lv_upperBound_4_0= ruleINTVALUE ) )
-                    // InternalSecMFParser.g:2129:5: (lv_upperBound_4_0= ruleINTVALUE )
+                    // InternalSecMFParser.g:2147:4: ( (lv_upperBound_4_0= ruleINTVALUE ) )
+                    // InternalSecMFParser.g:2148:5: (lv_upperBound_4_0= ruleINTVALUE )
                     {
-                    // InternalSecMFParser.g:2129:5: (lv_upperBound_4_0= ruleINTVALUE )
-                    // InternalSecMFParser.g:2130:6: lv_upperBound_4_0= ruleINTVALUE
+                    // InternalSecMFParser.g:2148:5: (lv_upperBound_4_0= ruleINTVALUE )
+                    // InternalSecMFParser.g:2149:6: lv_upperBound_4_0= ruleINTVALUE
                     {
 
                     						newCompositeNode(grammarAccess.getArrayRangeAccess().getUpperBoundINTVALUEParserRuleCall_3_1_0());
@@ -5684,7 +5717,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSignedConstant"
-    // InternalSecMFParser.g:2156:1: entryRuleSignedConstant returns [EObject current=null] : iv_ruleSignedConstant= ruleSignedConstant EOF ;
+    // InternalSecMFParser.g:2175:1: entryRuleSignedConstant returns [EObject current=null] : iv_ruleSignedConstant= ruleSignedConstant EOF ;
     public final EObject entryRuleSignedConstant() throws RecognitionException {
         EObject current = null;
 
@@ -5692,8 +5725,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2156:55: (iv_ruleSignedConstant= ruleSignedConstant EOF )
-            // InternalSecMFParser.g:2157:2: iv_ruleSignedConstant= ruleSignedConstant EOF
+            // InternalSecMFParser.g:2175:55: (iv_ruleSignedConstant= ruleSignedConstant EOF )
+            // InternalSecMFParser.g:2176:2: iv_ruleSignedConstant= ruleSignedConstant EOF
             {
              newCompositeNode(grammarAccess.getSignedConstantRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -5720,7 +5753,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSignedConstant"
-    // InternalSecMFParser.g:2163:1: ruleSignedConstant returns [EObject current=null] : ( ( (lv_op_0_0= rulePlusMinus ) ) ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) ) ) ;
+    // InternalSecMFParser.g:2182:1: ruleSignedConstant returns [EObject current=null] : ( ( (lv_op_0_0= rulePlusMinus ) ) ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) ) ) ;
     public final EObject ruleSignedConstant() throws RecognitionException {
         EObject current = null;
 
@@ -5733,17 +5766,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2169:2: ( ( ( (lv_op_0_0= rulePlusMinus ) ) ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) ) ) )
-            // InternalSecMFParser.g:2170:2: ( ( (lv_op_0_0= rulePlusMinus ) ) ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) ) )
+            // InternalSecMFParser.g:2188:2: ( ( ( (lv_op_0_0= rulePlusMinus ) ) ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) ) ) )
+            // InternalSecMFParser.g:2189:2: ( ( (lv_op_0_0= rulePlusMinus ) ) ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) ) )
             {
-            // InternalSecMFParser.g:2170:2: ( ( (lv_op_0_0= rulePlusMinus ) ) ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) ) )
-            // InternalSecMFParser.g:2171:3: ( (lv_op_0_0= rulePlusMinus ) ) ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) )
+            // InternalSecMFParser.g:2189:2: ( ( (lv_op_0_0= rulePlusMinus ) ) ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) ) )
+            // InternalSecMFParser.g:2190:3: ( (lv_op_0_0= rulePlusMinus ) ) ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) )
             {
-            // InternalSecMFParser.g:2171:3: ( (lv_op_0_0= rulePlusMinus ) )
-            // InternalSecMFParser.g:2172:4: (lv_op_0_0= rulePlusMinus )
+            // InternalSecMFParser.g:2190:3: ( (lv_op_0_0= rulePlusMinus ) )
+            // InternalSecMFParser.g:2191:4: (lv_op_0_0= rulePlusMinus )
             {
-            // InternalSecMFParser.g:2172:4: (lv_op_0_0= rulePlusMinus )
-            // InternalSecMFParser.g:2173:5: lv_op_0_0= rulePlusMinus
+            // InternalSecMFParser.g:2191:4: (lv_op_0_0= rulePlusMinus )
+            // InternalSecMFParser.g:2192:5: lv_op_0_0= rulePlusMinus
             {
 
             					newCompositeNode(grammarAccess.getSignedConstantAccess().getOpPlusMinusParserRuleCall_0_0());
@@ -5770,11 +5803,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:2190:3: ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) )
-            // InternalSecMFParser.g:2191:4: (lv_ownedPropertyExpression_1_0= ruleConstantValue )
+            // InternalSecMFParser.g:2209:3: ( (lv_ownedPropertyExpression_1_0= ruleConstantValue ) )
+            // InternalSecMFParser.g:2210:4: (lv_ownedPropertyExpression_1_0= ruleConstantValue )
             {
-            // InternalSecMFParser.g:2191:4: (lv_ownedPropertyExpression_1_0= ruleConstantValue )
-            // InternalSecMFParser.g:2192:5: lv_ownedPropertyExpression_1_0= ruleConstantValue
+            // InternalSecMFParser.g:2210:4: (lv_ownedPropertyExpression_1_0= ruleConstantValue )
+            // InternalSecMFParser.g:2211:5: lv_ownedPropertyExpression_1_0= ruleConstantValue
             {
 
             					newCompositeNode(grammarAccess.getSignedConstantAccess().getOwnedPropertyExpressionConstantValueParserRuleCall_1_0());
@@ -5824,7 +5857,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIntegerTerm"
-    // InternalSecMFParser.g:2213:1: entryRuleIntegerTerm returns [EObject current=null] : iv_ruleIntegerTerm= ruleIntegerTerm EOF ;
+    // InternalSecMFParser.g:2232:1: entryRuleIntegerTerm returns [EObject current=null] : iv_ruleIntegerTerm= ruleIntegerTerm EOF ;
     public final EObject entryRuleIntegerTerm() throws RecognitionException {
         EObject current = null;
 
@@ -5832,8 +5865,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2213:52: (iv_ruleIntegerTerm= ruleIntegerTerm EOF )
-            // InternalSecMFParser.g:2214:2: iv_ruleIntegerTerm= ruleIntegerTerm EOF
+            // InternalSecMFParser.g:2232:52: (iv_ruleIntegerTerm= ruleIntegerTerm EOF )
+            // InternalSecMFParser.g:2233:2: iv_ruleIntegerTerm= ruleIntegerTerm EOF
             {
              newCompositeNode(grammarAccess.getIntegerTermRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -5860,7 +5893,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntegerTerm"
-    // InternalSecMFParser.g:2220:1: ruleIntegerTerm returns [EObject current=null] : ( ( (lv_value_0_0= ruleSignedInt ) ) ( (otherlv_1= RULE_ID ) )? ) ;
+    // InternalSecMFParser.g:2239:1: ruleIntegerTerm returns [EObject current=null] : ( ( (lv_value_0_0= ruleSignedInt ) ) ( (otherlv_1= RULE_ID ) )? ) ;
     public final EObject ruleIntegerTerm() throws RecognitionException {
         EObject current = null;
 
@@ -5872,17 +5905,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2226:2: ( ( ( (lv_value_0_0= ruleSignedInt ) ) ( (otherlv_1= RULE_ID ) )? ) )
-            // InternalSecMFParser.g:2227:2: ( ( (lv_value_0_0= ruleSignedInt ) ) ( (otherlv_1= RULE_ID ) )? )
+            // InternalSecMFParser.g:2245:2: ( ( ( (lv_value_0_0= ruleSignedInt ) ) ( (otherlv_1= RULE_ID ) )? ) )
+            // InternalSecMFParser.g:2246:2: ( ( (lv_value_0_0= ruleSignedInt ) ) ( (otherlv_1= RULE_ID ) )? )
             {
-            // InternalSecMFParser.g:2227:2: ( ( (lv_value_0_0= ruleSignedInt ) ) ( (otherlv_1= RULE_ID ) )? )
-            // InternalSecMFParser.g:2228:3: ( (lv_value_0_0= ruleSignedInt ) ) ( (otherlv_1= RULE_ID ) )?
+            // InternalSecMFParser.g:2246:2: ( ( (lv_value_0_0= ruleSignedInt ) ) ( (otherlv_1= RULE_ID ) )? )
+            // InternalSecMFParser.g:2247:3: ( (lv_value_0_0= ruleSignedInt ) ) ( (otherlv_1= RULE_ID ) )?
             {
-            // InternalSecMFParser.g:2228:3: ( (lv_value_0_0= ruleSignedInt ) )
-            // InternalSecMFParser.g:2229:4: (lv_value_0_0= ruleSignedInt )
+            // InternalSecMFParser.g:2247:3: ( (lv_value_0_0= ruleSignedInt ) )
+            // InternalSecMFParser.g:2248:4: (lv_value_0_0= ruleSignedInt )
             {
-            // InternalSecMFParser.g:2229:4: (lv_value_0_0= ruleSignedInt )
-            // InternalSecMFParser.g:2230:5: lv_value_0_0= ruleSignedInt
+            // InternalSecMFParser.g:2248:4: (lv_value_0_0= ruleSignedInt )
+            // InternalSecMFParser.g:2249:5: lv_value_0_0= ruleSignedInt
             {
 
             					newCompositeNode(grammarAccess.getIntegerTermAccess().getValueSignedIntParserRuleCall_0_0());
@@ -5909,7 +5942,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:2247:3: ( (otherlv_1= RULE_ID ) )?
+            // InternalSecMFParser.g:2266:3: ( (otherlv_1= RULE_ID ) )?
             int alt39=2;
             int LA39_0 = input.LA(1);
 
@@ -5918,10 +5951,10 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt39) {
                 case 1 :
-                    // InternalSecMFParser.g:2248:4: (otherlv_1= RULE_ID )
+                    // InternalSecMFParser.g:2267:4: (otherlv_1= RULE_ID )
                     {
-                    // InternalSecMFParser.g:2248:4: (otherlv_1= RULE_ID )
-                    // InternalSecMFParser.g:2249:5: otherlv_1= RULE_ID
+                    // InternalSecMFParser.g:2267:4: (otherlv_1= RULE_ID )
+                    // InternalSecMFParser.g:2268:5: otherlv_1= RULE_ID
                     {
 
                     					if (current==null) {
@@ -5964,7 +5997,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSignedInt"
-    // InternalSecMFParser.g:2264:1: entryRuleSignedInt returns [String current=null] : iv_ruleSignedInt= ruleSignedInt EOF ;
+    // InternalSecMFParser.g:2283:1: entryRuleSignedInt returns [String current=null] : iv_ruleSignedInt= ruleSignedInt EOF ;
     public final String entryRuleSignedInt() throws RecognitionException {
         String current = null;
 
@@ -5972,8 +6005,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2264:49: (iv_ruleSignedInt= ruleSignedInt EOF )
-            // InternalSecMFParser.g:2265:2: iv_ruleSignedInt= ruleSignedInt EOF
+            // InternalSecMFParser.g:2283:49: (iv_ruleSignedInt= ruleSignedInt EOF )
+            // InternalSecMFParser.g:2284:2: iv_ruleSignedInt= ruleSignedInt EOF
             {
              newCompositeNode(grammarAccess.getSignedIntRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -6000,7 +6033,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSignedInt"
-    // InternalSecMFParser.g:2271:1: ruleSignedInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= PlusSign | kw= HyphenMinus )? this_INTEGER_LIT_2= RULE_INTEGER_LIT ) ;
+    // InternalSecMFParser.g:2290:1: ruleSignedInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= PlusSign | kw= HyphenMinus )? this_INTEGER_LIT_2= RULE_INTEGER_LIT ) ;
     public final AntlrDatatypeRuleToken ruleSignedInt() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6011,13 +6044,13 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2277:2: ( ( (kw= PlusSign | kw= HyphenMinus )? this_INTEGER_LIT_2= RULE_INTEGER_LIT ) )
-            // InternalSecMFParser.g:2278:2: ( (kw= PlusSign | kw= HyphenMinus )? this_INTEGER_LIT_2= RULE_INTEGER_LIT )
+            // InternalSecMFParser.g:2296:2: ( ( (kw= PlusSign | kw= HyphenMinus )? this_INTEGER_LIT_2= RULE_INTEGER_LIT ) )
+            // InternalSecMFParser.g:2297:2: ( (kw= PlusSign | kw= HyphenMinus )? this_INTEGER_LIT_2= RULE_INTEGER_LIT )
             {
-            // InternalSecMFParser.g:2278:2: ( (kw= PlusSign | kw= HyphenMinus )? this_INTEGER_LIT_2= RULE_INTEGER_LIT )
-            // InternalSecMFParser.g:2279:3: (kw= PlusSign | kw= HyphenMinus )? this_INTEGER_LIT_2= RULE_INTEGER_LIT
+            // InternalSecMFParser.g:2297:2: ( (kw= PlusSign | kw= HyphenMinus )? this_INTEGER_LIT_2= RULE_INTEGER_LIT )
+            // InternalSecMFParser.g:2298:3: (kw= PlusSign | kw= HyphenMinus )? this_INTEGER_LIT_2= RULE_INTEGER_LIT
             {
-            // InternalSecMFParser.g:2279:3: (kw= PlusSign | kw= HyphenMinus )?
+            // InternalSecMFParser.g:2298:3: (kw= PlusSign | kw= HyphenMinus )?
             int alt40=3;
             int LA40_0 = input.LA(1);
 
@@ -6029,7 +6062,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt40) {
                 case 1 :
-                    // InternalSecMFParser.g:2280:4: kw= PlusSign
+                    // InternalSecMFParser.g:2299:4: kw= PlusSign
                     {
                     kw=(Token)match(input,PlusSign,FollowSets000.FOLLOW_37); 
 
@@ -6040,7 +6073,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSecMFParser.g:2286:4: kw= HyphenMinus
+                    // InternalSecMFParser.g:2305:4: kw= HyphenMinus
                     {
                     kw=(Token)match(input,HyphenMinus,FollowSets000.FOLLOW_37); 
 
@@ -6083,7 +6116,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRealTerm"
-    // InternalSecMFParser.g:2303:1: entryRuleRealTerm returns [EObject current=null] : iv_ruleRealTerm= ruleRealTerm EOF ;
+    // InternalSecMFParser.g:2322:1: entryRuleRealTerm returns [EObject current=null] : iv_ruleRealTerm= ruleRealTerm EOF ;
     public final EObject entryRuleRealTerm() throws RecognitionException {
         EObject current = null;
 
@@ -6091,8 +6124,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2303:49: (iv_ruleRealTerm= ruleRealTerm EOF )
-            // InternalSecMFParser.g:2304:2: iv_ruleRealTerm= ruleRealTerm EOF
+            // InternalSecMFParser.g:2322:49: (iv_ruleRealTerm= ruleRealTerm EOF )
+            // InternalSecMFParser.g:2323:2: iv_ruleRealTerm= ruleRealTerm EOF
             {
              newCompositeNode(grammarAccess.getRealTermRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -6119,7 +6152,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRealTerm"
-    // InternalSecMFParser.g:2310:1: ruleRealTerm returns [EObject current=null] : ( ( (lv_value_0_0= ruleSignedReal ) ) ( (otherlv_1= RULE_ID ) )? ) ;
+    // InternalSecMFParser.g:2329:1: ruleRealTerm returns [EObject current=null] : ( ( (lv_value_0_0= ruleSignedReal ) ) ( (otherlv_1= RULE_ID ) )? ) ;
     public final EObject ruleRealTerm() throws RecognitionException {
         EObject current = null;
 
@@ -6131,17 +6164,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2316:2: ( ( ( (lv_value_0_0= ruleSignedReal ) ) ( (otherlv_1= RULE_ID ) )? ) )
-            // InternalSecMFParser.g:2317:2: ( ( (lv_value_0_0= ruleSignedReal ) ) ( (otherlv_1= RULE_ID ) )? )
+            // InternalSecMFParser.g:2335:2: ( ( ( (lv_value_0_0= ruleSignedReal ) ) ( (otherlv_1= RULE_ID ) )? ) )
+            // InternalSecMFParser.g:2336:2: ( ( (lv_value_0_0= ruleSignedReal ) ) ( (otherlv_1= RULE_ID ) )? )
             {
-            // InternalSecMFParser.g:2317:2: ( ( (lv_value_0_0= ruleSignedReal ) ) ( (otherlv_1= RULE_ID ) )? )
-            // InternalSecMFParser.g:2318:3: ( (lv_value_0_0= ruleSignedReal ) ) ( (otherlv_1= RULE_ID ) )?
+            // InternalSecMFParser.g:2336:2: ( ( (lv_value_0_0= ruleSignedReal ) ) ( (otherlv_1= RULE_ID ) )? )
+            // InternalSecMFParser.g:2337:3: ( (lv_value_0_0= ruleSignedReal ) ) ( (otherlv_1= RULE_ID ) )?
             {
-            // InternalSecMFParser.g:2318:3: ( (lv_value_0_0= ruleSignedReal ) )
-            // InternalSecMFParser.g:2319:4: (lv_value_0_0= ruleSignedReal )
+            // InternalSecMFParser.g:2337:3: ( (lv_value_0_0= ruleSignedReal ) )
+            // InternalSecMFParser.g:2338:4: (lv_value_0_0= ruleSignedReal )
             {
-            // InternalSecMFParser.g:2319:4: (lv_value_0_0= ruleSignedReal )
-            // InternalSecMFParser.g:2320:5: lv_value_0_0= ruleSignedReal
+            // InternalSecMFParser.g:2338:4: (lv_value_0_0= ruleSignedReal )
+            // InternalSecMFParser.g:2339:5: lv_value_0_0= ruleSignedReal
             {
 
             					newCompositeNode(grammarAccess.getRealTermAccess().getValueSignedRealParserRuleCall_0_0());
@@ -6168,7 +6201,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:2337:3: ( (otherlv_1= RULE_ID ) )?
+            // InternalSecMFParser.g:2356:3: ( (otherlv_1= RULE_ID ) )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -6177,10 +6210,10 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt41) {
                 case 1 :
-                    // InternalSecMFParser.g:2338:4: (otherlv_1= RULE_ID )
+                    // InternalSecMFParser.g:2357:4: (otherlv_1= RULE_ID )
                     {
-                    // InternalSecMFParser.g:2338:4: (otherlv_1= RULE_ID )
-                    // InternalSecMFParser.g:2339:5: otherlv_1= RULE_ID
+                    // InternalSecMFParser.g:2357:4: (otherlv_1= RULE_ID )
+                    // InternalSecMFParser.g:2358:5: otherlv_1= RULE_ID
                     {
 
                     					if (current==null) {
@@ -6223,7 +6256,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSignedReal"
-    // InternalSecMFParser.g:2354:1: entryRuleSignedReal returns [String current=null] : iv_ruleSignedReal= ruleSignedReal EOF ;
+    // InternalSecMFParser.g:2373:1: entryRuleSignedReal returns [String current=null] : iv_ruleSignedReal= ruleSignedReal EOF ;
     public final String entryRuleSignedReal() throws RecognitionException {
         String current = null;
 
@@ -6231,8 +6264,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2354:50: (iv_ruleSignedReal= ruleSignedReal EOF )
-            // InternalSecMFParser.g:2355:2: iv_ruleSignedReal= ruleSignedReal EOF
+            // InternalSecMFParser.g:2373:50: (iv_ruleSignedReal= ruleSignedReal EOF )
+            // InternalSecMFParser.g:2374:2: iv_ruleSignedReal= ruleSignedReal EOF
             {
              newCompositeNode(grammarAccess.getSignedRealRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -6259,7 +6292,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSignedReal"
-    // InternalSecMFParser.g:2361:1: ruleSignedReal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= PlusSign | kw= HyphenMinus )? this_REAL_LIT_2= RULE_REAL_LIT ) ;
+    // InternalSecMFParser.g:2380:1: ruleSignedReal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= PlusSign | kw= HyphenMinus )? this_REAL_LIT_2= RULE_REAL_LIT ) ;
     public final AntlrDatatypeRuleToken ruleSignedReal() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6270,13 +6303,13 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2367:2: ( ( (kw= PlusSign | kw= HyphenMinus )? this_REAL_LIT_2= RULE_REAL_LIT ) )
-            // InternalSecMFParser.g:2368:2: ( (kw= PlusSign | kw= HyphenMinus )? this_REAL_LIT_2= RULE_REAL_LIT )
+            // InternalSecMFParser.g:2386:2: ( ( (kw= PlusSign | kw= HyphenMinus )? this_REAL_LIT_2= RULE_REAL_LIT ) )
+            // InternalSecMFParser.g:2387:2: ( (kw= PlusSign | kw= HyphenMinus )? this_REAL_LIT_2= RULE_REAL_LIT )
             {
-            // InternalSecMFParser.g:2368:2: ( (kw= PlusSign | kw= HyphenMinus )? this_REAL_LIT_2= RULE_REAL_LIT )
-            // InternalSecMFParser.g:2369:3: (kw= PlusSign | kw= HyphenMinus )? this_REAL_LIT_2= RULE_REAL_LIT
+            // InternalSecMFParser.g:2387:2: ( (kw= PlusSign | kw= HyphenMinus )? this_REAL_LIT_2= RULE_REAL_LIT )
+            // InternalSecMFParser.g:2388:3: (kw= PlusSign | kw= HyphenMinus )? this_REAL_LIT_2= RULE_REAL_LIT
             {
-            // InternalSecMFParser.g:2369:3: (kw= PlusSign | kw= HyphenMinus )?
+            // InternalSecMFParser.g:2388:3: (kw= PlusSign | kw= HyphenMinus )?
             int alt42=3;
             int LA42_0 = input.LA(1);
 
@@ -6288,7 +6321,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt42) {
                 case 1 :
-                    // InternalSecMFParser.g:2370:4: kw= PlusSign
+                    // InternalSecMFParser.g:2389:4: kw= PlusSign
                     {
                     kw=(Token)match(input,PlusSign,FollowSets000.FOLLOW_41); 
 
@@ -6299,7 +6332,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSecMFParser.g:2376:4: kw= HyphenMinus
+                    // InternalSecMFParser.g:2395:4: kw= HyphenMinus
                     {
                     kw=(Token)match(input,HyphenMinus,FollowSets000.FOLLOW_41); 
 
@@ -6342,7 +6375,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumericRangeTerm"
-    // InternalSecMFParser.g:2393:1: entryRuleNumericRangeTerm returns [EObject current=null] : iv_ruleNumericRangeTerm= ruleNumericRangeTerm EOF ;
+    // InternalSecMFParser.g:2412:1: entryRuleNumericRangeTerm returns [EObject current=null] : iv_ruleNumericRangeTerm= ruleNumericRangeTerm EOF ;
     public final EObject entryRuleNumericRangeTerm() throws RecognitionException {
         EObject current = null;
 
@@ -6350,8 +6383,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2393:57: (iv_ruleNumericRangeTerm= ruleNumericRangeTerm EOF )
-            // InternalSecMFParser.g:2394:2: iv_ruleNumericRangeTerm= ruleNumericRangeTerm EOF
+            // InternalSecMFParser.g:2412:57: (iv_ruleNumericRangeTerm= ruleNumericRangeTerm EOF )
+            // InternalSecMFParser.g:2413:2: iv_ruleNumericRangeTerm= ruleNumericRangeTerm EOF
             {
              newCompositeNode(grammarAccess.getNumericRangeTermRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -6378,7 +6411,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumericRangeTerm"
-    // InternalSecMFParser.g:2400:1: ruleNumericRangeTerm returns [EObject current=null] : ( ( (lv_minimum_0_0= ruleNumAlt ) ) otherlv_1= FullStopFullStop ( (lv_maximum_2_0= ruleNumAlt ) ) (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )? ) ;
+    // InternalSecMFParser.g:2419:1: ruleNumericRangeTerm returns [EObject current=null] : ( ( (lv_minimum_0_0= ruleNumAlt ) ) otherlv_1= FullStopFullStop ( (lv_maximum_2_0= ruleNumAlt ) ) (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )? ) ;
     public final EObject ruleNumericRangeTerm() throws RecognitionException {
         EObject current = null;
 
@@ -6395,17 +6428,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2406:2: ( ( ( (lv_minimum_0_0= ruleNumAlt ) ) otherlv_1= FullStopFullStop ( (lv_maximum_2_0= ruleNumAlt ) ) (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )? ) )
-            // InternalSecMFParser.g:2407:2: ( ( (lv_minimum_0_0= ruleNumAlt ) ) otherlv_1= FullStopFullStop ( (lv_maximum_2_0= ruleNumAlt ) ) (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )? )
+            // InternalSecMFParser.g:2425:2: ( ( ( (lv_minimum_0_0= ruleNumAlt ) ) otherlv_1= FullStopFullStop ( (lv_maximum_2_0= ruleNumAlt ) ) (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )? ) )
+            // InternalSecMFParser.g:2426:2: ( ( (lv_minimum_0_0= ruleNumAlt ) ) otherlv_1= FullStopFullStop ( (lv_maximum_2_0= ruleNumAlt ) ) (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )? )
             {
-            // InternalSecMFParser.g:2407:2: ( ( (lv_minimum_0_0= ruleNumAlt ) ) otherlv_1= FullStopFullStop ( (lv_maximum_2_0= ruleNumAlt ) ) (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )? )
-            // InternalSecMFParser.g:2408:3: ( (lv_minimum_0_0= ruleNumAlt ) ) otherlv_1= FullStopFullStop ( (lv_maximum_2_0= ruleNumAlt ) ) (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )?
+            // InternalSecMFParser.g:2426:2: ( ( (lv_minimum_0_0= ruleNumAlt ) ) otherlv_1= FullStopFullStop ( (lv_maximum_2_0= ruleNumAlt ) ) (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )? )
+            // InternalSecMFParser.g:2427:3: ( (lv_minimum_0_0= ruleNumAlt ) ) otherlv_1= FullStopFullStop ( (lv_maximum_2_0= ruleNumAlt ) ) (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )?
             {
-            // InternalSecMFParser.g:2408:3: ( (lv_minimum_0_0= ruleNumAlt ) )
-            // InternalSecMFParser.g:2409:4: (lv_minimum_0_0= ruleNumAlt )
+            // InternalSecMFParser.g:2427:3: ( (lv_minimum_0_0= ruleNumAlt ) )
+            // InternalSecMFParser.g:2428:4: (lv_minimum_0_0= ruleNumAlt )
             {
-            // InternalSecMFParser.g:2409:4: (lv_minimum_0_0= ruleNumAlt )
-            // InternalSecMFParser.g:2410:5: lv_minimum_0_0= ruleNumAlt
+            // InternalSecMFParser.g:2428:4: (lv_minimum_0_0= ruleNumAlt )
+            // InternalSecMFParser.g:2429:5: lv_minimum_0_0= ruleNumAlt
             {
 
             					newCompositeNode(grammarAccess.getNumericRangeTermAccess().getMinimumNumAltParserRuleCall_0_0());
@@ -6436,11 +6469,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getNumericRangeTermAccess().getFullStopFullStopKeyword_1());
             		
-            // InternalSecMFParser.g:2431:3: ( (lv_maximum_2_0= ruleNumAlt ) )
-            // InternalSecMFParser.g:2432:4: (lv_maximum_2_0= ruleNumAlt )
+            // InternalSecMFParser.g:2450:3: ( (lv_maximum_2_0= ruleNumAlt ) )
+            // InternalSecMFParser.g:2451:4: (lv_maximum_2_0= ruleNumAlt )
             {
-            // InternalSecMFParser.g:2432:4: (lv_maximum_2_0= ruleNumAlt )
-            // InternalSecMFParser.g:2433:5: lv_maximum_2_0= ruleNumAlt
+            // InternalSecMFParser.g:2451:4: (lv_maximum_2_0= ruleNumAlt )
+            // InternalSecMFParser.g:2452:5: lv_maximum_2_0= ruleNumAlt
             {
 
             					newCompositeNode(grammarAccess.getNumericRangeTermAccess().getMaximumNumAltParserRuleCall_2_0());
@@ -6467,7 +6500,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSecMFParser.g:2450:3: (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )?
+            // InternalSecMFParser.g:2469:3: (otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) ) )?
             int alt43=2;
             int LA43_0 = input.LA(1);
 
@@ -6476,17 +6509,17 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt43) {
                 case 1 :
-                    // InternalSecMFParser.g:2451:4: otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) )
+                    // InternalSecMFParser.g:2470:4: otherlv_3= Delta ( (lv_delta_4_0= ruleNumAlt ) )
                     {
                     otherlv_3=(Token)match(input,Delta,FollowSets000.FOLLOW_40); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getNumericRangeTermAccess().getDeltaKeyword_3_0());
                     			
-                    // InternalSecMFParser.g:2455:4: ( (lv_delta_4_0= ruleNumAlt ) )
-                    // InternalSecMFParser.g:2456:5: (lv_delta_4_0= ruleNumAlt )
+                    // InternalSecMFParser.g:2474:4: ( (lv_delta_4_0= ruleNumAlt ) )
+                    // InternalSecMFParser.g:2475:5: (lv_delta_4_0= ruleNumAlt )
                     {
-                    // InternalSecMFParser.g:2456:5: (lv_delta_4_0= ruleNumAlt )
-                    // InternalSecMFParser.g:2457:6: lv_delta_4_0= ruleNumAlt
+                    // InternalSecMFParser.g:2475:5: (lv_delta_4_0= ruleNumAlt )
+                    // InternalSecMFParser.g:2476:6: lv_delta_4_0= ruleNumAlt
                     {
 
                     						newCompositeNode(grammarAccess.getNumericRangeTermAccess().getDeltaNumAltParserRuleCall_3_1_0());
@@ -6542,7 +6575,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumAlt"
-    // InternalSecMFParser.g:2479:1: entryRuleNumAlt returns [EObject current=null] : iv_ruleNumAlt= ruleNumAlt EOF ;
+    // InternalSecMFParser.g:2498:1: entryRuleNumAlt returns [EObject current=null] : iv_ruleNumAlt= ruleNumAlt EOF ;
     public final EObject entryRuleNumAlt() throws RecognitionException {
         EObject current = null;
 
@@ -6550,8 +6583,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2479:47: (iv_ruleNumAlt= ruleNumAlt EOF )
-            // InternalSecMFParser.g:2480:2: iv_ruleNumAlt= ruleNumAlt EOF
+            // InternalSecMFParser.g:2498:47: (iv_ruleNumAlt= ruleNumAlt EOF )
+            // InternalSecMFParser.g:2499:2: iv_ruleNumAlt= ruleNumAlt EOF
             {
              newCompositeNode(grammarAccess.getNumAltRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -6578,7 +6611,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumAlt"
-    // InternalSecMFParser.g:2486:1: ruleNumAlt returns [EObject current=null] : (this_RealTerm_0= ruleRealTerm | this_IntegerTerm_1= ruleIntegerTerm | this_SignedConstant_2= ruleSignedConstant | this_ConstantValue_3= ruleConstantValue ) ;
+    // InternalSecMFParser.g:2505:1: ruleNumAlt returns [EObject current=null] : (this_RealTerm_0= ruleRealTerm | this_IntegerTerm_1= ruleIntegerTerm | this_SignedConstant_2= ruleSignedConstant | this_ConstantValue_3= ruleConstantValue ) ;
     public final EObject ruleNumAlt() throws RecognitionException {
         EObject current = null;
 
@@ -6595,15 +6628,20 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2492:2: ( (this_RealTerm_0= ruleRealTerm | this_IntegerTerm_1= ruleIntegerTerm | this_SignedConstant_2= ruleSignedConstant | this_ConstantValue_3= ruleConstantValue ) )
-            // InternalSecMFParser.g:2493:2: (this_RealTerm_0= ruleRealTerm | this_IntegerTerm_1= ruleIntegerTerm | this_SignedConstant_2= ruleSignedConstant | this_ConstantValue_3= ruleConstantValue )
+            // InternalSecMFParser.g:2511:2: ( (this_RealTerm_0= ruleRealTerm | this_IntegerTerm_1= ruleIntegerTerm | this_SignedConstant_2= ruleSignedConstant | this_ConstantValue_3= ruleConstantValue ) )
+            // InternalSecMFParser.g:2512:2: (this_RealTerm_0= ruleRealTerm | this_IntegerTerm_1= ruleIntegerTerm | this_SignedConstant_2= ruleSignedConstant | this_ConstantValue_3= ruleConstantValue )
             {
-            // InternalSecMFParser.g:2493:2: (this_RealTerm_0= ruleRealTerm | this_IntegerTerm_1= ruleIntegerTerm | this_SignedConstant_2= ruleSignedConstant | this_ConstantValue_3= ruleConstantValue )
+            // InternalSecMFParser.g:2512:2: (this_RealTerm_0= ruleRealTerm | this_IntegerTerm_1= ruleIntegerTerm | this_SignedConstant_2= ruleSignedConstant | this_ConstantValue_3= ruleConstantValue )
             int alt44=4;
             switch ( input.LA(1) ) {
             case PlusSign:
                 {
                 switch ( input.LA(2) ) {
+                case RULE_ID:
+                    {
+                    alt44=3;
+                    }
+                    break;
                 case RULE_REAL_LIT:
                     {
                     alt44=1;
@@ -6612,11 +6650,6 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                 case RULE_INTEGER_LIT:
                     {
                     alt44=2;
-                    }
-                    break;
-                case RULE_ID:
-                    {
-                    alt44=3;
                     }
                     break;
                 default:
@@ -6631,11 +6664,6 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             case HyphenMinus:
                 {
                 switch ( input.LA(2) ) {
-                case RULE_ID:
-                    {
-                    alt44=3;
-                    }
-                    break;
                 case RULE_REAL_LIT:
                     {
                     alt44=1;
@@ -6644,6 +6672,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                 case RULE_INTEGER_LIT:
                     {
                     alt44=2;
+                    }
+                    break;
+                case RULE_ID:
+                    {
+                    alt44=3;
                     }
                     break;
                 default:
@@ -6679,7 +6712,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             switch (alt44) {
                 case 1 :
-                    // InternalSecMFParser.g:2494:3: this_RealTerm_0= ruleRealTerm
+                    // InternalSecMFParser.g:2513:3: this_RealTerm_0= ruleRealTerm
                     {
 
                     			newCompositeNode(grammarAccess.getNumAltAccess().getRealTermParserRuleCall_0());
@@ -6697,7 +6730,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSecMFParser.g:2503:3: this_IntegerTerm_1= ruleIntegerTerm
+                    // InternalSecMFParser.g:2522:3: this_IntegerTerm_1= ruleIntegerTerm
                     {
 
                     			newCompositeNode(grammarAccess.getNumAltAccess().getIntegerTermParserRuleCall_1());
@@ -6715,7 +6748,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalSecMFParser.g:2512:3: this_SignedConstant_2= ruleSignedConstant
+                    // InternalSecMFParser.g:2531:3: this_SignedConstant_2= ruleSignedConstant
                     {
 
                     			newCompositeNode(grammarAccess.getNumAltAccess().getSignedConstantParserRuleCall_2());
@@ -6733,7 +6766,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalSecMFParser.g:2521:3: this_ConstantValue_3= ruleConstantValue
+                    // InternalSecMFParser.g:2540:3: this_ConstantValue_3= ruleConstantValue
                     {
 
                     			newCompositeNode(grammarAccess.getNumAltAccess().getConstantValueParserRuleCall_3());
@@ -6773,7 +6806,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAppliesToKeywords"
-    // InternalSecMFParser.g:2533:1: entryRuleAppliesToKeywords returns [String current=null] : iv_ruleAppliesToKeywords= ruleAppliesToKeywords EOF ;
+    // InternalSecMFParser.g:2552:1: entryRuleAppliesToKeywords returns [String current=null] : iv_ruleAppliesToKeywords= ruleAppliesToKeywords EOF ;
     public final String entryRuleAppliesToKeywords() throws RecognitionException {
         String current = null;
 
@@ -6781,8 +6814,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2533:57: (iv_ruleAppliesToKeywords= ruleAppliesToKeywords EOF )
-            // InternalSecMFParser.g:2534:2: iv_ruleAppliesToKeywords= ruleAppliesToKeywords EOF
+            // InternalSecMFParser.g:2552:57: (iv_ruleAppliesToKeywords= ruleAppliesToKeywords EOF )
+            // InternalSecMFParser.g:2553:2: iv_ruleAppliesToKeywords= ruleAppliesToKeywords EOF
             {
              newCompositeNode(grammarAccess.getAppliesToKeywordsRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -6809,7 +6842,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAppliesToKeywords"
-    // InternalSecMFParser.g:2540:1: ruleAppliesToKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= Applies kw= To ) ;
+    // InternalSecMFParser.g:2559:1: ruleAppliesToKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= Applies kw= To ) ;
     public final AntlrDatatypeRuleToken ruleAppliesToKeywords() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6819,11 +6852,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2546:2: ( (kw= Applies kw= To ) )
-            // InternalSecMFParser.g:2547:2: (kw= Applies kw= To )
+            // InternalSecMFParser.g:2565:2: ( (kw= Applies kw= To ) )
+            // InternalSecMFParser.g:2566:2: (kw= Applies kw= To )
             {
-            // InternalSecMFParser.g:2547:2: (kw= Applies kw= To )
-            // InternalSecMFParser.g:2548:3: kw= Applies kw= To
+            // InternalSecMFParser.g:2566:2: (kw= Applies kw= To )
+            // InternalSecMFParser.g:2567:3: kw= Applies kw= To
             {
             kw=(Token)match(input,Applies,FollowSets000.FOLLOW_44); 
 
@@ -6858,7 +6891,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInBindingKeywords"
-    // InternalSecMFParser.g:2562:1: entryRuleInBindingKeywords returns [String current=null] : iv_ruleInBindingKeywords= ruleInBindingKeywords EOF ;
+    // InternalSecMFParser.g:2581:1: entryRuleInBindingKeywords returns [String current=null] : iv_ruleInBindingKeywords= ruleInBindingKeywords EOF ;
     public final String entryRuleInBindingKeywords() throws RecognitionException {
         String current = null;
 
@@ -6866,8 +6899,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2562:57: (iv_ruleInBindingKeywords= ruleInBindingKeywords EOF )
-            // InternalSecMFParser.g:2563:2: iv_ruleInBindingKeywords= ruleInBindingKeywords EOF
+            // InternalSecMFParser.g:2581:57: (iv_ruleInBindingKeywords= ruleInBindingKeywords EOF )
+            // InternalSecMFParser.g:2582:2: iv_ruleInBindingKeywords= ruleInBindingKeywords EOF
             {
              newCompositeNode(grammarAccess.getInBindingKeywordsRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -6894,7 +6927,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInBindingKeywords"
-    // InternalSecMFParser.g:2569:1: ruleInBindingKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= In kw= Binding ) ;
+    // InternalSecMFParser.g:2588:1: ruleInBindingKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= In kw= Binding ) ;
     public final AntlrDatatypeRuleToken ruleInBindingKeywords() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6904,11 +6937,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2575:2: ( (kw= In kw= Binding ) )
-            // InternalSecMFParser.g:2576:2: (kw= In kw= Binding )
+            // InternalSecMFParser.g:2594:2: ( (kw= In kw= Binding ) )
+            // InternalSecMFParser.g:2595:2: (kw= In kw= Binding )
             {
-            // InternalSecMFParser.g:2576:2: (kw= In kw= Binding )
-            // InternalSecMFParser.g:2577:3: kw= In kw= Binding
+            // InternalSecMFParser.g:2595:2: (kw= In kw= Binding )
+            // InternalSecMFParser.g:2596:3: kw= In kw= Binding
             {
             kw=(Token)match(input,In,FollowSets000.FOLLOW_45); 
 
@@ -6943,7 +6976,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInModesKeywords"
-    // InternalSecMFParser.g:2591:1: entryRuleInModesKeywords returns [String current=null] : iv_ruleInModesKeywords= ruleInModesKeywords EOF ;
+    // InternalSecMFParser.g:2610:1: entryRuleInModesKeywords returns [String current=null] : iv_ruleInModesKeywords= ruleInModesKeywords EOF ;
     public final String entryRuleInModesKeywords() throws RecognitionException {
         String current = null;
 
@@ -6951,8 +6984,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2591:55: (iv_ruleInModesKeywords= ruleInModesKeywords EOF )
-            // InternalSecMFParser.g:2592:2: iv_ruleInModesKeywords= ruleInModesKeywords EOF
+            // InternalSecMFParser.g:2610:55: (iv_ruleInModesKeywords= ruleInModesKeywords EOF )
+            // InternalSecMFParser.g:2611:2: iv_ruleInModesKeywords= ruleInModesKeywords EOF
             {
              newCompositeNode(grammarAccess.getInModesKeywordsRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -6979,7 +7012,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInModesKeywords"
-    // InternalSecMFParser.g:2598:1: ruleInModesKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= In kw= Modes ) ;
+    // InternalSecMFParser.g:2617:1: ruleInModesKeywords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= In kw= Modes ) ;
     public final AntlrDatatypeRuleToken ruleInModesKeywords() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6989,11 +7022,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2604:2: ( (kw= In kw= Modes ) )
-            // InternalSecMFParser.g:2605:2: (kw= In kw= Modes )
+            // InternalSecMFParser.g:2623:2: ( (kw= In kw= Modes ) )
+            // InternalSecMFParser.g:2624:2: (kw= In kw= Modes )
             {
-            // InternalSecMFParser.g:2605:2: (kw= In kw= Modes )
-            // InternalSecMFParser.g:2606:3: kw= In kw= Modes
+            // InternalSecMFParser.g:2624:2: (kw= In kw= Modes )
+            // InternalSecMFParser.g:2625:3: kw= In kw= Modes
             {
             kw=(Token)match(input,In,FollowSets000.FOLLOW_46); 
 
@@ -7028,7 +7061,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleINTVALUE"
-    // InternalSecMFParser.g:2620:1: entryRuleINTVALUE returns [String current=null] : iv_ruleINTVALUE= ruleINTVALUE EOF ;
+    // InternalSecMFParser.g:2639:1: entryRuleINTVALUE returns [String current=null] : iv_ruleINTVALUE= ruleINTVALUE EOF ;
     public final String entryRuleINTVALUE() throws RecognitionException {
         String current = null;
 
@@ -7036,8 +7069,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2620:48: (iv_ruleINTVALUE= ruleINTVALUE EOF )
-            // InternalSecMFParser.g:2621:2: iv_ruleINTVALUE= ruleINTVALUE EOF
+            // InternalSecMFParser.g:2639:48: (iv_ruleINTVALUE= ruleINTVALUE EOF )
+            // InternalSecMFParser.g:2640:2: iv_ruleINTVALUE= ruleINTVALUE EOF
             {
              newCompositeNode(grammarAccess.getINTVALUERule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -7064,7 +7097,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleINTVALUE"
-    // InternalSecMFParser.g:2627:1: ruleINTVALUE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INTEGER_LIT_0= RULE_INTEGER_LIT ;
+    // InternalSecMFParser.g:2646:1: ruleINTVALUE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INTEGER_LIT_0= RULE_INTEGER_LIT ;
     public final AntlrDatatypeRuleToken ruleINTVALUE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7074,8 +7107,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2633:2: (this_INTEGER_LIT_0= RULE_INTEGER_LIT )
-            // InternalSecMFParser.g:2634:2: this_INTEGER_LIT_0= RULE_INTEGER_LIT
+            // InternalSecMFParser.g:2652:2: (this_INTEGER_LIT_0= RULE_INTEGER_LIT )
+            // InternalSecMFParser.g:2653:2: this_INTEGER_LIT_0= RULE_INTEGER_LIT
             {
             this_INTEGER_LIT_0=(Token)match(input,RULE_INTEGER_LIT,FollowSets000.FOLLOW_2); 
 
@@ -7104,7 +7137,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQPREF"
-    // InternalSecMFParser.g:2644:1: entryRuleQPREF returns [String current=null] : iv_ruleQPREF= ruleQPREF EOF ;
+    // InternalSecMFParser.g:2663:1: entryRuleQPREF returns [String current=null] : iv_ruleQPREF= ruleQPREF EOF ;
     public final String entryRuleQPREF() throws RecognitionException {
         String current = null;
 
@@ -7112,8 +7145,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2644:45: (iv_ruleQPREF= ruleQPREF EOF )
-            // InternalSecMFParser.g:2645:2: iv_ruleQPREF= ruleQPREF EOF
+            // InternalSecMFParser.g:2663:45: (iv_ruleQPREF= ruleQPREF EOF )
+            // InternalSecMFParser.g:2664:2: iv_ruleQPREF= ruleQPREF EOF
             {
              newCompositeNode(grammarAccess.getQPREFRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -7140,7 +7173,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQPREF"
-    // InternalSecMFParser.g:2651:1: ruleQPREF returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )? ) ;
+    // InternalSecMFParser.g:2670:1: ruleQPREF returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )? ) ;
     public final AntlrDatatypeRuleToken ruleQPREF() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7152,11 +7185,11 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2657:2: ( (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )? ) )
-            // InternalSecMFParser.g:2658:2: (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )? )
+            // InternalSecMFParser.g:2676:2: ( (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )? ) )
+            // InternalSecMFParser.g:2677:2: (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )? )
             {
-            // InternalSecMFParser.g:2658:2: (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )? )
-            // InternalSecMFParser.g:2659:3: this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )?
+            // InternalSecMFParser.g:2677:2: (this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )? )
+            // InternalSecMFParser.g:2678:3: this_ID_0= RULE_ID (kw= ColonColon this_ID_2= RULE_ID )?
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_24); 
 
@@ -7165,7 +7198,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_ID_0, grammarAccess.getQPREFAccess().getIDTerminalRuleCall_0());
             		
-            // InternalSecMFParser.g:2666:3: (kw= ColonColon this_ID_2= RULE_ID )?
+            // InternalSecMFParser.g:2685:3: (kw= ColonColon this_ID_2= RULE_ID )?
             int alt45=2;
             int LA45_0 = input.LA(1);
 
@@ -7174,7 +7207,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt45) {
                 case 1 :
-                    // InternalSecMFParser.g:2667:4: kw= ColonColon this_ID_2= RULE_ID
+                    // InternalSecMFParser.g:2686:4: kw= ColonColon this_ID_2= RULE_ID
                     {
                     kw=(Token)match(input,ColonColon,FollowSets000.FOLLOW_6); 
 
@@ -7217,7 +7250,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQCREF"
-    // InternalSecMFParser.g:2684:1: entryRuleQCREF returns [String current=null] : iv_ruleQCREF= ruleQCREF EOF ;
+    // InternalSecMFParser.g:2703:1: entryRuleQCREF returns [String current=null] : iv_ruleQCREF= ruleQCREF EOF ;
     public final String entryRuleQCREF() throws RecognitionException {
         String current = null;
 
@@ -7225,8 +7258,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2684:45: (iv_ruleQCREF= ruleQCREF EOF )
-            // InternalSecMFParser.g:2685:2: iv_ruleQCREF= ruleQCREF EOF
+            // InternalSecMFParser.g:2703:45: (iv_ruleQCREF= ruleQCREF EOF )
+            // InternalSecMFParser.g:2704:2: iv_ruleQCREF= ruleQCREF EOF
             {
              newCompositeNode(grammarAccess.getQCREFRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -7253,7 +7286,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQCREF"
-    // InternalSecMFParser.g:2691:1: ruleQCREF returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_ID_0= RULE_ID kw= ColonColon )* this_ID_2= RULE_ID (kw= FullStop this_ID_4= RULE_ID )? ) ;
+    // InternalSecMFParser.g:2710:1: ruleQCREF returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_ID_0= RULE_ID kw= ColonColon )* this_ID_2= RULE_ID (kw= FullStop this_ID_4= RULE_ID )? ) ;
     public final AntlrDatatypeRuleToken ruleQCREF() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7266,13 +7299,13 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2697:2: ( ( (this_ID_0= RULE_ID kw= ColonColon )* this_ID_2= RULE_ID (kw= FullStop this_ID_4= RULE_ID )? ) )
-            // InternalSecMFParser.g:2698:2: ( (this_ID_0= RULE_ID kw= ColonColon )* this_ID_2= RULE_ID (kw= FullStop this_ID_4= RULE_ID )? )
+            // InternalSecMFParser.g:2716:2: ( ( (this_ID_0= RULE_ID kw= ColonColon )* this_ID_2= RULE_ID (kw= FullStop this_ID_4= RULE_ID )? ) )
+            // InternalSecMFParser.g:2717:2: ( (this_ID_0= RULE_ID kw= ColonColon )* this_ID_2= RULE_ID (kw= FullStop this_ID_4= RULE_ID )? )
             {
-            // InternalSecMFParser.g:2698:2: ( (this_ID_0= RULE_ID kw= ColonColon )* this_ID_2= RULE_ID (kw= FullStop this_ID_4= RULE_ID )? )
-            // InternalSecMFParser.g:2699:3: (this_ID_0= RULE_ID kw= ColonColon )* this_ID_2= RULE_ID (kw= FullStop this_ID_4= RULE_ID )?
+            // InternalSecMFParser.g:2717:2: ( (this_ID_0= RULE_ID kw= ColonColon )* this_ID_2= RULE_ID (kw= FullStop this_ID_4= RULE_ID )? )
+            // InternalSecMFParser.g:2718:3: (this_ID_0= RULE_ID kw= ColonColon )* this_ID_2= RULE_ID (kw= FullStop this_ID_4= RULE_ID )?
             {
-            // InternalSecMFParser.g:2699:3: (this_ID_0= RULE_ID kw= ColonColon )*
+            // InternalSecMFParser.g:2718:3: (this_ID_0= RULE_ID kw= ColonColon )*
             loop46:
             do {
                 int alt46=2;
@@ -7291,7 +7324,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
                 switch (alt46) {
             	case 1 :
-            	    // InternalSecMFParser.g:2700:4: this_ID_0= RULE_ID kw= ColonColon
+            	    // InternalSecMFParser.g:2719:4: this_ID_0= RULE_ID kw= ColonColon
             	    {
             	    this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_47); 
 
@@ -7321,7 +7354,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_ID_2, grammarAccess.getQCREFAccess().getIDTerminalRuleCall_1());
             		
-            // InternalSecMFParser.g:2720:3: (kw= FullStop this_ID_4= RULE_ID )?
+            // InternalSecMFParser.g:2739:3: (kw= FullStop this_ID_4= RULE_ID )?
             int alt47=2;
             int LA47_0 = input.LA(1);
 
@@ -7330,7 +7363,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             }
             switch (alt47) {
                 case 1 :
-                    // InternalSecMFParser.g:2721:4: kw= FullStop this_ID_4= RULE_ID
+                    // InternalSecMFParser.g:2740:4: kw= FullStop this_ID_4= RULE_ID
                     {
                     kw=(Token)match(input,FullStop,FollowSets000.FOLLOW_6); 
 
@@ -7373,7 +7406,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSTAR"
-    // InternalSecMFParser.g:2738:1: entryRuleSTAR returns [String current=null] : iv_ruleSTAR= ruleSTAR EOF ;
+    // InternalSecMFParser.g:2757:1: entryRuleSTAR returns [String current=null] : iv_ruleSTAR= ruleSTAR EOF ;
     public final String entryRuleSTAR() throws RecognitionException {
         String current = null;
 
@@ -7381,8 +7414,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSecMFParser.g:2738:44: (iv_ruleSTAR= ruleSTAR EOF )
-            // InternalSecMFParser.g:2739:2: iv_ruleSTAR= ruleSTAR EOF
+            // InternalSecMFParser.g:2757:44: (iv_ruleSTAR= ruleSTAR EOF )
+            // InternalSecMFParser.g:2758:2: iv_ruleSTAR= ruleSTAR EOF
             {
              newCompositeNode(grammarAccess.getSTARRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -7409,7 +7442,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSTAR"
-    // InternalSecMFParser.g:2745:1: ruleSTAR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= Asterisk ;
+    // InternalSecMFParser.g:2764:1: ruleSTAR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= Asterisk ;
     public final AntlrDatatypeRuleToken ruleSTAR() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7419,8 +7452,8 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSecMFParser.g:2751:2: (kw= Asterisk )
-            // InternalSecMFParser.g:2752:2: kw= Asterisk
+            // InternalSecMFParser.g:2770:2: (kw= Asterisk )
+            // InternalSecMFParser.g:2771:2: kw= Asterisk
             {
             kw=(Token)match(input,Asterisk,FollowSets000.FOLLOW_2); 
 
@@ -7501,7 +7534,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
             this.transition = dfa_7;
         }
         public String getDescription() {
-            return "1363:2: (this_RecordTerm_0= ruleRecordTerm | this_ReferenceTerm_1= ruleReferenceTerm | this_ComponentClassifierTerm_2= ruleComponentClassifierTerm | this_ComputedTerm_3= ruleComputedTerm | this_StringTerm_4= ruleStringTerm | this_NumericRangeTerm_5= ruleNumericRangeTerm | this_RealTerm_6= ruleRealTerm | this_IntegerTerm_7= ruleIntegerTerm | this_ListTerm_8= ruleListTerm | this_BooleanLiteral_9= ruleBooleanLiteral | this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm )";
+            return "1382:2: (this_RecordTerm_0= ruleRecordTerm | this_ReferenceTerm_1= ruleReferenceTerm | this_ComponentClassifierTerm_2= ruleComponentClassifierTerm | this_ComputedTerm_3= ruleComputedTerm | this_StringTerm_4= ruleStringTerm | this_NumericRangeTerm_5= ruleNumericRangeTerm | this_RealTerm_6= ruleRealTerm | this_IntegerTerm_7= ruleIntegerTerm | this_ListTerm_8= ruleListTerm | this_BooleanLiteral_9= ruleBooleanLiteral | this_LiteralorReferenceTerm_10= ruleLiteralorReferenceTerm )";
         }
     }
  
@@ -7529,7 +7562,7 @@ public class InternalSecMFParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000040000000L});
         public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000001000000L});
         public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000002000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0400100000000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000110000000000L});
         public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000400000L});
         public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000100000002L});
         public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000204000000L});

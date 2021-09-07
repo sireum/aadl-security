@@ -676,19 +676,24 @@ public class SecMFGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final Assignment cTypeAssignment_1_1_3 = (Assignment)cGroup_1_1.eContents().get(3);
 		private final CrossReference cTypeSMFTypeRefCrossReference_1_1_3_0 = (CrossReference)cTypeAssignment_1_1_3.eContents().get(0);
 		private final RuleCall cTypeSMFTypeRefIDTerminalRuleCall_1_1_3_0_1 = (RuleCall)cTypeSMFTypeRefCrossReference_1_1_3_0.eContents().get(1);
+		private final Group cGroup_1_1_4 = (Group)cGroup_1_1.eContents().get(4);
+		private final Keyword cCommaKeyword_1_1_4_0 = (Keyword)cGroup_1_1_4.eContents().get(0);
+		private final Assignment cTypeAssignment_1_1_4_1 = (Assignment)cGroup_1_1_4.eContents().get(1);
+		private final CrossReference cTypeSMFTypeRefCrossReference_1_1_4_1_0 = (CrossReference)cTypeAssignment_1_1_4_1.eContents().get(0);
+		private final RuleCall cTypeSMFTypeRefIDTerminalRuleCall_1_1_4_1_0_1 = (RuleCall)cTypeSMFTypeRefCrossReference_1_1_4_1_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//SMFTypeDef returns SmfTypeDef:
 		//    name=ID (
 		//        (':' 'type')
-		//        |(':' 'type' 'extends' type+=([SMFTypeRef|ID])*)
+		//        |(':' 'type' 'extends' type+=[SMFTypeRef|ID] (','type+=[SMFTypeRef|ID])*)
 		//    )
 		//    ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//name=ID (
 		//    (':' 'type')
-		//    |(':' 'type' 'extends' type+=([SMFTypeRef|ID])*)
+		//    |(':' 'type' 'extends' type+=[SMFTypeRef|ID] (','type+=[SMFTypeRef|ID])*)
 		//)
 		//';'
 		public Group getGroup() { return cGroup; }
@@ -701,7 +706,7 @@ public class SecMFGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		
 		//(
 		//       (':' 'type')
-		//       |(':' 'type' 'extends' type+=([SMFTypeRef|ID])*)
+		//       |(':' 'type' 'extends' type+=[SMFTypeRef|ID] (','type+=[SMFTypeRef|ID])*)
 		//   )
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 		
@@ -714,7 +719,7 @@ public class SecMFGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'type'
 		public Keyword getTypeKeyword_1_0_1() { return cTypeKeyword_1_0_1; }
 		
-		//(':' 'type' 'extends' type+=([SMFTypeRef|ID])*)
+		//(':' 'type' 'extends' type+=[SMFTypeRef|ID] (','type+=[SMFTypeRef|ID])*)
 		public Group getGroup_1_1() { return cGroup_1_1; }
 		
 		//':'
@@ -726,14 +731,29 @@ public class SecMFGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'extends'
 		public Keyword getExtendsKeyword_1_1_2() { return cExtendsKeyword_1_1_2; }
 		
-		//type+=([SMFTypeRef|ID])*
+		//type+=[SMFTypeRef|ID]
 		public Assignment getTypeAssignment_1_1_3() { return cTypeAssignment_1_1_3; }
 		
-		//([SMFTypeRef|ID])
+		//[SMFTypeRef|ID]
 		public CrossReference getTypeSMFTypeRefCrossReference_1_1_3_0() { return cTypeSMFTypeRefCrossReference_1_1_3_0; }
 		
 		//ID
 		public RuleCall getTypeSMFTypeRefIDTerminalRuleCall_1_1_3_0_1() { return cTypeSMFTypeRefIDTerminalRuleCall_1_1_3_0_1; }
+		
+		//(','type+=[SMFTypeRef|ID])*
+		public Group getGroup_1_1_4() { return cGroup_1_1_4; }
+		
+		//','
+		public Keyword getCommaKeyword_1_1_4_0() { return cCommaKeyword_1_1_4_0; }
+		
+		//type+=[SMFTypeRef|ID]
+		public Assignment getTypeAssignment_1_1_4_1() { return cTypeAssignment_1_1_4_1; }
+		
+		//[SMFTypeRef|ID]
+		public CrossReference getTypeSMFTypeRefCrossReference_1_1_4_1_0() { return cTypeSMFTypeRefCrossReference_1_1_4_1_0; }
+		
+		//ID
+		public RuleCall getTypeSMFTypeRefIDTerminalRuleCall_1_1_4_1_0_1() { return cTypeSMFTypeRefIDTerminalRuleCall_1_1_4_1_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
@@ -1115,7 +1135,7 @@ public class SecMFGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	//SMFTypeDef returns SmfTypeDef:
 	//    name=ID (
 	//        (':' 'type')
-	//        |(':' 'type' 'extends' type+=([SMFTypeRef|ID])*)
+	//        |(':' 'type' 'extends' type+=[SMFTypeRef|ID] (','type+=[SMFTypeRef|ID])*)
 	//    )
 	//    ';';
 	public SMFTypeDefElements getSMFTypeDefAccess() {

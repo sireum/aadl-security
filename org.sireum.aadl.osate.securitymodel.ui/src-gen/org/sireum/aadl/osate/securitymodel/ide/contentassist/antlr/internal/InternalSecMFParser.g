@@ -3475,6 +3475,7 @@ rule__SMFTypeDef__Group_1_1__3
 	}
 :
 	rule__SMFTypeDef__Group_1_1__3__Impl
+	rule__SMFTypeDef__Group_1_1__4
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -3487,8 +3488,88 @@ rule__SMFTypeDef__Group_1_1__3__Impl
 :
 (
 	{ before(grammarAccess.getSMFTypeDefAccess().getTypeAssignment_1_1_3()); }
-	(rule__SMFTypeDef__TypeAssignment_1_1_3)*
+	(rule__SMFTypeDef__TypeAssignment_1_1_3)
 	{ after(grammarAccess.getSMFTypeDefAccess().getTypeAssignment_1_1_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SMFTypeDef__Group_1_1__4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__SMFTypeDef__Group_1_1__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SMFTypeDef__Group_1_1__4__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getSMFTypeDefAccess().getGroup_1_1_4()); }
+	(rule__SMFTypeDef__Group_1_1_4__0)*
+	{ after(grammarAccess.getSMFTypeDefAccess().getGroup_1_1_4()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__SMFTypeDef__Group_1_1_4__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__SMFTypeDef__Group_1_1_4__0__Impl
+	rule__SMFTypeDef__Group_1_1_4__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SMFTypeDef__Group_1_1_4__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getSMFTypeDefAccess().getCommaKeyword_1_1_4_0()); }
+	Comma
+	{ after(grammarAccess.getSMFTypeDefAccess().getCommaKeyword_1_1_4_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SMFTypeDef__Group_1_1_4__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__SMFTypeDef__Group_1_1_4__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SMFTypeDef__Group_1_1_4__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getSMFTypeDefAccess().getTypeAssignment_1_1_4_1()); }
+	(rule__SMFTypeDef__TypeAssignment_1_1_4_1)
+	{ after(grammarAccess.getSMFTypeDefAccess().getTypeAssignment_1_1_4_1()); }
 )
 ;
 finally {
@@ -6849,6 +6930,25 @@ rule__SMFTypeDef__TypeAssignment_1_1_3
 			{ after(grammarAccess.getSMFTypeDefAccess().getTypeSMFTypeRefIDTerminalRuleCall_1_1_3_0_1()); }
 		)
 		{ after(grammarAccess.getSMFTypeDefAccess().getTypeSMFTypeRefCrossReference_1_1_3_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SMFTypeDef__TypeAssignment_1_1_4_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getSMFTypeDefAccess().getTypeSMFTypeRefCrossReference_1_1_4_1_0()); }
+		(
+			{ before(grammarAccess.getSMFTypeDefAccess().getTypeSMFTypeRefIDTerminalRuleCall_1_1_4_1_0_1()); }
+			RULE_ID
+			{ after(grammarAccess.getSMFTypeDefAccess().getTypeSMFTypeRefIDTerminalRuleCall_1_1_4_1_0_1()); }
+		)
+		{ after(grammarAccess.getSMFTypeDefAccess().getTypeSMFTypeRefCrossReference_1_1_4_1_0()); }
 	)
 ;
 finally {

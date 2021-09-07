@@ -271,7 +271,7 @@ public abstract class AbstractSecMFSemanticSequencer extends PropertiesSemanticS
 	 *     SMFTypeDef returns SmfTypeDef
 	 *
 	 * Constraint:
-	 *     (name=ID type+=[SMFTypeRef|ID]*)
+	 *     (name=ID (type+=[SMFTypeRef|ID] type+=[SMFTypeRef|ID]*)?)
 	 */
 	protected void sequence_SMFTypeDef(ISerializationContext context, SmfTypeDef semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

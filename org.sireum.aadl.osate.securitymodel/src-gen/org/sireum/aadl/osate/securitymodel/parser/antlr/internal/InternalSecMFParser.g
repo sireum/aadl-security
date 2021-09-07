@@ -828,12 +828,31 @@ ruleSMFTypeDef returns [EObject current=null]
 							newLeafNode(otherlv_6, grammarAccess.getSMFTypeDefAccess().getTypeSMFTypeRefCrossReference_1_1_3_0());
 						}
 					)
+				)
+				(
+					otherlv_7=Comma
+					{
+						newLeafNode(otherlv_7, grammarAccess.getSMFTypeDefAccess().getCommaKeyword_1_1_4_0());
+					}
+					(
+						(
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getSMFTypeDefRule());
+								}
+							}
+							otherlv_8=RULE_ID
+							{
+								newLeafNode(otherlv_8, grammarAccess.getSMFTypeDefAccess().getTypeSMFTypeRefCrossReference_1_1_4_1_0());
+							}
+						)
+					)
 				)*
 			)
 		)
-		otherlv_7=Semicolon
+		otherlv_9=Semicolon
 		{
-			newLeafNode(otherlv_7, grammarAccess.getSMFTypeDefAccess().getSemicolonKeyword_2());
+			newLeafNode(otherlv_9, grammarAccess.getSMFTypeDefAccess().getSemicolonKeyword_2());
 		}
 	)
 ;

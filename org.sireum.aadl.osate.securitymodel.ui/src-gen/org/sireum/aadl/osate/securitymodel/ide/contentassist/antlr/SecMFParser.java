@@ -73,6 +73,7 @@ public class SecMFParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getSMFTypeDefAccess().getGroup(), "rule__SMFTypeDef__Group__0");
 			builder.put(grammarAccess.getSMFTypeDefAccess().getGroup_1_0(), "rule__SMFTypeDef__Group_1_0__0");
 			builder.put(grammarAccess.getSMFTypeDefAccess().getGroup_1_1(), "rule__SMFTypeDef__Group_1_1__0");
+			builder.put(grammarAccess.getSMFTypeDefAccess().getGroup_1_1_4(), "rule__SMFTypeDef__Group_1_1_4__0");
 			builder.put(grammarAccess.getDomainTypesKeywordsAccess().getGroup(), "rule__DomainTypesKeywords__Group__0");
 			builder.put(grammarAccess.getEndTypesKeywordsAccess().getGroup(), "rule__EndTypesKeywords__Group__0");
 			builder.put(grammarAccess.getQUALIFIEDNAMEAccess().getGroup(), "rule__QUALIFIEDNAME__Group__0");
@@ -147,6 +148,7 @@ public class SecMFParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getSMFDeclassificationAccess().getSnkNameAssignment_5(), "rule__SMFDeclassification__SnkNameAssignment_5");
 			builder.put(grammarAccess.getSMFTypeDefAccess().getNameAssignment_0(), "rule__SMFTypeDef__NameAssignment_0");
 			builder.put(grammarAccess.getSMFTypeDefAccess().getTypeAssignment_1_1_3(), "rule__SMFTypeDef__TypeAssignment_1_1_3");
+			builder.put(grammarAccess.getSMFTypeDefAccess().getTypeAssignment_1_1_4_1(), "rule__SMFTypeDef__TypeAssignment_1_1_4_1");
 			builder.put(grammarAccess.getContainedPropertyAssociationAccess().getPropertyAssignment_0(), "rule__ContainedPropertyAssociation__PropertyAssignment_0");
 			builder.put(grammarAccess.getContainedPropertyAssociationAccess().getAppendAssignment_1_1(), "rule__ContainedPropertyAssociation__AppendAssignment_1_1");
 			builder.put(grammarAccess.getContainedPropertyAssociationAccess().getConstantAssignment_2(), "rule__ContainedPropertyAssociation__ConstantAssignment_2");
