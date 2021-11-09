@@ -43,7 +43,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <import plugin="org.eclipse.xtext.xbase.lib" version="2.14.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.xtext.util" version="2.20.0" match="compatible"/>
       <import plugin="org.eclipse.emf.common" version="2.7.0" match="compatible"/>
-      <import plugin="org.antlr.runtime" version="3.2.0" match="perfect"/>
+      <import plugin="org.antlr.runtime"/>
       <import plugin="org.eclipse.xtext" version="2.20.0" match="compatible"/>
       <import plugin="org.apache.log4j" version="1.2.15" match="compatible"/>
       <import plugin="org.eclipse.xtext.ui"/>
