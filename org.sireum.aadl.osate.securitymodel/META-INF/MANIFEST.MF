@@ -3,7 +3,7 @@ Automatic-Module-Name: org.sireum.aadl.osate.securitymodel
 Bundle-ManifestVersion: 2
 Bundle-Name: org.sireum.aadl.osate.securitymodel
 Bundle-Vendor: My Company
-Bundle-Version: 1.2022.07051018.qualifier
+Bundle-Version: 1.2022.08191219.qualifier
 Bundle-SymbolicName: org.sireum.aadl.osate.securitymodel; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext.generator;bundle-version="[2.20.0,3.0.0)";resolution:=optional,
