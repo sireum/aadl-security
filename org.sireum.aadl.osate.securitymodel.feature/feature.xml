@@ -2,7 +2,7 @@
 <feature
       id="org.sireum.aadl.osate.securitymodel.feature"
       label="SecMF Feature "
-      version="1.2022.08191219.qualifier">
+      version="1.2022.08221314.qualifier">
 
    <license url="">
       Copyright (c) 2020, Kansas State University
